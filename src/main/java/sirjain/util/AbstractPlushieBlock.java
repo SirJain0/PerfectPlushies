@@ -1,4 +1,4 @@
-package sirjain.plushie_blocks;
+package sirjain.util;
 
 import net.minecraft.block.Block;
 

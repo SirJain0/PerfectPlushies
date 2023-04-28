@@ -1,4 +1,4 @@
-package sirjain.plushie_blocks;
+package sirjain.util;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.particle.ParticleType;

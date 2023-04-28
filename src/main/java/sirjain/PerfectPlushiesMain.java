@@ -1,7 +1,7 @@
 package sirjain;
 
 import net.fabricmc.api.ModInitializer;
-import sirjain.plushie_blocks.PlushieBlockRegistries;
+import sirjain.util.PlushieBlockRegistries;
 
 public class PerfectPlushiesMain implements ModInitializer {
 	public static final String MOD_ID = "perfectplushies";

@@ -1,4 +1,4 @@
-package sirjain.plushie_blocks;
+package sirjain.plushie_variants;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
@@ -7,6 +7,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
+import sirjain.util.AbstractPlushieBlock;
+import sirjain.util.IPlushieBlockSpecialEffects;
 
 public class SwiftPlushieBlock extends AbstractPlushieBlock implements IPlushieBlockSpecialEffects {
 	public SwiftPlushieBlock() {
