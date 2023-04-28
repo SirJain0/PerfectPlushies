@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Perfect Plushies",
-  "description": "Adds various plushies to Minecraft!",
+  "description": "Adds various plushies with different perks to Minecraft!",
   "authors": [
     "SirJain"
   ],
@@ -12,7 +12,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/perfectplushies/icon.png",
+  "icon": "assets/perfectplushies/icon/icon.png",
 
   "environment": "*",
   "entrypoints": {

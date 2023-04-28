@@ -9,7 +9,8 @@ public class PerfectPlushiesMain implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		System.out.println("Initializing Perfect Plushies!");
-		PlushieBlockRegistries.registerPlushieBlockItems();
 		PlushieBlockRegistries.registerPlushieBlocks();
+		PlushieBlockRegistries.registerPlushieBlockItems();
+		PlushieBlockRegistries.addItemsToTabs();
 	}
 }
