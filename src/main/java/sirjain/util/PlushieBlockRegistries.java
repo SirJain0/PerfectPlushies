@@ -14,14 +14,22 @@ import sirjain.plushie_variants.SwiftPlushieBlock;
 public class PlushieBlockRegistries {
 	// Block variables
 	public static Block FOX_PLUSHIE;
+	public static Block DOLPHIN_PLUSHIE;
 
 	// Item variables
 	public static Item FOX_PLUSHIE_BLOCK_ITEM;
+	public static Item DOLPHIN_PLUSHIE_BLOCK_ITEM;
 
 	public static void registerPlushieBlocks() {
 		FOX_PLUSHIE = Registry.register(
 			Registries.BLOCK,
 			new Identifier(PerfectPlushiesMain.MOD_ID, "fox_plushie"),
+			new SwiftPlushieBlock()
+		);
+
+		DOLPHIN_PLUSHIE = Registry.register(
+			Registries.BLOCK,
+			new Identifier(PerfectPlushiesMain.MOD_ID, "dolphin_plushie"),
 			new SwiftPlushieBlock()
 		);
 	}
@@ -32,11 +40,18 @@ public class PlushieBlockRegistries {
 			new Identifier(PerfectPlushiesMain.MOD_ID, "fox_plushie"),
 			new BlockItem(FOX_PLUSHIE, new Item.Settings())
 		);
+
+		DOLPHIN_PLUSHIE_BLOCK_ITEM = Registry.register(
+			Registries.ITEM,
+			new Identifier(PerfectPlushiesMain.MOD_ID, "dolphin_plushie"),
+			new BlockItem(DOLPHIN_PLUSHIE, new Item.Settings())
+		);
 	}
 
 	public static void addItemsToTabs() {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
 			entries.add(FOX_PLUSHIE_BLOCK_ITEM);
+			entries.add(DOLPHIN_PLUSHIE_BLOCK_ITEM);
 		});
 	}
 }
