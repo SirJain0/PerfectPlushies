@@ -8,8 +8,8 @@ import net.minecraft.sound.BlockSoundGroup;
 import sirjain.util.AbstractPlushieBlock;
 import sirjain.util.IPlushieBlockSpecialEffects;
 
-public class SwiftPlushieBlock extends AbstractPlushieBlock implements IPlushieBlockSpecialEffects {
-	public SwiftPlushieBlock() {
+public class ResistancePlushieBlock extends AbstractPlushieBlock implements IPlushieBlockSpecialEffects {
+	public ResistancePlushieBlock() {
 		super(FabricBlockSettings.of(Material.WOOL)
 			.nonOpaque()
 			.sounds(BlockSoundGroup.WOOL)
@@ -20,7 +20,7 @@ public class SwiftPlushieBlock extends AbstractPlushieBlock implements IPlushieB
 
 	@Override
 	public StatusEffectInstance getStatusEffect() {
-		final StatusEffectInstance speedEffect = new StatusEffectInstance(StatusEffects.SPEED, 20 * 3, 1);
+		final StatusEffectInstance speedEffect = new StatusEffectInstance(StatusEffects.RESISTANCE, 20 * 3, 1);
 		return new StatusEffectInstance(speedEffect);
 	}
 }

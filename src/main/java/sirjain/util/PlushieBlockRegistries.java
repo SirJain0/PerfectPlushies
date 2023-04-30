@@ -9,6 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sirjain.PerfectPlushiesMain;
+import sirjain.plushie_variants.JumpPlushieBlock;
 import sirjain.plushie_variants.SwiftPlushieBlock;
 
 public class PlushieBlockRegistries {
@@ -38,7 +39,7 @@ public class PlushieBlockRegistries {
 		RABBIT_PLUSHIE = Registry.register(
 			Registries.BLOCK,
 			new Identifier(PerfectPlushiesMain.MOD_ID, "rabbit_plushie"),
-			new SwiftPlushieBlock()
+			new JumpPlushieBlock()
 		);
 	}
 

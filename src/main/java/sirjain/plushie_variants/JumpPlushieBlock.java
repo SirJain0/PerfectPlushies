@@ -4,8 +4,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.particle.ParticleType;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import sirjain.util.AbstractPlushieBlock;
 import sirjain.util.IPlushieBlockSpecialEffects;
@@ -18,11 +16,6 @@ public class JumpPlushieBlock extends AbstractPlushieBlock implements IPlushieBl
 			.strength(0.5f, 0.5f)
 			.luminance((state) -> 3)
 		);
-	}
-
-	@Override
-	public ParticleType getParticle() {
-		return ParticleTypes.HEART;
 	}
 
 	@Override
