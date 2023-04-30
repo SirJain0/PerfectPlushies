@@ -12,7 +12,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/perfectplushies/icon/icon.png",
+  "icon": "assets/perfectplushies/icon/perfectplushieslogo.png",
 
   "environment": "*",
   "entrypoints": {
