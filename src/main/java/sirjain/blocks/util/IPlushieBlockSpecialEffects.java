@@ -1,4 +1,4 @@
-package sirjain.util;
+package sirjain.blocks.util;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 

@@ -1,4 +1,4 @@
-package sirjain.util;
+package sirjain.blocks.util;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
@@ -9,8 +9,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sirjain.PerfectPlushiesMain;
-import sirjain.plushie_variants.JumpPlushieBlock;
-import sirjain.plushie_variants.SwiftPlushieBlock;
+import sirjain.blocks.plushie_variants.JumpPlushieBlock;
+import sirjain.blocks.plushie_variants.SwiftPlushieBlock;
 
 public class PlushieBlockRegistries {
 	// Block variables

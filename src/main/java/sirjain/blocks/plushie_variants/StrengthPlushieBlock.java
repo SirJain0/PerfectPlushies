@@ -1,12 +1,12 @@
-package sirjain.plushie_variants;
+package sirjain.blocks.plushie_variants;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.sound.BlockSoundGroup;
-import sirjain.util.AbstractPlushieBlock;
-import sirjain.util.IPlushieBlockSpecialEffects;
+import sirjain.blocks.util.AbstractPlushieBlock;
+import sirjain.blocks.util.IPlushieBlockSpecialEffects;
 
 public class StrengthPlushieBlock extends AbstractPlushieBlock implements IPlushieBlockSpecialEffects {
 	public StrengthPlushieBlock() {

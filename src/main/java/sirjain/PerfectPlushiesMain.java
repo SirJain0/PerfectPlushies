@@ -1,7 +1,8 @@
 package sirjain;
 
 import net.fabricmc.api.ModInitializer;
-import sirjain.util.PlushieBlockRegistries;
+import sirjain.blocks.util.PlushieBlockRegistries;
+import sirjain.loot_tables.PlushiesLootTableModifier;
 
 public class PerfectPlushiesMain implements ModInitializer {
 	public static final String MOD_ID = "perfectplushies";
@@ -12,5 +13,6 @@ public class PerfectPlushiesMain implements ModInitializer {
 		PlushieBlockRegistries.registerPlushieBlocks();
 		PlushieBlockRegistries.registerPlushieBlockItems();
 		PlushieBlockRegistries.addItemsToTabs();
+		PlushiesLootTableModifier.modifyLootTables();
 	}
 }
