@@ -49,9 +49,9 @@ abstract public class AbstractPlushieBlock extends Block {
 		if (world.isClient) {
 			world.addParticle(
 				ParticleTypes.HEART,
-				+ pos.getX() + (world.random.nextInt(2)),
+				pos.getX() + (world.random.nextInt(2)),
 				pos.getY(),
-				+ pos.getZ() + (world.random.nextInt(2)),
+				pos.getZ() + (world.random.nextInt(2)),
 				0, 0, 0
 			);
 		}
