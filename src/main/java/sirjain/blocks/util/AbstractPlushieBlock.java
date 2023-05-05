@@ -1,6 +1,5 @@
 package sirjain.blocks.util;
 
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -33,28 +32,28 @@ abstract public class AbstractPlushieBlock extends Block {
 		return OUTLINE_SHAPE;
 	}
 
-	// Displays particles
-	@Override
-	public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-		world.addParticle(
-			ParticleTypes.HEART,
-			+ pos.getX() + (world.random.nextInt(2)),
-			pos.getY(),
-			+ pos.getZ() + (world.random.nextInt(2)),
-			0, 0, 0
-		);
-	}
-
-	// Sends chat message
+	// Sends chat message and displays particles on right click
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 		if (!world.isClient) {
 			MinecraftServer server = world.getServer();
+			if (server == null) return ActionResult.FAIL;
+
 			List<ServerPlayerEntity> serverList = server.getPlayerManager().getPlayerList();
 
 			for (ServerPlayerEntity serverPlayer : serverList) {
 				serverPlayer.sendMessage(Text.literal("Hehe!"));
 			}
+		}
+
+		if (world.isClient) {
+			world.addParticle(
+				ParticleTypes.HEART,
+				+ pos.getX() + (world.random.nextInt(2)),
+				pos.getY(),
+				+ pos.getZ() + (world.random.nextInt(2)),
+				0, 0, 0
+			);
 		}
 
 		return ActionResult.SUCCESS;
