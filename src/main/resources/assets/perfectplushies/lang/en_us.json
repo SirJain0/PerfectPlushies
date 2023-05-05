@@ -2,8 +2,10 @@
   "block.perfectplushies.fox_plushie": "Fox Plushie",
   "block.perfectplushies.dolphin_plushie": "Dolphin Plushie",
   "block.perfectplushies.rabbit_plushie": "Rabbit Plushie",
+  "block.perfectplushies.frog_plushie": "Frog Plushie",
 
   "item.perfectplushies.fox_plushie": "Fox Plushie",
   "item.perfectplushies.dolphin_plushie": "Dolphin Plushie",
-  "item.perfectplushies.rabbit_plushie": "Rabbit Plushie"
+  "item.perfectplushies.rabbit_plushie": "Rabbit Plushie",
+  "item.perfectplushies.frog_plushie": "Frog Plushie"
 }

@@ -22,6 +22,9 @@
   "entrypoints": {
     "main": [
       "sirjain.PerfectPlushiesMain"
+    ],
+    "client": [
+      "sirjain.PerfectPlushiesClient"
     ]
   },
 
