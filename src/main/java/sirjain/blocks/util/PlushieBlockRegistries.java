@@ -9,8 +9,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sirjain.PerfectPlushiesMain;
-import sirjain.blocks.plushie_variants.JumpPlushieBlock;
-import sirjain.blocks.plushie_variants.SwiftPlushieBlock;
 
 public class PlushieBlockRegistries {
 	// Block variables
@@ -29,25 +27,25 @@ public class PlushieBlockRegistries {
 		FOX_PLUSHIE = Registry.register(
 			Registries.BLOCK,
 			new Identifier(PerfectPlushiesMain.MOD_ID, "fox_plushie"),
-			new SwiftPlushieBlock()
+			new AbstractPlushieBlock()
 		);
 
 		DOLPHIN_PLUSHIE = Registry.register(
 			Registries.BLOCK,
 			new Identifier(PerfectPlushiesMain.MOD_ID, "dolphin_plushie"),
-			new SwiftPlushieBlock()
+			new AbstractPlushieBlock()
 		);
 
 		RABBIT_PLUSHIE = Registry.register(
 			Registries.BLOCK,
 			new Identifier(PerfectPlushiesMain.MOD_ID, "rabbit_plushie"),
-			new JumpPlushieBlock()
+			new AbstractPlushieBlock()
 		);
 
 		FROG_PLUSHIE = Registry.register(
 			Registries.BLOCK,
 			new Identifier(PerfectPlushiesMain.MOD_ID, "frog_plushie"),
-			new JumpPlushieBlock()
+			new AbstractPlushieBlock()
 		);
 	}
 

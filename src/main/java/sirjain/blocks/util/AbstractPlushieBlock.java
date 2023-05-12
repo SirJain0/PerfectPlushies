@@ -1,29 +1,36 @@
 package sirjain.blocks.util;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 import java.util.List;
 
-abstract public class AbstractPlushieBlock extends Block {
+public class AbstractPlushieBlock extends Block {
 	private static final VoxelShape OUTLINE_SHAPE = Block.createCuboidShape(3, 0, 3, 13, 10, 13);
 
-	public AbstractPlushieBlock(Settings settings) {
-		super(settings);
+	public AbstractPlushieBlock() {
+		super(FabricBlockSettings.of(Material.WOOL)
+			.nonOpaque()
+			.sounds(BlockSoundGroup.WOOL)
+			.strength(0.5f, 0.5f)
+			.luminance((state) -> 3)
+		);
 	}
 
 	// Defines hitbox for all plushies
