@@ -13,13 +13,16 @@ import sirjain.blocks.util.PlushieBlockRegistries;
 
 public class PlushiesLootTableModifier {
 	public static Identifier VILLAGE_IDENTIFIER;
-	public static final Item[] plushies = new Item[] {
+	public static final Item[] PLUSHIES = new Item[] {
 		PlushieBlockRegistries.FOX_PLUSHIE_BLOCK_ITEM,
 		PlushieBlockRegistries.DOLPHIN_PLUSHIE_BLOCK_ITEM,
-		PlushieBlockRegistries.RABBIT_PLUSHIE_BLOCK_ITEM
+		PlushieBlockRegistries.RABBIT_PLUSHIE_BLOCK_ITEM,
+		PlushieBlockRegistries.FROG_PLUSHIE_BLOCK_ITEM,
+		PlushieBlockRegistries.HIPPO_PLUSHIE_BLOCK_ITEM,
+		PlushieBlockRegistries.DEER_PLUSHIE_BLOCK_ITEM
 	};
 
-	public static final String[] villageVariants = new String[] {
+	public static final String[] VILLAGE_VARIANTS = new String[] {
 		"village_armorer",
 		"village_butcher",
 		"village_cartographer",
@@ -40,12 +43,10 @@ public class PlushiesLootTableModifier {
 
 	public static void modifyLootTables() {
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-			VILLAGE_IDENTIFIER = null;
-
-			for (String village : villageVariants) {
+			for (String village : VILLAGE_VARIANTS) {
 				VILLAGE_IDENTIFIER = new Identifier("minecraft", "chests/village/" + village);
 
-				for (Item plushie : plushies) {
+				for (Item plushie : PLUSHIES) {
 					if (VILLAGE_IDENTIFIER.equals(id)) {
 						LootPool.Builder poolBuilder = LootPool.builder()
 							.rolls(ConstantLootNumberProvider.create(1))
