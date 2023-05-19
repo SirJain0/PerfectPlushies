@@ -18,6 +18,7 @@ public class PlushieBlockRegistries {
 	public static Block FROG_PLUSHIE;
 	public static Block HIPPO_PLUSHIE;
 	public static Block DEER_PLUSHIE;
+	public static Block BEAR_PLUSHIE;
 
 	// Item variables
 	public static Item FOX_PLUSHIE_BLOCK_ITEM;
@@ -26,6 +27,7 @@ public class PlushieBlockRegistries {
 	public static Item FROG_PLUSHIE_BLOCK_ITEM;
 	public static Item HIPPO_PLUSHIE_BLOCK_ITEM;
 	public static Item DEER_PLUSHIE_BLOCK_ITEM;
+	public static Item BEAR_PLUSHIE_BLOCK_ITEM;
 
 	public static void registerPlushieBlocks() {
 		FOX_PLUSHIE = Registry.register(
@@ -61,6 +63,12 @@ public class PlushieBlockRegistries {
 		DEER_PLUSHIE = Registry.register(
 			Registries.BLOCK,
 			new Identifier(PerfectPlushiesMain.MOD_ID, "deer_plushie"),
+			new PlushieBlock()
+		);
+
+		BEAR_PLUSHIE = Registry.register(
+			Registries.BLOCK,
+			new Identifier(PerfectPlushiesMain.MOD_ID, "bear_plushie"),
 			new PlushieBlock()
 		);
 	}
@@ -101,6 +109,12 @@ public class PlushieBlockRegistries {
 			new Identifier(PerfectPlushiesMain.MOD_ID, "deer_plushie"),
 			new BlockItem(DEER_PLUSHIE, new Item.Settings())
 		);
+
+		BEAR_PLUSHIE_BLOCK_ITEM = Registry.register(
+			Registries.ITEM,
+			new Identifier(PerfectPlushiesMain.MOD_ID, "bear_plushie"),
+			new BlockItem(BEAR_PLUSHIE, new Item.Settings())
+		);
 	}
 
 	public static void addItemsToTabs() {
@@ -111,6 +125,7 @@ public class PlushieBlockRegistries {
 			entries.add(FROG_PLUSHIE_BLOCK_ITEM);
 			entries.add(HIPPO_PLUSHIE_BLOCK_ITEM);
 			entries.add(DEER_PLUSHIE_BLOCK_ITEM);
+			entries.add(BEAR_PLUSHIE_BLOCK_ITEM);
 		});
 	}
 }
