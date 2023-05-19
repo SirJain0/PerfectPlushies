@@ -54,7 +54,7 @@ public class PlushieBlock extends Block {
 				List<ServerPlayerEntity> serverList = server.getPlayerManager().getPlayerList();
 
 				for (ServerPlayerEntity serverPlayer : serverList) {
-					serverPlayer.sendMessage(Text.literal("[Plushie]").formatted(Formatting.GRAY).append("Hehe!"));
+					serverPlayer.sendMessage(Text.literal("[Plushie] ").formatted(Formatting.GRAY, Formatting.BOLD).append("Hehe!"));
 				}
 			}
 		}
