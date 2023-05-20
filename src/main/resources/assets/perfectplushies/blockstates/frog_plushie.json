@@ -1,5 +1,19 @@
 {
   "variants": {
-    "": {"model": "perfectplushies:block/frog_plushie"}
+    "facing=east": {
+      "model": "perfectplushies:block/frog_plushie",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "perfectplushies:block/frog_plushie"
+    },
+    "facing=south": {
+      "model": "perfectplushies:block/frog_plushie",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "perfectplushies:block/frog_plushie",
+      "y": 270
+    }
   }
 }
