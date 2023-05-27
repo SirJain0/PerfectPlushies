@@ -50,7 +50,7 @@ public class PlushiesLootTableModifier {
 					if (VILLAGE_IDENTIFIER.equals(id)) {
 						LootPool.Builder poolBuilder = LootPool.builder()
 							.rolls(ConstantLootNumberProvider.create(1))
-							.conditionally(RandomChanceLootCondition.builder(0.5f)) // Drops 50% of the time - will be changed later
+							.conditionally(RandomChanceLootCondition.builder(0.12f)) // one plushie has a 12% chance of spawning
 							.with(ItemEntry.builder(plushie))
 							.apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 						tableBuilder.pool(poolBuilder.build());
