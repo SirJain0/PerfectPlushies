@@ -6,6 +6,7 @@
   "block.perfectplushies.hippo_plushie": "Hippo Plushie",
   "block.perfectplushies.deer_plushie": "Deer Plushie",
   "block.perfectplushies.bear_plushie": "Bear Plushie",
+  "block.perfectplushies.dog_plushie": "Dog Plushie",
 
   "item.perfectplushies.fox_plushie": "Fox Plushie",
   "item.perfectplushies.dolphin_plushie": "Dolphin Plushie",
@@ -13,5 +14,6 @@
   "item.perfectplushies.frog_plushie": "Frog Plushie",
   "item.perfectplushies.hippo_plushie": "Hippo Plushie",
   "item.perfectplushies.deer_plushie": "Deer Plushie",
-  "item.perfectplushies.bear_plushie": "Bear Plushie"
+  "item.perfectplushies.bear_plushie": "Bear Plushie",
+  "item.perfectplushies.dog_plushie": "Dog Plushie"
 }
