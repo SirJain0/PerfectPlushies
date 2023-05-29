@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "perfectplushies:block/elephant_plushie",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "perfectplushies:block/elephant_plushie"
+    },
+    "facing=south": {
+      "model": "perfectplushies:block/elephant_plushie",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "perfectplushies:block/elephant_plushie",
+      "y": 270
+    }
+  }
+}
