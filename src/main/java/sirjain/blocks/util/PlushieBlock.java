@@ -32,7 +32,7 @@ public class PlushieBlock extends Block {
 	private static final VoxelShape OUTLINE_SHAPE = Block.createCuboidShape(3, 0, 3, 13, 10, 13);
 
 	public PlushieBlock() {
-		super(FabricBlockSettings.of(Material.WOOL)
+		super(FabricBlockSettings.create()
 			.nonOpaque()
 			.sounds(BlockSoundGroup.WOOL)
 			.strength(0.5f, 0.5f)
