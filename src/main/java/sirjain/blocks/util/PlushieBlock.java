@@ -31,6 +31,7 @@ import static net.minecraft.block.HorizontalFacingBlock.FACING;
 public class PlushieBlock extends Block {
 	private static final VoxelShape OUTLINE_SHAPE = Block.createCuboidShape(3, 0, 3, 13, 10, 13);
 
+	// Constructor with pre-defined block settings
 	public PlushieBlock() {
 		super(FabricBlockSettings.create()
 			.nonOpaque()
