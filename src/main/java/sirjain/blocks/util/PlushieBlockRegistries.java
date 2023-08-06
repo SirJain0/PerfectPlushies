@@ -4,158 +4,55 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import sirjain.PerfectPlushiesMain;
 
 public class PlushieBlockRegistries {
-	// Block variables
-	public static Block FOX_PLUSHIE;
-	public static Block DOLPHIN_PLUSHIE;
-	public static Block RABBIT_PLUSHIE;
-	public static Block FROG_PLUSHIE;
-	public static Block HIPPO_PLUSHIE;
-	public static Block DEER_PLUSHIE;
-	public static Block BEAR_PLUSHIE;
-	public static Block DOG_PLUSHIE;
-	public static Block ELEPHANT_PLUSHIE;
 
-	// Item variables
-	public static Item FOX_PLUSHIE_BLOCK_ITEM;
-	public static Item DOLPHIN_PLUSHIE_BLOCK_ITEM;
-	public static Item RABBIT_PLUSHIE_BLOCK_ITEM;
-	public static Item FROG_PLUSHIE_BLOCK_ITEM;
-	public static Item HIPPO_PLUSHIE_BLOCK_ITEM;
-	public static Item DEER_PLUSHIE_BLOCK_ITEM;
-	public static Item BEAR_PLUSHIE_BLOCK_ITEM;
-	public static Item DOG_PLUSHIE_BLOCK_ITEM;
-	public static Item ELEPHANT_PLUSHIE_BLOCK_ITEM;
+    // Block variables
+    public static Block FOX_PLUSHIE = registerBasicPlushie("fox_plushie");
+    public static Block DOLPHIN_PLUSHIE = registerBasicPlushie("dolphin_plushie");
+    public static Block RABBIT_PLUSHIE = registerBasicPlushie("rabbit_plushie");
+    public static Block FROG_PLUSHIE = registerBasicPlushie("frog_plushie");
+    public static Block HIPPO_PLUSHIE = registerBasicPlushie("hippo_plushie");
+    public static Block DEER_PLUSHIE = registerBasicPlushie("deer_plushie");
+    public static Block BEAR_PLUSHIE = registerBasicPlushie("bear_plushie");
+    public static Block DOG_PLUSHIE = registerBasicPlushie("dog_plushie");
+    public static Block ELEPHANT_PLUSHIE = registerBasicPlushie("elephant_plushie");
 
-	public static void registerPlushieBlocks() {
-		FOX_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "fox_plushie"),
-			new PlushieBlock()
-		);
+    public static void registerPlushieBlocks() {
 
-		DOLPHIN_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "dolphin_plushie"),
-			new PlushieBlock()
-		);
+    }
 
-		RABBIT_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "rabbit_plushie"),
-			new PlushieBlock()
-		);
+    public static ItemStack getIcon() {
+        return FOX_PLUSHIE.asItem().getDefaultStack();
+    }
 
-		FROG_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "frog_plushie"),
-			new PlushieBlock()
-		);
 
-		HIPPO_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "hippo_plushie"),
-			new PlushieBlock()
-		);
+    public static Block registerBasicPlushie(String name) {
+        Identifier id = new Identifier(PerfectPlushiesMain.MOD_ID, name);
+        Block block = Registry.register(Registries.BLOCK, id, new PlushieBlock());
+        Registry.register(Registries.ITEM, id, new BlockItem(block, new Item.Settings()));
+        ItemGroupEvents.modifyEntriesEvent(Registries.ITEM_GROUP.getKey(PerfectPlushiesMain.ITEM_GROUP).get()).register(entries -> {
+            entries.add(block);
+        });
+        return block;
+    }
 
-		DEER_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "deer_plushie"),
-			new PlushieBlock()
-		);
-
-		BEAR_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "bear_plushie"),
-			new PlushieBlock()
-		);
-
-		DOG_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "dog_plushie"),
-			new PlushieBlock()
-		);
-
-		ELEPHANT_PLUSHIE = Registry.register(
-			Registries.BLOCK,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "elephant_plushie"),
-			new PlushieBlock()
-		);
-	}
-
-	public static void registerPlushieBlockItems() {
-		FOX_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "fox_plushie"),
-			new BlockItem(FOX_PLUSHIE, new Item.Settings())
-		);
-
-		DOLPHIN_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "dolphin_plushie"),
-			new BlockItem(DOLPHIN_PLUSHIE, new Item.Settings())
-		);
-
-		RABBIT_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "rabbit_plushie"),
-			new BlockItem(RABBIT_PLUSHIE, new Item.Settings())
-		);
-
-		FROG_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "frog_plushie"),
-			new BlockItem(FROG_PLUSHIE, new Item.Settings())
-		);
-
-		HIPPO_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "hippo_plushie"),
-			new BlockItem(HIPPO_PLUSHIE, new Item.Settings())
-		);
-
-		DEER_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "deer_plushie"),
-			new BlockItem(DEER_PLUSHIE, new Item.Settings())
-		);
-
-		BEAR_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "bear_plushie"),
-			new BlockItem(BEAR_PLUSHIE, new Item.Settings())
-		);
-
-		DOG_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "dog_plushie"),
-			new BlockItem(DOG_PLUSHIE, new Item.Settings())
-		);
-
-		ELEPHANT_PLUSHIE_BLOCK_ITEM = Registry.register(
-			Registries.ITEM,
-			new Identifier(PerfectPlushiesMain.MOD_ID, "elephant_plushie"),
-			new BlockItem(ELEPHANT_PLUSHIE, new Item.Settings())
-		);
-	}
-
-	public static void addItemsToTabs() {
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
-			entries.add(FOX_PLUSHIE_BLOCK_ITEM);
-			entries.add(DOLPHIN_PLUSHIE_BLOCK_ITEM);
-			entries.add(RABBIT_PLUSHIE_BLOCK_ITEM);
-			entries.add(FROG_PLUSHIE_BLOCK_ITEM);
-			entries.add(HIPPO_PLUSHIE_BLOCK_ITEM);
-			entries.add(DEER_PLUSHIE_BLOCK_ITEM);
-			entries.add(BEAR_PLUSHIE_BLOCK_ITEM);
-			entries.add(DOG_PLUSHIE_BLOCK_ITEM);
-			entries.add(ELEPHANT_PLUSHIE_BLOCK_ITEM);
-		});
-	}
+//    public static void addItemsToTabs() {
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+//            entries.add(FOX_PLUSHIE);
+//            entries.add(DOLPHIN_PLUSHIE);
+//            entries.add(RABBIT_PLUSHIE);
+//            entries.add(FROG_PLUSHIE);
+//            entries.add(HIPPO_PLUSHIE);
+//            entries.add(DEER_PLUSHIE);
+//            entries.add(BEAR_PLUSHIE);
+//            entries.add(DOG_PLUSHIE);
+//            entries.add(ELEPHANT_PLUSHIE);
+//        });
+//    }
 }

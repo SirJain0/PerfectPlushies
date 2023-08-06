@@ -17,5 +17,7 @@
   "item.perfectplushies.deer_plushie": "Deer Plushie",
   "item.perfectplushies.bear_plushie": "Bear Plushie",
   "item.perfectplushies.dog_plushie": "Dog Plushie",
-  "item.perfectplushies.elephant_plushie": "Elephant Plushie"
+  "item.perfectplushies.elephant_plushie": "Elephant Plushie",
+
+  "itemGroup.perfectplushies.tab": "Perfect Plushies"
 }

@@ -6,8 +6,8 @@ import net.minecraft.client.render.RenderLayer;
 import sirjain.blocks.util.PlushieBlockRegistries;
 
 public class PerfectPlushiesClient implements ClientModInitializer {
-	@Override
-	public void onInitializeClient() {
-		BlockRenderLayerMap.INSTANCE.putBlock(PlushieBlockRegistries.FROG_PLUSHIE, RenderLayer.getCutout());
-	}
+    @Override
+    public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlock(PlushieBlockRegistries.FROG_PLUSHIE, RenderLayer.getCutout());
+    }
 }
