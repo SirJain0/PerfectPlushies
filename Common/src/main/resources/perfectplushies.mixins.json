@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.sirjain0.perfectplushies.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "${mod_id}.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "PlayerPlushieBlockItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+  
