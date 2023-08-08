@@ -1,0 +1,11 @@
+{
+  "type": "perfectplushies:add_plushie",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_savanna_house"
+    }
+  ],
+  "plushies": ["#perfectplushies:village_plushies"],
+  "chance": 0.12
+}

@@ -1,0 +1,21 @@
+{
+  "entries": [
+    "perfectplushies:village_butcher_loot",
+    "perfectplushies:village_armorer_loot",
+    "perfectplushies:village_cartographer_loot",
+    "perfectplushies:village_desert_house_loot",
+    "perfectplushies:village_fisher_loot",
+    "perfectplushies:village_mason_loot",
+    "perfectplushies:village_plains_house_loot",
+    "perfectplushies:village_savanna_house_loot",
+    "perfectplushies:village_shepherd_loot",
+    "perfectplushies:village_snowy_house_loot",
+    "perfectplushies:village_taiga_house_loot",
+    "perfectplushies:village_tannery_loot",
+    "perfectplushies:village_temple_loot",
+    "perfectplushies:village_toolsmith_loot",
+    "perfectplushies:village_weaponsmith_loot"
+    
+  ],
+  "replace": false
+}
