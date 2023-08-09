@@ -5,6 +5,7 @@ import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -21,19 +22,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
 
-        // Stream.of(
-        //
-        //         )
-        //         .map(Supplier::get)
-        //         .forEach(this::simpleCubeBottomTopBlockState);
-        //
-        // Stream.of(
-        //
-        // ).map(Supplier::get)
-        //         .forEach(this::simpleBlock);
-                BlockInit.playerBlocks.stream()
-                        .map(Supplier::get)
-                        .forEach(this::generatePlayerPlushieBlockState);
+        BlockInit.plushieBlocks.stream()
+                .map(Supplier::get)
+                .forEach(this::generatePlushieBlockState);
+        BlockInit.playerBlocks.stream()
+                .map(Supplier::get)
+                .forEach(this::generatePlayerPlushieBlockState);
 
 
     }
@@ -52,7 +46,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockModelBuilder builder = models().getBuilder(getName(block)).texture("particle", textRL);
         getVariantBuilder(block).partialState().setModels(new ConfiguredModel(builder));
     }
-    
+
+    private void generatePlushieBlockState(Block block) {
+        getVariantBuilder(block)
+                .forAllStates(state -> ConfiguredModel.builder()
+                        .modelFile(models().getExistingFile(modLoc("block/" + getName(block))))
+                        .rotationY(((int) state.getValue(BlockStateProperties.HORIZONTAL_FACING).toYRot() + 180) % 360)
+                        .build()
+                );
+    }
+
     protected String getName(Block item) {
         return ForgeRegistries.BLOCKS.getKey(item).getPath();
     }

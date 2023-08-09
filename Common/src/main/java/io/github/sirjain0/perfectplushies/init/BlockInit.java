@@ -19,6 +19,7 @@ import java.util.function.Supplier;
 
 public class BlockInit {
     public static List<RegistryObject<Block>> playerBlocks = new ArrayList<>();
+    public static List<RegistryObject<Block>> plushieBlocks = new ArrayList<>();
     public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registries.BLOCK, Constants.MODID);
     public static final RegistrationProvider<BlockEntityType<?>> BLOCK_ENTITIES = RegistrationProvider.get(Registries.BLOCK_ENTITY_TYPE, Constants.MODID);
 
@@ -49,6 +50,7 @@ public class BlockInit {
     public static RegistryObject<Block> registerBasicPlushie(String name){
         RegistryObject<Block> block = BLOCKS.register(name, PlushieBlock::new);
         ItemInit.ITEMS.register(name, ()-> new BlockItem(block.get(),new Item.Properties()));
+        plushieBlocks.add(block);
         return block;
     }
 

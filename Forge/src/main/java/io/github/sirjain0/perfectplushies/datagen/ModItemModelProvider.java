@@ -28,9 +28,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         //         .map(Supplier::get)
         //         .forEach(this::simpleGeneratedModel);
 
-        // Stream.of()
-        //         .map(Supplier::get)
-        //         .forEach(this::simpleBlockItemModel);
+        BlockInit.plushieBlocks.stream()
+                .map(Supplier::get)
+                .forEach(this::simpleBlockItemModel);
         BlockInit.playerBlocks.stream()
                 .map(Supplier::get)
                 .forEach(this::playerPlushieItemModel);
@@ -40,6 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         String name = getName(block);
         return withExistingParent(name, modLoc("block/" + name));
     }
+
     protected ItemModelBuilder playerPlushieItemModel(Block block) {
         String name = getName(block);
         return withExistingParent(name, modLoc("item/player_plushie"));
