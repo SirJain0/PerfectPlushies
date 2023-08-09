@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-09T09:26:41.4832229	Block States: perfectplushies
+// 1.20.1	2023-08-09T09:49:14.9882394	Block States: perfectplushies
 c8eaf216548086f4ebd92b3d5d452c0cfce18ab1 assets/perfectplushies/blockstates/bear_plushie.json
 e9f120a2830edc6d11bee2ff74ff5c2ef6102fdb assets/perfectplushies/blockstates/deer_plushie.json
 c6542e718ca58d4937fb6e88c343dc28d1b836f7 assets/perfectplushies/blockstates/dog_plushie.json
@@ -9,8 +9,10 @@ e0a323b385dbf038ef500eaf94d6861bd8f3f09f assets/perfectplushies/blockstates/fox_
 5d496e364d4f8257655ce89e1a2a7cc1df8c6d23 assets/perfectplushies/blockstates/hippo_plushie.json
 643763c3436d85902d6cd0f7a2ce0dce2ec13337 assets/perfectplushies/blockstates/nyf_plushie.json
 b5dcaa91dd38f41afaf861c0f78cfccdae8bfe1f assets/perfectplushies/blockstates/rabbit_plushie.json
+85498f5a105096d390648afafff362a7fbb33fce assets/perfectplushies/blockstates/silk_plushie.json
 633084cce036f0beb7c604efd25d55291c9e1391 assets/perfectplushies/blockstates/sizableshrimp_plushie.json
 e154a5d89ce624390fdc08128ffb798fc5f9362c assets/perfectplushies/blockstates/tslat_plushie.json
 1d73c3d5a137850a9c6fa4e6abf410e26e9461a0 assets/perfectplushies/models/block/nyf_plushie.json
+dbdd25db02daacf4e7f78c01948d3445312bc3b7 assets/perfectplushies/models/block/silk_plushie.json
 c0142ed66d65717177406d5500e2c2077633f03a assets/perfectplushies/models/block/sizableshrimp_plushie.json
 2d867484441acb9822afa1d6425fcbeb23234679 assets/perfectplushies/models/block/tslat_plushie.json
