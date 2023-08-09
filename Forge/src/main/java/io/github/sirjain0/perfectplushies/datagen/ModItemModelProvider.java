@@ -1,6 +1,7 @@
 package io.github.sirjain0.perfectplushies.datagen;
 
 import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -9,6 +10,8 @@ import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
 
 public class ModItemModelProvider extends ItemModelProvider {
     public ModItemModelProvider(PackOutput generator, ExistingFileHelper existingFileHelper) {
@@ -28,11 +31,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         // Stream.of()
         //         .map(Supplier::get)
         //         .forEach(this::simpleBlockItemModel);
+        BlockInit.playerBlocks.stream()
+                .map(Supplier::get)
+                .forEach(this::playerPlushieItemModel);
     }
 
     protected ItemModelBuilder simpleBlockItemModel(Block block) {
         String name = getName(block);
         return withExistingParent(name, modLoc("block/" + name));
+    }
+    protected ItemModelBuilder playerPlushieItemModel(Block block) {
+        String name = getName(block);
+        return withExistingParent(name, modLoc("item/player_plushie"));
     }
 
     protected ItemModelBuilder simpleGeneratedModel(Item item) {

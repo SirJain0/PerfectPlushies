@@ -2,16 +2,10 @@ package io.github.sirjain0.perfectplushies.loot;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import io.github.sirjain0.perfectplushies.init.TagInit;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderSet;
-import net.minecraft.core.RegistryCodecs;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagEntry;
 import net.minecraft.tags.TagKey;
-import net.minecraft.util.ExtraCodecs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -42,10 +36,10 @@ public class VillageLootModifier extends LootModifier {
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         if (context.getRandom().nextFloat() < chance) {
-            TagEntry tagthing  =plushies.get(context.getRandom().nextInt(plushies.size()));
+            TagEntry tagthing = plushies.get(context.getRandom().nextInt(plushies.size()));
             Item item;
-            if(tagthing.isTag()){
-                TagKey<Item> itemTag = TagKey.create(Registries.ITEM,tagthing.getId());
+            if (tagthing.isTag()) {
+                TagKey<Item> itemTag = TagKey.create(Registries.ITEM, tagthing.getId());
                 item = ForgeRegistries.ITEMS.tags().getTag(itemTag).getRandomElement(context.getRandom()).get();
             } else {
                 item = ForgeRegistries.ITEMS.getValue(tagthing.getId());
