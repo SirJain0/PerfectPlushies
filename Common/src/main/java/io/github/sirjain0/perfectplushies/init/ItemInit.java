@@ -16,11 +16,11 @@ public class ItemInit {
     public static final RegistryObject<CreativeModeTab> PERFECT_PLUSHIES_TAB = CREATIVE_MODE_TABS.register("perfectplushies", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP,0)
             .icon(()-> new ItemStack(BlockInit.FOX_PLUSHIE.get()))
             .displayItems(
-                    (itemDisplayParameters,output)-> {
-                        ITEMS.getEntries().forEach((registryObject)-> output.accept(new ItemStack(registryObject.get()))
-                        );
+                    (itemDisplayParameters, output)-> {
+                        ITEMS.getEntries().forEach((registryObject)-> output.accept(new ItemStack(registryObject.get())));
                     }).title(Component.translatable("itemGroup.perfectplushies.tab"))
             .build());
+
     public static Item.Properties getItemProperties() {
         return new Item.Properties();
     }

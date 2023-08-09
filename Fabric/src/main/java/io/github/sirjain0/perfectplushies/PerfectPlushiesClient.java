@@ -12,6 +12,6 @@ public class PerfectPlushiesClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(BlockInit.FROG_PLUSHIE.get(), RenderType.cutout());
-        BlockEntityRenderers.register(BlockInit.PLAYER_PLUSHIE_BLOCK_ENTITY.get(), (context)->new PlushieRenderer());
+        BlockEntityRenderers.register(BlockInit.PLAYER_PLUSHIE_BLOCK_ENTITY.get(), (context) -> new PlushieRenderer());
     }
 }
