@@ -6,6 +6,7 @@
 - Retextured rabbit and hippo plushies
 - Decreased chances of animal plushies spawning slightly
 - Added Forge port
+- Fixed "Hehe!" message displaying to all players in a server
 
 ### Version 1.0.2
 - Add spanish translation

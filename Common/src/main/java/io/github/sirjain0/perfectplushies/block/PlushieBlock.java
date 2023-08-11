@@ -60,14 +60,16 @@ public class PlushieBlock extends HorizontalDirectionalBlock {
 
     // Handles plushie's chat message and displays particles on right click
 
-  public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHitResult) {
-    if (level.isClientSide) {
-      RandomSource randomNum = level.random;
-      if (randomNum.nextInt(2) == 1) {
-        player.sendSystemMessage(Component.literal("[Plushie] ").withStyle(ChatFormatting.GRAY, ChatFormatting.BOLD).append("Hehe!"));
-      }
-      level.addParticle(ParticleTypes.HEART, pos.getX() + (level.random.nextInt(2)), pos.getY(), pos.getZ() + (level.random.nextInt(2)), 0, 0, 0);
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHitResult) {
+        if (level.isClientSide) {
+            RandomSource randomNum = level.random;
+
+            if (randomNum.nextInt(2) == 1)
+                player.sendSystemMessage(Component.literal("[Plushie] ").withStyle(ChatFormatting.GRAY, ChatFormatting.BOLD).append("Hehe!"));
+
+            level.addParticle(ParticleTypes.HEART, pos.getX() + (level.random.nextInt(2)), pos.getY(), pos.getZ() + (level.random.nextInt(2)), 0, 0, 0);
+        }
+
+        return InteractionResult.SUCCESS;
     }
-    return InteractionResult.SUCCESS;
-  }
 }
