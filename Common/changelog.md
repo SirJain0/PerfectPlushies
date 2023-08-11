@@ -7,6 +7,7 @@
 - Retextured rabbit and hippo plushies
 - Decreased chances of animal plushies spawning slightly
 - Fixed "Hehe!" message displaying to all players in a server
+- Fixed many plushies being mined with fortune pickaxes
 
 ### Version 1.0.2
 - Add spanish translation
