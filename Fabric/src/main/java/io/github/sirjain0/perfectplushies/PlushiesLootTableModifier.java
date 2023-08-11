@@ -69,7 +69,7 @@ public class PlushiesLootTableModifier {
                     if (VILLAGE_IDENTIFIER.equals(id)) {
                         LootPool.Builder poolBuilder = LootPool.lootPool()
                                 .setRolls(ConstantValue.exactly(1))
-                                .when(LootItemRandomChanceCondition.randomChance(0.08f)) // 8% chance of spawning
+                                .when(LootItemRandomChanceCondition.randomChance(0.15f)) // 15% chance of spawning
                                 .add(LootItem.lootTableItem(plushie.value()))
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1)).build());
                         tableBuilder.pool(poolBuilder.build());
