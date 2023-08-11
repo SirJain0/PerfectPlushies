@@ -2,7 +2,6 @@
 
 ### Version 1.1.0
 - Added brand-new player plushies!
-- Added new capybara plushie and cat plushies
 - Retextured rabbit and hippo plushies
 - Decreased chances of animal plushies spawning slightly
 - Added Forge port
