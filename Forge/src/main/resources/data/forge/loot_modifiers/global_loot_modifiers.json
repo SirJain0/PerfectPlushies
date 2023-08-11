@@ -14,8 +14,12 @@
     "perfectplushies:village_tannery_loot",
     "perfectplushies:village_temple_loot",
     "perfectplushies:village_toolsmith_loot",
-    "perfectplushies:village_weaponsmith_loot"
-    
+    "perfectplushies:village_weaponsmith_loot",
+    "perfectplushies:buried_treasure_loot",
+    "perfectplushies:shipwreck_treasure_loot",
+    "perfectplushies:simple_dungeon_loot",
+    "perfectplushies:underwater_ruin_big_loot",
+    "perfectplushies:underwater_ruin_small_loot"
   ],
   "replace": false
 }

@@ -49,7 +49,7 @@ public class PlushiesLootTableModifier {
             for (String village : VILLAGE_VARIANTS) {
                 VILLAGE_IDENTIFIER = new ResourceLocation("minecraft", "chests/village/" + village);
 
-                for (Holder<Item> plushie : BuiltInRegistries.ITEM.getTagOrEmpty(TagInit.VILLAGE_PLUSHIES)) {
+                for (Holder<Item> plushie : BuiltInRegistries.ITEM.getTagOrEmpty(TagInit.VILLAGE_PLUSHIES_ITEMS)) {
                     if (VILLAGE_IDENTIFIER.equals(id)) {
                         LootPool.Builder poolBuilder = LootPool.lootPool()
                                 .setRolls(ConstantValue.exactly(1))
@@ -65,7 +65,7 @@ public class PlushiesLootTableModifier {
             for (String buried_treasure : BURIED_VARIANTS) {
                 VILLAGE_IDENTIFIER = new ResourceLocation("minecraft", "chests/" + buried_treasure);
 
-                for (Holder<Item> plushie : BuiltInRegistries.ITEM.getTagOrEmpty(TagInit.TREASURE_PLUSHIES)) {
+                for (Holder<Item> plushie : BuiltInRegistries.ITEM.getTagOrEmpty(TagInit.TREASURE_PLUSHIES_ITEMS)) {
                     if (VILLAGE_IDENTIFIER.equals(id)) {
                         LootPool.Builder poolBuilder = LootPool.lootPool()
                                 .setRolls(ConstantValue.exactly(1))

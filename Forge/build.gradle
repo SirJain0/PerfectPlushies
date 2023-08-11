@@ -143,7 +143,7 @@ publishMods {
     changelog = project(":Common").file("changelog.md").text
     type = STABLE
     modLoaders.add("forge")
-    displayName = "${mod_id}-${minecraft_version}-forge-${project.property('version')}"
+    displayName = "${mod_name}[Forge] ${project.property('version')}"
     if (curseforge_publishing_enabled.toBoolean()) {
         curseforge {
             projectId = curseforge_project_id
