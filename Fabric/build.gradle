@@ -105,13 +105,16 @@ publishMods {
     changelog = project(":Common").file("changelog.md").text
     type = STABLE
     modLoaders.add("fabric")
-    displayName = "${mod_name}[Fabric] ${project.property('version')}"
+    displayName = "${mod_name} ${project.property('version')} [Fabric]"
     dryRun = dry_run.toBoolean()
     if (curseforge_publishing_enabled.toBoolean()) {
         curseforge {
             projectId = curseforge_project_id
             accessToken = curseforge_token
             minecraftVersions.add(minecraft_version)
+            requires {
+                slug = "geckolib"
+            }
         }
     }
     if (modrinth_publishing_enabled.toBoolean()) {

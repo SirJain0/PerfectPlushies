@@ -1,3 +1,10 @@
+## Version 1.2.0
+- Added rare player plushie
+- Added common player plushie
+- Added cat plushie
+- Added capybara plushie
+- Re-Adjusted Spawn Rates
+
 ## Version 1.1.0
 - Added brand-new player plushies!
 - Added Forge port
