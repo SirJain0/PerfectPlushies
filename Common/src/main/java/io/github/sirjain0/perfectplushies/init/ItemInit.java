@@ -17,7 +17,8 @@ public class ItemInit {
             .icon(()-> new ItemStack(BlockInit.FOX_PLUSHIE.get()))
             .displayItems(
                     (itemDisplayParameters, output)-> {
-                        ITEMS.getEntries().forEach((registryObject)-> output.accept(new ItemStack(registryObject.get())));
+                        BlockInit.plushieBlocks.forEach((registryObject)-> output.accept(new ItemStack(registryObject.get())));
+                        BlockInit.playerBlocks.forEach((registryObject)-> output.accept(new ItemStack(registryObject.get())));
                     }).title(Component.translatable("itemGroup.perfectplushies.tab"))
             .build());
 

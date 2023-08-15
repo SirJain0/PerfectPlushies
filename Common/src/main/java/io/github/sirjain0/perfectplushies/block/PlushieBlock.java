@@ -38,7 +38,6 @@ public class PlushieBlock extends HorizontalDirectionalBlock {
                 .lightLevel((state) -> 3)
         );
     }
-
     // Defines hitbox for all plushies
     @Override
     public VoxelShape getShape(BlockState $$0, BlockGetter $$1, BlockPos $$2, CollisionContext $$3) {
