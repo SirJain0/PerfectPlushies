@@ -48,6 +48,7 @@ public class ModLangProvider extends LanguageProvider {
         add("plushie.description.gamerpotion_plushie_rare", "Developer of the DarkRPG ModPack!");
         add("plushie.description.silk_plushie", "Pillar of the Modding Community!");
         add("plushie.description.june_plushie", "Developer of Plushables");
+        add("plushie.description.daniel_plushie", "Developer of Spray Madness");
     }
 
     protected void itemLang(RegistryObject<Item> entry) {
