@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:tag",
+          "conditions": [
+            {
+              "chance": 0.15,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "expand": true,
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "perfectplushies:treasure_plushies"
+        },
+        {
+          "type": "minecraft:tag",
+          "conditions": [
+            {
+              "chance": 0.01,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "expand": true,
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "perfectplushies:rare_treasure_plushies"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "perfectplushies:chests/pretend"
+}

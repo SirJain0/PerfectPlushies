@@ -6,11 +6,21 @@
   "block.perfectplushies.elephant_plushie": "Elephant Plushie",
   "block.perfectplushies.fox_plushie": "Fox Plushie",
   "block.perfectplushies.frog_plushie": "Frog Plushie",
+  "block.perfectplushies.gamerpotion_plushie": "GamerPotion Plushie",
+  "block.perfectplushies.gamerpotion_plushie_rare": "GamerPotion Plushie",
   "block.perfectplushies.hippo_plushie": "Hippo Plushie",
   "block.perfectplushies.nyf_plushie": "Nyf Plushie",
   "block.perfectplushies.rabbit_plushie": "Rabbit Plushie",
   "block.perfectplushies.silk_plushie": "Silk Plushie",
   "block.perfectplushies.sizableshrimp_plushie": "SizableShrimp Plushie",
   "block.perfectplushies.tslat_plushie": "Tslat Plushie",
-  "itemGroup.perfectplushies.tab": "Perfect Plushies"
+  "itemGroup.perfectplushies.tab": "Perfect Plushies",
+  "plushie.description.gamerpotion_plushie": "Developer of DarkRPG ModPack!",
+  "plushie.description.gamerpotion_plushie_rare": "Developer of DarkRPG ModPack!",
+  "plushie.description.nyf_plushie": "Co-Developer of Perfect Plushies\nDeveloper of Many Mod's that Start with \"Nyf's\"",
+  "plushie.description.silk_plushie": "Pillar of the Modding Community!",
+  "plushie.description.sizableshrimp_plushie": "NeoForge Dev\nVery Helpful Dev in the Community",
+  "plushie.description.tslat_plushie": "Developer of Advent of Ascension\nDeveloper of SmartBrainLib\nMaintainer of Geckolib",
+  "tooltip.perfectplushies.advanced": "Hold %s for more information",
+  "tooltip.perfectplushies.shift": "SHIFT"
 }

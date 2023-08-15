@@ -31,7 +31,8 @@
     "fabricloader": "${fabric_loader_version_range}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "java": ">=17"
+    "java": ">=17",
+    "geckolib": "${geckolib_version_range}"
   },
   "suggests": {
     "another-mod": "*"

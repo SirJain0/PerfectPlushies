@@ -86,18 +86,19 @@ dependencies {
 tasks.withType(JavaCompile) {
     source(project(":Common").sourceSets.main.allSource)
 }
-def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta', "${mod_id}.mixins.json".toString(),'fabric.mod.json']
+def resourceTargets = ['META-INF/mods.toml', 'pack.mcmeta', "${mod_id}.mixins.json".toString(), 'fabric.mod.json']
 def intoTargets = ["$rootDir/out/production/resources/", "$rootDir/out/production/${project.name}.main/", "$rootDir/bin/main/"]
 def replaceProperties =
         [
-                mod_id: mod_id,
-                mod_name: mod_name,
-                mod_version: version,
-                mod_authors: mod_author,
-                mod_description: mod_description,
+                mod_id                 : mod_id,
+                mod_name               : mod_name,
+                mod_version            : version,
+                mod_authors            : mod_author,
+                mod_description        : mod_description,
                 minecraft_version_range: minecraft_version_range,
-                forge_version_range: forge_version_range,
-                loader_version_range: loader_version_range]
+                forge_version_range    : forge_version_range,
+                loader_version_range   : loader_version_range,
+                geckolib_version_range : geckolib_version_range]
 processResources {
     from project(":Common").sourceSets.main.resources
     inputs.properties replaceProperties
@@ -144,6 +145,7 @@ publishMods {
     type = STABLE
     modLoaders.add("forge")
     displayName = "${mod_name}[Forge] ${project.property('version')}"
+    dryRun = dry_run.toBoolean()
     if (curseforge_publishing_enabled.toBoolean()) {
         curseforge {
             projectId = curseforge_project_id
@@ -151,7 +153,7 @@ publishMods {
             minecraftVersions.add(minecraft_version)
         }
     }
-    if(modrinth_publishing_enabled.toBoolean()){
+    if (modrinth_publishing_enabled.toBoolean()) {
         modrinth {
             accessToken = modrinth_token
             projectId = modrinth_project_id

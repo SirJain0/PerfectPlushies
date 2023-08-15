@@ -23,7 +23,10 @@ public class ModLangProvider extends LanguageProvider {
     protected static final Map<String, String> REPLACE_LIST = ImmutableMap.of(
             "tnt", "TNT",
             "sus", "",
-            "sizableshrimp", "SizableShrimp"
+            "sizableshrimp", "SizableShrimp",
+            "gamerpotion", "GamerPotion",
+            "rare","",
+            "epic",""
     );
 
     public ModLangProvider(PackOutput gen) {
@@ -36,6 +39,15 @@ public class ModLangProvider extends LanguageProvider {
         EntityInit.ENTITIES.getEntries().forEach(this::entityLang);
         BlockInit.BLOCKS.getEntries().forEach(this::blockLang);
         add("itemGroup.perfectplushies.tab", "Perfect Plushies");
+        add("tooltip.perfectplushies.advanced", "Hold %s for more information");
+        add("tooltip.perfectplushies.shift", "SHIFT");
+        add("plushie.description.tslat_plushie", "Developer of Advent of Ascension\nDeveloper of SmartBrainLib\nMaintainer of Geckolib");
+        add("plushie.description.nyf_plushie", "Co-Developer of Perfect Plushies\nDeveloper of Many Mod's that Start with \"Nyf's\"");
+        add("plushie.description.sizableshrimp_plushie", "NeoForge Dev\nVery Helpful Dev in the Community");
+        add("plushie.description.gamerpotion_plushie", "Developer of DarkRPG ModPack!");
+        add("plushie.description.gamerpotion_plushie_rare", "Developer of DarkRPG ModPack!");
+        add("plushie.description.silk_plushie", "Pillar of the Modding Community!");
+
     }
 
     protected void itemLang(RegistryObject<Item> entry) {
