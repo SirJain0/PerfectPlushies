@@ -25,6 +25,7 @@ public class BlockInit {
     public static final RegistrationProvider<BlockEntityType<?>> BLOCK_ENTITIES = RegistrationProvider.get(Registries.BLOCK_ENTITY_TYPE, Constants.MODID);
 
     public static final RegistryObject<Block> FOX_PLUSHIE = registerCommonBasicPlushie("fox_plushie");
+    public static final RegistryObject<Block> CAPYBARA_PLUSHIE = registerCommonBasicPlushie("capybara_plushie");
     public static final RegistryObject<Block> DOLPHIN_PLUSHIE = registerCommonBasicPlushie("dolphin_plushie");
     public static final RegistryObject<Block> RABBIT_PLUSHIE = registerCommonBasicPlushie("rabbit_plushie");
     public static final RegistryObject<Block> FROG_PLUSHIE = registerCommonBasicPlushie("frog_plushie");
