@@ -43,6 +43,7 @@ public class BlockInit {
     public static final RegistryObject<Block> TSLAT_PLUSHIE = registerCommonPlayerPlushie("tslat_plushie");
     public static final RegistryObject<Block> SILK_PLUSHIE = registerCommonPlayerPlushie("silk_plushie");
     public static final RegistryObject<Block> GAMERPOTION_PLUSHIE = registerCommonPlayerPlushie("gamerpotion_plushie");
+    public static final RegistryObject<Block> JUNE_PLUSHIE = registerCommonPlayerPlushie("june_plushie");
     public static final RegistryObject<Block> GAMERPOTION_PLUSHIE_RARE = registerRarePlayerPlushie("gamerpotion_plushie_rare");
 
 
