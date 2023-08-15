@@ -28,6 +28,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockInit.playerBlocks.stream()
                 .map(Supplier::get)
                 .forEach(this::generatePlayerPlushieBlockState);
+        BlockInit.playerBlocksRare.stream()
+                .map(Supplier::get)
+                .forEach(this::generatePlayerPlushieBlockState);
+        BlockInit.playerBlocksEpic.stream()
+                .map(Supplier::get)
+                .forEach(this::generatePlayerPlushieBlockState);
 
 
     }

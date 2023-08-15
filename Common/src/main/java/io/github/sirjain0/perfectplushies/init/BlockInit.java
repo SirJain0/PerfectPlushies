@@ -20,6 +20,8 @@ import java.util.function.Supplier;
 
 public class BlockInit {
     public static List<RegistryObject<Block>> playerBlocks = new ArrayList<>();
+    public static List<RegistryObject<Block>> playerBlocksRare = new ArrayList<>();
+    public static List<RegistryObject<Block>> playerBlocksEpic = new ArrayList<>();
     public static List<RegistryObject<Block>> plushieBlocks = new ArrayList<>();
     public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registries.BLOCK, Constants.MODID);
     public static final RegistrationProvider<BlockEntityType<?>> BLOCK_ENTITIES = RegistrationProvider.get(Registries.BLOCK_ENTITY_TYPE, Constants.MODID);
@@ -59,10 +61,17 @@ public class BlockInit {
     public static RegistryObject<Block> registerPlayerPlushie(String name, Rarity rarity){
         RegistryObject<Block> block = BLOCKS.register(name, PlayerPlushieBlock::new);
         ItemInit.ITEMS.register(name, ()-> new PlayerPlushieBlockItem(block.get(), rarity));
-        playerBlocks.add(block);
+        addToList(block, rarity);
         return block;
     }
 
+    public static void addToList(RegistryObject<Block> block, Rarity rarity){
+        switch (rarity) {
+            case COMMON -> playerBlocks.add(block);
+            case RARE -> playerBlocksRare.add(block);
+            case EPIC -> playerBlocksEpic.add(block);
+        }
+    }
     public static RegistryObject<Block> registerCommonBasicPlushie(String name){
         return registerBasicPlushie(name, Rarity.COMMON);
     }

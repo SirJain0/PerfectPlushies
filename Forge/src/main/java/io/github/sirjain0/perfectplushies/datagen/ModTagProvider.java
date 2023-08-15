@@ -18,6 +18,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
@@ -38,6 +41,13 @@ public class ModTagProvider {
             populateTag(TagInit.TREASURE_PLUSHIES_ITEMS,
                     BlockInit.playerBlocks.toArray(new RegistryObject[0])
             );
+            populateTag(TagInit.RARE_TREASURE_PLUSHIES_ITEMS,
+                    BlockInit.playerBlocksRare.toArray(new RegistryObject[0])
+            );
+            populateTag(TagInit.EPIC_TREASURE_PLUSHIES_ITEMS,
+                    BlockInit.playerBlocksEpic.toArray(new RegistryObject[0])
+            );
+
             tag(ItemTags.WOOL).addTags(TagInit.VILLAGE_PLUSHIES_ITEMS, TagInit.TREASURE_PLUSHIES_ITEMS);
         }
 
@@ -59,10 +69,11 @@ public class ModTagProvider {
             populateTag(TagInit.VILLAGE_PLUSHIES_BLOCKS,
                     BlockInit.plushieBlocks.toArray(new RegistryObject[0])
             );
-
-            populateTag(TagInit.TREASURE_PLUSHIES_BLOCKS,
-                    BlockInit.playerBlocks.toArray(new RegistryObject[0])
-            );
+            List<RegistryObject<Block>> blocks = new ArrayList<>();
+            blocks.addAll(BlockInit.playerBlocks);
+            blocks.addAll(BlockInit.playerBlocksRare);
+            blocks.addAll(BlockInit.playerBlocksEpic);
+            populateTag(TagInit.TREASURE_PLUSHIES_BLOCKS, blocks.toArray(new RegistryObject[0]));
             tag(BlockTags.WOOL).addTags(TagInit.VILLAGE_PLUSHIES_BLOCKS, TagInit.TREASURE_PLUSHIES_BLOCKS);
         }
 
