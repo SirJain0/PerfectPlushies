@@ -37,9 +37,8 @@ public class ModTagProvider {
             populateTag(TagInit.VILLAGE_PLUSHIES_ITEMS,
                     BlockInit.plushieBlocks.toArray(new RegistryObject[0])
             );
-
             populateTag(TagInit.TREASURE_PLUSHIES_ITEMS,
-                    BlockInit.playerBlocks.toArray(new RegistryObject[0])
+                    BlockInit.playerBlocksCommon.toArray(new RegistryObject[0])
             );
             populateTag(TagInit.RARE_TREASURE_PLUSHIES_ITEMS,
                     BlockInit.playerBlocksRare.toArray(new RegistryObject[0])
@@ -48,7 +47,11 @@ public class ModTagProvider {
                     BlockInit.playerBlocksEpic.toArray(new RegistryObject[0])
             );
 
-            tag(ItemTags.WOOL).addTags(TagInit.VILLAGE_PLUSHIES_ITEMS, TagInit.TREASURE_PLUSHIES_ITEMS);
+            tag(ItemTags.WOOL).addTags(
+                    TagInit.VILLAGE_PLUSHIES_ITEMS,
+                    TagInit.TREASURE_PLUSHIES_ITEMS,
+                    TagInit.RARE_TREASURE_PLUSHIES_ITEMS
+            );
         }
 
         public void populateTag(TagKey<Item> tag, Supplier<ItemLike>... items) {
@@ -69,12 +72,11 @@ public class ModTagProvider {
             populateTag(TagInit.VILLAGE_PLUSHIES_BLOCKS,
                     BlockInit.plushieBlocks.toArray(new RegistryObject[0])
             );
-            List<RegistryObject<Block>> blocks = new ArrayList<>();
-            blocks.addAll(BlockInit.playerBlocks);
-            blocks.addAll(BlockInit.playerBlocksRare);
-            blocks.addAll(BlockInit.playerBlocksEpic);
-            populateTag(TagInit.TREASURE_PLUSHIES_BLOCKS, blocks.toArray(new RegistryObject[0]));
-            tag(BlockTags.WOOL).addTags(TagInit.VILLAGE_PLUSHIES_BLOCKS, TagInit.TREASURE_PLUSHIES_BLOCKS);
+            populateTag(TagInit.TREASURE_PLUSHIES_BLOCKS, BlockInit.playerBlocks.toArray(new RegistryObject[0]));
+            tag(BlockTags.WOOL).addTags(
+                    TagInit.VILLAGE_PLUSHIES_BLOCKS,
+                    TagInit.TREASURE_PLUSHIES_BLOCKS
+            );
         }
 
         public <T extends Block> void populateTag(TagKey<Block> tag, Supplier<?>... items) {

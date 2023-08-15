@@ -34,9 +34,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         BlockInit.playerBlocks.stream()
                 .map(Supplier::get)
                 .forEach(this::playerPlushieItemModel);
-        BlockInit.playerBlocksRare.stream()
-                .map(Supplier::get)
-                .forEach(this::playerPlushieItemModel);
     }
 
     protected ItemModelBuilder simpleBlockItemModel(Block block) {

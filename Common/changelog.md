@@ -1,3 +1,6 @@
+## Version 1.2.1
+- Fixed rare player plushie not visible
+
 ## Version 1.2.0
 - Added rare player plushie
 - Added common player plushie

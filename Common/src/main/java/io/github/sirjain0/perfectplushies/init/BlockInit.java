@@ -20,6 +20,7 @@ import java.util.function.Supplier;
 
 public class BlockInit {
     public static List<RegistryObject<Block>> playerBlocks = new ArrayList<>();
+    public static List<RegistryObject<Block>> playerBlocksCommon = new ArrayList<>();
     public static List<RegistryObject<Block>> playerBlocksRare = new ArrayList<>();
     public static List<RegistryObject<Block>> playerBlocksEpic = new ArrayList<>();
     public static List<RegistryObject<Block>> plushieBlocks = new ArrayList<>();
@@ -67,10 +68,11 @@ public class BlockInit {
 
     public static void addToList(RegistryObject<Block> block, Rarity rarity){
         switch (rarity) {
-            case COMMON -> playerBlocks.add(block);
+            case COMMON -> playerBlocksCommon.add(block);
             case RARE -> playerBlocksRare.add(block);
             case EPIC -> playerBlocksEpic.add(block);
         }
+        playerBlocks.add(block);
     }
     public static RegistryObject<Block> registerCommonBasicPlushie(String name){
         return registerBasicPlushie(name, Rarity.COMMON);
