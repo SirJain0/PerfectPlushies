@@ -1,3 +1,10 @@
+## Version 1.3.0
+- Retextured the following plushies:
+  - Blah
+  - Foo
+- Tweaked display settings of player plushies
+- Made player plushies display last in creative tab
+
 ## Version 1.2.1
 - Fixed rare player plushie not visible
 
