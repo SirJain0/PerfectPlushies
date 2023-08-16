@@ -39,6 +39,7 @@ public class BlockInit {
     public static final RegistryObject<Block> CAT_PLUSHIE = registerCommonBasicPlushie("cat_plushie");
     public static final RegistryObject<Block> ELEPHANT_PLUSHIE = registerCommonBasicPlushie("elephant_plushie");
     public static final RegistryObject<Block> NYF_PLUSHIE = registerCommonPlayerPlushie("nyf_plushie");
+    public static final RegistryObject<Block> SIRJAIN_PLUSHIE = registerCommonPlayerPlushie("sirjain_plushie");
     public static final RegistryObject<Block> SIZABLESHRIMP_PLUSHIE = registerCommonPlayerPlushie("sizableshrimp_plushie");
     public static final RegistryObject<Block> TSLAT_PLUSHIE = registerCommonPlayerPlushie("tslat_plushie");
     public static final RegistryObject<Block> SILK_PLUSHIE = registerCommonPlayerPlushie("silk_plushie");
@@ -46,6 +47,7 @@ public class BlockInit {
     public static final RegistryObject<Block> DANIEL_PLUSHIE = registerCommonPlayerPlushie("daniel_plushie");
     public static final RegistryObject<Block> GAMERPOTION_PLUSHIE = registerCommonPlayerPlushie("gamerpotion_plushie");
     public static final RegistryObject<Block> GAMERPOTION_PLUSHIE_RARE = registerRarePlayerPlushie("gamerpotion_plushie_rare");
+    public static final RegistryObject<Block> SIRJAIN_PLUSHIE_RARE = registerRarePlayerPlushie("sirjain_plushie_rare");
 
 
 
