@@ -1,9 +1,14 @@
+## Version 1.4.0
+- Changed mod icon to use new fox plushie model and increase quality
+- Added new animal plushies: turtle, cat, dog, monkey
+- Added _ new player plushies
+
 ## Version 1.3.0
 - Retextured and revamped animal plushies
 - Made display settings of animal plushies more consistent
 - Removed dog and cat plushies
 - Added lion cub plushie
-- - Added 4 new player plushies
+- Added 4 new player plushies
 - Tweaked display settings of player plushies
 - Made player plushies display last in creative tab
 

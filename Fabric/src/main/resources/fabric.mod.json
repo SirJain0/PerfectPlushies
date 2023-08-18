@@ -14,11 +14,11 @@
     "issues": "https://github.com/SirJain0/PerfectPlushies/issues"
   },
   "license": "CC0-1.0",
-  "icon": "assets/perfectplushies/icon/perfectplushieslogo.png",
+  "icon": "assets/perfectplushies/icon/perfect_plushies_logo.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-        "io.github.sirjain0.perfectplushies.PerfectPlushies"
+      "io.github.sirjain0.perfectplushies.PerfectPlushies"
     ],
     "client": [
       "io.github.sirjain0.perfectplushies.PerfectPlushiesClient"
