@@ -1,10 +1,11 @@
 ## Version 1.3.0
-- Retextured the following plushies:
-  - Blah
-  - Foo
+- Retextured and revamped animal plushies
+- Made display settings of animal plushies more consistent
+- Removed dog and cat plushies
+- Added lion cub plushie
+- - Added 4 new player plushies
 - Tweaked display settings of player plushies
 - Made player plushies display last in creative tab
-- Added 4 new player plushies
 
 ## Version 1.2.1
 - Fixed rare player plushie not visible
