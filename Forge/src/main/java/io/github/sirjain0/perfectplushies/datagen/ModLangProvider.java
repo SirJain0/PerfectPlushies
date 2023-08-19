@@ -26,6 +26,7 @@ public class ModLangProvider extends LanguageProvider {
             "sizableshrimp", "SizableShrimp",
             "gamerpotion", "GamerPotion",
             "sirjain", "SirJain",
+            "rocris", "RoCris",
             "rare","",
             "epic",""
     );
@@ -52,6 +53,7 @@ public class ModLangProvider extends LanguageProvider {
         add("plushie.description.daniel_plushie", "Developer of Spray Madness");
         add("plushie.description.sirjain_plushie", "Co-Developer of Perfect Plushies\nCo-Developer of Herespawn\nDeveloper of Throwable Fluids");
         add("plushie.description.sirjain_plushie_rare", "Co-Developer of Perfect Plushies\nCo-Developer of Herespawn\nDeveloper of Throwable Fluids");
+        add("plushie.description.rocris_plushie", "Early Supporter");
     }
 
     protected void itemLang(RegistryObject<Item> entry) {
