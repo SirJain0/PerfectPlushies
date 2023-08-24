@@ -54,6 +54,7 @@ public class ModLangProvider extends LanguageProvider {
         add("plushie.description.sirjain_plushie", "Co-Developer of Perfect Plushies\nCo-Developer of Herespawn\nDeveloper of Throwable Fluids");
         add("plushie.description.sirjain_plushie_rare", "Co-Developer of Perfect Plushies\nCo-Developer of Herespawn\nDeveloper of Throwable Fluids");
         add("plushie.description.rocris_plushie", "Early Supporter");
+        add("plushie.description.joosh_plushie", "Lead Artist of Bonsai Studios");
     }
 
     protected void itemLang(RegistryObject<Item> entry) {
