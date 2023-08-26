@@ -1,6 +1,7 @@
-// 1.20.1	2023-08-23T20:24:43.938132	Loot Tables
+// 1.20.1	2023-08-25T23:30:41.1740077	Loot Tables
 ffbeb5a2cd3891aab26eaf13f9c308c1e34ac3e9 data/perfectplushies/loot_tables/blocks/bear_plushie.json
 a3a1e869645030831a3fa55cd497af08ca7c6972 data/perfectplushies/loot_tables/blocks/capybara_plushie.json
+5ffda2b7c1085f110d342cf45f8e0545e1354fc4 data/perfectplushies/loot_tables/blocks/cat_plushie.json
 fe6c8056c2c7667b205f68c4af0363e27689f5ca data/perfectplushies/loot_tables/blocks/daniel_plushie.json
 20a05980712784a09f2bbacc804812c0de668203 data/perfectplushies/loot_tables/blocks/deer_plushie.json
 29bbd9bba0a1ae396d3985063d291da62758833f data/perfectplushies/loot_tables/blocks/dog_plushie.json

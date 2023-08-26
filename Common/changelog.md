@@ -1,7 +1,9 @@
 ## Version 1.4.0
 - Changed mod icon to use new fox plushie model and increase quality
-- Added new animal plushies: turtle, cat, dog, monkey
-- Added _ new player plushies - Count: II
+- Added new animal plushies: turtle, cat, dog, and monkey
+- Added two new player plushies
+- Add dog and cat plushies closer to the start of the mod group
+- Update mod to be compatible with the latest version of GeckoLib
 
 ## Version 1.3.0
 - Retextured and revamped animal plushies
