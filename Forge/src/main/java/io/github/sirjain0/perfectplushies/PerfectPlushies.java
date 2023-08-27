@@ -1,5 +1,6 @@
 package io.github.sirjain0.perfectplushies;
 
+import io.github.sirjain0.perfectplushies.config.CommonConfig;
 import io.github.sirjain0.perfectplushies.datagen.ModBlockStateProvider;
 import io.github.sirjain0.perfectplushies.datagen.ModItemModelProvider;
 import io.github.sirjain0.perfectplushies.datagen.ModLangProvider;
@@ -13,7 +14,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(Constants.MODID)
@@ -24,6 +27,7 @@ public class PerfectPlushies {
         Constants.LOG.info("Hello Forge world!");
         CommonClass.init();
         LootModifierInit.LOOT_MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.CONFIG_SPEC);
         
     }
 

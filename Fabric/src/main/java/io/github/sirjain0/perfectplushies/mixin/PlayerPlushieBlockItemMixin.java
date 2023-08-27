@@ -17,11 +17,5 @@ import java.util.function.Supplier;
 
 @Mixin(PlayerPlushieBlockItem.class)
 public abstract class PlayerPlushieBlockItemMixin implements GeoItem {
-//    private final Supplier<Object> renderProvider = GeoItem.makeRenderer(this);
-//
-//    @Inject(method = "getRenderProvider", at = @At("HEAD"), cancellable = true, remap = false)
-//    public void getRenderProvider(CallbackInfoReturnable<Supplier<Object>> cir) {
-//        cir.setReturnValue(renderProvider);
-//    }
 
 }
