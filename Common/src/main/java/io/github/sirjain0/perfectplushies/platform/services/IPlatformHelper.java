@@ -1,11 +1,16 @@
 package io.github.sirjain0.perfectplushies.platform.services;
 
+import io.github.sirjain0.perfectplushies.registration.RegistryObject;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.item.SpawnEggItem;
 import software.bernie.geckolib.animatable.GeoItem;
 
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public interface IPlatformHelper {
+public interface IPlatformHelper<T extends Mob> {
 
     /**
      * Gets the name of the current platform
@@ -42,4 +47,6 @@ public interface IPlatformHelper {
     void registerFabricRenderer(Consumer<Object> consumer);
 
     Supplier<Object> getRenderProvider(GeoItem item);
+
+    SpawnEggItem createSpawnEggItem(RegistryObject<EntityType<T>> entityTypeRegistryObject, int primaryColor, int secondaryColor);
 }

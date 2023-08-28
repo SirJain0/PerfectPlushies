@@ -1,6 +1,7 @@
 package io.github.sirjain0.perfectplushies.init;
 
 import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.platform.Services;
 import io.github.sirjain0.perfectplushies.registration.RegistrationProvider;
 import io.github.sirjain0.perfectplushies.registration.RegistryObject;
 import net.minecraft.core.registries.Registries;
@@ -14,10 +15,10 @@ import net.minecraft.world.item.SpawnEggItem;
 
 public class ItemInit {
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registries.ITEM, Constants.MODID);
-    public static final Item WANDERING_TRADER_SPAWN_EGG = registerSpawnEgg(
+    public static final RegistryObject<Item> WANDERING_TRADER_SPAWN_EGG = registerSpawnEgg(
             "wandering_plushie_trader_spawn_egg",
-            EntityInit.WANDERING_PLUSHIH_TRADER.get(),
-            0x906834, 0xa4471f).get();
+            EntityInit.WANDERING_PLUSHIH_TRADER,
+            0x906834, 0xa4471f);
 
     public static final RegistrationProvider<CreativeModeTab> CREATIVE_MODE_TABS = RegistrationProvider.get(Registries.CREATIVE_MODE_TAB, Constants.MODID);
     public static final RegistryObject<CreativeModeTab> PERFECT_PLUSHIES_TAB = CREATIVE_MODE_TABS.register("perfectplushies", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
@@ -26,7 +27,7 @@ public class ItemInit {
                     (itemDisplayParameters, output) -> {
                         BlockInit.plushieBlocks.forEach((registryObject) -> output.accept(new ItemStack(registryObject.get())));
                         BlockInit.playerBlocks.forEach((registryObject) -> output.accept(new ItemStack(registryObject.get())));
-                        output.accept(WANDERING_TRADER_SPAWN_EGG);
+                        output.accept(WANDERING_TRADER_SPAWN_EGG.get());
                     }).title(Component.translatable("itemGroup.perfectplushies.tab"))
             .build());
 
@@ -34,8 +35,8 @@ public class ItemInit {
         return new Item.Properties();
     }
 
-    public static RegistryObject<Item> registerSpawnEgg(String id, EntityType<? extends Mob> entity, int primaryColor, int secondaryColor) {
-        return ItemInit.ITEMS.register(id, () -> new SpawnEggItem(entity, primaryColor, secondaryColor, getItemProperties()));
+    public static<T extends Mob> RegistryObject<Item> registerSpawnEgg(String id, RegistryObject<EntityType<T>> entity, int primaryColor, int secondaryColor) {
+        return ItemInit.ITEMS.register(id, () -> Services.PLATFORM.createSpawnEggItem(entity, primaryColor, secondaryColor));
     }
 
     public static void loadClass() {

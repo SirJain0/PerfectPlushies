@@ -2,6 +2,7 @@ package io.github.sirjain0.perfectplushies.datagen;
 
 import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
+import io.github.sirjain0.perfectplushies.init.ItemInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -34,6 +35,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         BlockInit.playerBlocks.stream()
                 .map(Supplier::get)
                 .forEach(this::playerPlushieItemModel);
+        spawnEgg(ItemInit.WANDERING_TRADER_SPAWN_EGG.get());
     }
 
     protected ItemModelBuilder simpleBlockItemModel(Block block) {
@@ -45,7 +47,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         String name = getName(block);
         return withExistingParent(name, modLoc("item/player_plushie"));
     }
-
+    protected ItemModelBuilder spawnEgg(Item block) {
+        String name = getName(block);
+        return withExistingParent(name, mcLoc("item/template_spawn_egg"));
+    }
     protected ItemModelBuilder simpleGeneratedModel(Item item) {
         return simpleModel(item, mcLoc("item/generated"));
     }

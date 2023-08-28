@@ -1,5 +1,4 @@
 # Version 1.6.0
-- Fixed wandering plushie merchant attributes not 
 - Add wandering trader spawn egg 
 
 ## Version 1.5.0
