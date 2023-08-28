@@ -1,5 +1,6 @@
 # Version 1.6.0
-- Add wandering trader spawn egg 
+- Add wandering plushie trader spawn egg 
+- Add the following animal plushies: raccoon, lemur, and panda
 
 ## Version 1.5.0
 - Added wandering plushie merchant
