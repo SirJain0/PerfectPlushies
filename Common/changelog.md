@@ -1,3 +1,6 @@
+## Version 1.5.0
+- Added wandering plushie merchant
+
 ## Version 1.4.0
 - Changed mod icon to use new fox plushie model and increase quality
 - Added new animal plushies: turtle, cat, dog, and monkey
