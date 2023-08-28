@@ -61,5 +61,6 @@ public class ModEntityLootTables extends EntityLootSubProvider {
         return List.<EntityType<?>>of().stream();
     }
 
-    record LootEntry(Item item, NumberProvider numberProvider) {}
+    record LootEntry(Item item, NumberProvider numberProvider) {
+    }
 }

@@ -1,6 +1,5 @@
 package io.github.sirjain0.perfectplushies.platform.services;
 
-import net.minecraft.world.item.Item;
 import software.bernie.geckolib.animatable.GeoItem;
 
 import java.util.function.Consumer;
@@ -39,6 +38,7 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
     void registerFabricRenderer(Consumer<Object> consumer);
 
     Supplier<Object> getRenderProvider(GeoItem item);

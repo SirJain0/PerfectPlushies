@@ -14,7 +14,7 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void onRenderers(EntityRenderersEvent.RegisterRenderers event) {
-     event.registerBlockEntityRenderer(BlockInit.PLAYER_PLUSHIE_BLOCK_ENTITY.get(), (context)->new PlushieRenderer());
-     event.registerEntityRenderer(EntityInit.WANDERING_PLUSHIH_TRADER.get(), WanderingPlushieTraderRenderer::new);
+        event.registerBlockEntityRenderer(BlockInit.PLAYER_PLUSHIE_BLOCK_ENTITY.get(), (context) -> new PlushieRenderer());
+        event.registerEntityRenderer(EntityInit.WANDERING_PLUSHIH_TRADER.get(), WanderingPlushieTraderRenderer::new);
     }
 }

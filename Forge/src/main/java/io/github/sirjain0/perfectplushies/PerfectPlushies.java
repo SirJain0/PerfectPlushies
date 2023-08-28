@@ -22,13 +22,13 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod(Constants.MODID)
 @Mod.EventBusSubscriber(modid = Constants.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PerfectPlushies {
-    
+
     public PerfectPlushies() {
         Constants.LOG.info("Hello Forge world!");
         CommonClass.init();
         LootModifierInit.LOOT_MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.CONFIG_SPEC);
-        
+
     }
 
     @SubscribeEvent
@@ -41,8 +41,8 @@ public class PerfectPlushies {
         generator.addProvider(includeServer, new ModRecipeProvider(packOutput));
         generator.addProvider(includeServer, new ModLootTableProvider(packOutput));
         generator.addProvider(includeServer, new ModSoundProvider(packOutput, existingFileHelper));
-        generator.addProvider(includeServer, new ModTagProvider.Blocks(packOutput,event.getLookupProvider(), existingFileHelper));
-        generator.addProvider(includeServer, new ModTagProvider.Items(packOutput,event.getLookupProvider(), existingFileHelper));
+        generator.addProvider(includeServer, new ModTagProvider.Blocks(packOutput, event.getLookupProvider(), existingFileHelper));
+        generator.addProvider(includeServer, new ModTagProvider.Items(packOutput, event.getLookupProvider(), existingFileHelper));
         generator.addProvider(includeClient, new ModBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(includeClient, new ModItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(includeClient, new ModLangProvider(packOutput));

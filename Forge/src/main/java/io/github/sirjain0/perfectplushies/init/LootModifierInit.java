@@ -13,6 +13,7 @@ public class LootModifierInit {
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIERS = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Constants.MODID);
 
     public static final RegistryObject<Codec<VillageLootModifier>> VILLAGE_LOOT_MODIFIER = registerSerializer("add_plushie", VillageLootModifier.CODEC);
+
     private static <T extends LootModifier> RegistryObject<Codec<T>> registerSerializer(String id, Codec<T> serializer) {
         return LOOT_MODIFIERS.register(id, () -> serializer);
     }

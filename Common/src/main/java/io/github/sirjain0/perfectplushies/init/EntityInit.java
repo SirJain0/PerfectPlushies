@@ -11,7 +11,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.npc.Villager;
-import net.minecraft.world.entity.npc.WanderingTrader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +20,7 @@ public class EntityInit {
     public static final RegistrationProvider<EntityType<?>> ENTITIES = RegistrationProvider.get(Registries.ENTITY_TYPE, Constants.MODID);
     public static final List<AttributesRegister<?>> attributeSuppliers = new ArrayList<>();
 
-    public static final RegistryObject<EntityType<WanderingPlushieTrader>> WANDERING_PLUSHIH_TRADER = registerEntity("wandering_plushie_trader", ()->EntityType.Builder.of(WanderingPlushieTrader::new, MobCategory.MISC).sized(0.6F, 1.95F),
+    public static final RegistryObject<EntityType<WanderingPlushieTrader>> WANDERING_PLUSHIH_TRADER = registerEntity("wandering_plushie_trader", () -> EntityType.Builder.of(WanderingPlushieTrader::new, MobCategory.MISC).sized(0.6F, 1.95F),
             Villager::createAttributes);
 
     private static <T extends Entity> RegistryObject<EntityType<T>> registerEntity(String name, Supplier<EntityType.Builder<T>> supplier) {
@@ -39,5 +38,7 @@ public class EntityInit {
     }
 
 
-    public record AttributesRegister<E extends LivingEntity>(Supplier<EntityType<E>> entityTypeSupplier, Supplier<AttributeSupplier.Builder> factory) {}
+    public record AttributesRegister<E extends LivingEntity>(Supplier<EntityType<E>> entityTypeSupplier,
+                                                             Supplier<AttributeSupplier.Builder> factory) {
+    }
 }

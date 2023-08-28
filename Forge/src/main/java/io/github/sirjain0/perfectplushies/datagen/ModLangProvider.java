@@ -27,8 +27,8 @@ public class ModLangProvider extends LanguageProvider {
             "gamerpotion", "GamerPotion",
             "sirjain", "SirJain",
             "rocris", "RoCris",
-            "rare","",
-            "epic",""
+            "rare", "",
+            "epic", ""
     );
 
     public ModLangProvider(PackOutput gen) {

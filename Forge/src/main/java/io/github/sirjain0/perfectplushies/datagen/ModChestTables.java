@@ -4,7 +4,6 @@ import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.init.TagInit;
 import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.TagEntry;

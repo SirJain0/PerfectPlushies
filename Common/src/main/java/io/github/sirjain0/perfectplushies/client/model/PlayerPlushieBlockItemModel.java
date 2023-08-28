@@ -1,7 +1,6 @@
 package io.github.sirjain0.perfectplushies.client.model;
 
 import io.github.sirjain0.perfectplushies.Constants;
-import io.github.sirjain0.perfectplushies.block.entity.PlayerPlushieBlockEntity;
 import io.github.sirjain0.perfectplushies.item.PlayerPlushieBlockItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

@@ -2,10 +2,9 @@ package io.github.sirjain0.perfectplushies;
 
 import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
 import io.github.sirjain0.perfectplushies.config.CommonConfig;
-import io.github.sirjain0.perfectplushies.entity.spawning.WanderingPlushieTraderSpawner;
+import io.github.sirjain0.perfectplushies.init.EntityInit;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
-import net.minecraft.world.level.Level;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraftforge.fml.config.ModConfig;
 
 public class PerfectPlushies implements ModInitializer {
@@ -15,7 +14,9 @@ public class PerfectPlushies implements ModInitializer {
         CommonClass.init();
         PlushiesLootTableModifier.modifyLootTables();
         ForgeConfigRegistry.INSTANCE.register(Constants.MODID, ModConfig.Type.COMMON, CommonConfig.CONFIG_SPEC);
-//        ServerLifecycleEvents.SERVER_STARTED.register(server -> server.getLevel(Level.OVERWORLD).customSpawners.add(new WanderingPlushieTraderSpawner(server.getWorldData().overworldData())));
+        EntityInit.attributeSuppliers.forEach(
+                p -> FabricDefaultAttributeRegistry.register(p.entityTypeSupplier().get(), p.factory().get().build())
+        );
     }
 }
 

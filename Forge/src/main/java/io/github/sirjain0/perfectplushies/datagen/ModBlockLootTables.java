@@ -15,6 +15,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
+
     @Override
     protected void generate() {
         this.getBlockStream().filter(this::shouldDropSelf).forEach(this::dropSelf);

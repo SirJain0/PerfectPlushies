@@ -1,14 +1,11 @@
 package io.github.sirjain0.perfectplushies.item;
 
 import com.mojang.blaze3d.platform.InputConstants;
-import io.github.sirjain0.perfectplushies.block.PlayerPlushieBlock;
 import io.github.sirjain0.perfectplushies.init.ItemInit;
 import io.github.sirjain0.perfectplushies.platform.Services;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
@@ -31,9 +28,11 @@ import java.util.function.Supplier;
 public class PlayerPlushieBlockItem extends BlockItem implements GeoItem, NeededForML {
 
     private final AnimatableInstanceCache animatableInstanceCache = GeckoLibUtil.createInstanceCache(this);
-    public PlayerPlushieBlockItem(Block block, Rarity isRare){
+
+    public PlayerPlushieBlockItem(Block block, Rarity isRare) {
         super(block, ItemInit.getItemProperties().rarity(isRare));
     }
+
     public PlayerPlushieBlockItem(Block block) {
         this(block, Rarity.COMMON);
     }
@@ -46,12 +45,12 @@ public class PlayerPlushieBlockItem extends BlockItem implements GeoItem, Needed
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, level, tooltip, flag);
-        if(flag.isAdvanced() || InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), GLFW.GLFW_KEY_LEFT_SHIFT)) {
+        if (flag.isAdvanced() || InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), GLFW.GLFW_KEY_LEFT_SHIFT)) {
             Arrays.stream(Component.translatable("plushie.description." + BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath()).getString().split("\n")).forEach(
                     s -> tooltip.add(Component.literal(s).withStyle(ChatFormatting.AQUA))
             );
         } else {
-            tooltip.add(Component.translatable("tooltip.perfectplushies.advanced",Component.translatable("tooltip.perfectplushies.shift").withStyle(ChatFormatting.YELLOW)));
+            tooltip.add(Component.translatable("tooltip.perfectplushies.advanced", Component.translatable("tooltip.perfectplushies.shift").withStyle(ChatFormatting.YELLOW)));
         }
     }
 

@@ -2,7 +2,6 @@ package io.github.sirjain0.perfectplushies.mixin;
 
 import io.github.sirjain0.perfectplushies.client.renderer.PlayerPlushieBlockItemRenderer;
 import io.github.sirjain0.perfectplushies.item.NeededForML;
-import io.github.sirjain0.perfectplushies.item.PlayerPlushieBlockItem;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;

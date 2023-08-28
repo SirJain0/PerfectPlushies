@@ -4,8 +4,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -24,8 +22,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
-
 public class PlushieBlock extends HorizontalDirectionalBlock {
     private static final VoxelShape OUTLINE_SHAPE = Block.box(3, 0, 3, 13, 10, 13);
 
@@ -38,6 +34,7 @@ public class PlushieBlock extends HorizontalDirectionalBlock {
                 .lightLevel((state) -> 3)
         );
     }
+
     // Defines hitbox for all plushies
     @Override
     public VoxelShape getShape(BlockState $$0, BlockGetter $$1, BlockPos $$2, CollisionContext $$3) {

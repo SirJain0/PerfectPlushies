@@ -27,13 +27,15 @@ import java.util.concurrent.Executor;
 public class ServerLevelMixin {
 
     @Mutable
-    @Shadow @Final public List<CustomSpawner> customSpawners;
+    @Shadow
+    @Final
+    public List<CustomSpawner> customSpawners;
 
     @Inject(method = "<init>", at = @At("RETURN"))
-    public void addPlushieMerchant(MinecraftServer server, Executor executor, LevelStorageSource.LevelStorageAccess levelStorageAccess, ServerLevelData serverLevelData, ResourceKey resourceKey, LevelStem levelStem, ChunkProgressListener chunkProgressListener, boolean isdDebug, long biomezoomseed, List customspawners, boolean tickTime, RandomSequences randomSequences, CallbackInfo ci){
+    public void addPlushieMerchant(MinecraftServer server, Executor executor, LevelStorageSource.LevelStorageAccess levelStorageAccess, ServerLevelData serverLevelData, ResourceKey resourceKey, LevelStem levelStem, ChunkProgressListener chunkProgressListener, boolean isdDebug, long biomezoomseed, List customspawners, boolean tickTime, RandomSequences randomSequences, CallbackInfo ci) {
         List<CustomSpawner> spawnList = new ArrayList<>();
         spawnList.addAll(this.customSpawners);
         spawnList.add(new WanderingPlushieTraderSpawner(server.getWorldData().overworldData()));
-        this.customSpawners =  spawnList;
+        this.customSpawners = spawnList;
     }
 }

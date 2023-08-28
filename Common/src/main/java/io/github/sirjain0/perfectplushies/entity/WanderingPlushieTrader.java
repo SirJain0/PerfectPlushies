@@ -16,8 +16,6 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class WanderingPlushieTrader extends WanderingTrader implements GeoEntity {
-    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
-
     public static final Int2ObjectMap<VillagerTrades.ItemListing[]> TRADES = toIntMap(
             ImmutableMap.of(1, BlockInit.plushieBlocks.stream().map(blockRegistryObject -> new VillagerTrades.ItemsForEmeralds(blockRegistryObject.get(), 5, 1, 1, 1)).toArray(VillagerTrades.ItemListing[]::new),
                     2, BlockInit.playerBlocksCommon.stream().map(blockRegistryObject -> new VillagerTrades.ItemsForEmeralds(blockRegistryObject.get(), 10, 1, 1, 1)).toArray(VillagerTrades.ItemListing[]::new),
@@ -25,14 +23,15 @@ public class WanderingPlushieTrader extends WanderingTrader implements GeoEntity
                     4, BlockInit.playerBlocksEpic.stream().map(blockRegistryObject -> new VillagerTrades.ItemsForEmeralds(blockRegistryObject.get(), 20, 1, 1, 1)).toArray(VillagerTrades.ItemListing[]::new)
             )
     );
+    private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
+    public WanderingPlushieTrader(EntityType<? extends WanderingTrader> $$0, Level $$1) {
+        super($$0, $$1);
+    }
 
     private static Int2ObjectMap<VillagerTrades.ItemListing[]> toIntMap(ImmutableMap<Integer, VillagerTrades.ItemListing[]> pMap) {
 
         return new Int2ObjectOpenHashMap<>(pMap);
-    }
-
-    public WanderingPlushieTrader(EntityType<? extends WanderingTrader> $$0, Level $$1) {
-        super($$0, $$1);
     }
 
     @Override

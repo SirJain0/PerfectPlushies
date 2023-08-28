@@ -11,6 +11,7 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class PlayerPlushieBlockEntity extends BlockEntity implements GeoBlockEntity {
     private AnimatableInstanceCache animatableManager = GeckoLibUtil.createInstanceCache(this);
+
     public PlayerPlushieBlockEntity(BlockPos pos, BlockState state) {
         super(BlockInit.PLAYER_PLUSHIE_BLOCK_ENTITY.get(), pos, state);
     }
