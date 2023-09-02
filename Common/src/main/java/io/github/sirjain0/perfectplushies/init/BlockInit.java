@@ -40,6 +40,7 @@ public class BlockInit {
     public static List<RegistryObject<Block>> plushieBlocks = new ArrayList<>();
     public static final RegistryObject<Block> FOX_PLUSHIE = registerCommonBasicPlushie("fox_plushie");
     public static final RegistryObject<Block> RACCOON_PLUSHIE = registerCommonBasicPlushie("raccoon_plushie");
+    public static final RegistryObject<Block> RED_RUFFED_LEMUR = registerCommonBasicPlushie("red_ruffed_lemur");
     public static final RegistryObject<Block> CAPYBARA_PLUSHIE = registerCommonBasicPlushie("capybara_plushie");
     public static final RegistryObject<Block> DOG_PLUSHIE = registerCommonBasicPlushie("dog_plushie");
     public static final RegistryObject<Block> CAT_PLUSHIE = registerCommonBasicPlushie("cat_plushie");
