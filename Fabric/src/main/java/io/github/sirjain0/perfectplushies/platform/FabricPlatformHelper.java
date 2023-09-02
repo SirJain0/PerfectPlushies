@@ -40,7 +40,7 @@ public class FabricPlatformHelper<T extends Mob> implements IPlatformHelper<T> {
 
     @Override
     public SpawnEggItem createSpawnEggItem(RegistryObject<EntityType<T>> entityTypeRegistryObject, int primaryColor, int secondaryColor) {
-        return null;
+        return new SpawnEggItem(entityTypeRegistryObject.get(), primaryColor, secondaryColor, new SpawnEggItem.Properties());
     }
 
     @Override
