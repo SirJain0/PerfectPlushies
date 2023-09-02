@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-01T13:01:45.2210053	Loot Tables
+// 1.20.1	2023-09-01T22:31:25.4029107	Loot Tables
 ffbeb5a2cd3891aab26eaf13f9c308c1e34ac3e9 data/perfectplushies/loot_tables/blocks/bear_plushie.json
 a3a1e869645030831a3fa55cd497af08ca7c6972 data/perfectplushies/loot_tables/blocks/capybara_plushie.json
 5ffda2b7c1085f110d342cf45f8e0545e1354fc4 data/perfectplushies/loot_tables/blocks/cat_plushie.json
@@ -19,6 +19,7 @@ ac69925551768b382ddf73e621850865a3b5d685 data/perfectplushies/loot_tables/blocks
 d1d499db00751ee11f990d0ed0d0d07085d2e0a0 data/perfectplushies/loot_tables/blocks/nyf_plushie.json
 beb848db71fc418cbd10ccecd683ab4b191336d1 data/perfectplushies/loot_tables/blocks/panda_plushie.json
 496320554a3c31d63eca210dea9f21a6c85dfd19 data/perfectplushies/loot_tables/blocks/rabbit_plushie.json
+cd08b6c6a4d093a7db96b3257b4a9299c1279de9 data/perfectplushies/loot_tables/blocks/raccoon_plushie.json
 032ac52d31793c4fd90df2d98d11dd370b319860 data/perfectplushies/loot_tables/blocks/rocris_plushie.json
 f4035d9ea63994b1e81ab36fff7508548264f310 data/perfectplushies/loot_tables/blocks/silk_plushie.json
 4b532f998758b346ef3260c9e559e325ba52478a data/perfectplushies/loot_tables/blocks/sirjain_plushie.json
