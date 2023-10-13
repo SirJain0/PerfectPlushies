@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-02T14:40:13.4046448	Loot Tables
+// 1.20.1	2023-10-13T19:28:03.9481602	Loot Tables
 ffbeb5a2cd3891aab26eaf13f9c308c1e34ac3e9 data/perfectplushies/loot_tables/blocks/bear_plushie.json
 a3a1e869645030831a3fa55cd497af08ca7c6972 data/perfectplushies/loot_tables/blocks/capybara_plushie.json
 5ffda2b7c1085f110d342cf45f8e0545e1354fc4 data/perfectplushies/loot_tables/blocks/cat_plushie.json
@@ -26,6 +26,7 @@ f4035d9ea63994b1e81ab36fff7508548264f310 data/perfectplushies/loot_tables/blocks
 4b532f998758b346ef3260c9e559e325ba52478a data/perfectplushies/loot_tables/blocks/sirjain_plushie.json
 7925c069150789bfa36240b926bd8fe57a847540 data/perfectplushies/loot_tables/blocks/sirjain_plushie_rare.json
 0a3c30a30c7da9afad123db5ca48dcfe6b4ae88e data/perfectplushies/loot_tables/blocks/sizableshrimp_plushie.json
+8138581e5386c68bab1ccf8df12221ba4b2e1f9f data/perfectplushies/loot_tables/blocks/snow_fox_plushie.json
 d5f51517ba04a2a4d9d26936ccc8cce7847935c4 data/perfectplushies/loot_tables/blocks/tslat_plushie.json
 2533d6688879c8652d83ee6f8ab3f8969cb414ee data/perfectplushies/loot_tables/blocks/turtle_plushie.json
 3d57b1bbec8be43ec8a3a259e37168c61bddeea0 data/perfectplushies/loot_tables/chests/pretend.json

@@ -1,5 +1,5 @@
-// 1.20.1	2023-09-02T14:40:13.3996224	Tags for minecraft:item mod id perfectplushies
+// 1.20.1	2023-10-13T19:28:03.9381341	Tags for minecraft:item mod id perfectplushies
 0b4bf8669e72f448c93dd875ecf243e50e4d7cb9 data/minecraft/tags/items/wool.json
 8f9eeda59e841d3a242407c81f1547ff413ef247 data/perfectplushies/tags/items/rare_treasure_plushies.json
 32d77df5c4ce4262e74f11568352c495e867d5dc data/perfectplushies/tags/items/treasure_plushies.json
-11aca64572cf586551ecbe7ce112ab6f00c207c9 data/perfectplushies/tags/items/village_plushies.json
+40e0e10bcd2dd6643c35ac15db36415bd4f31245 data/perfectplushies/tags/items/village_plushies.json

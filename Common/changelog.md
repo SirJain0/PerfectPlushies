@@ -1,3 +1,7 @@
+## Version 1.7.0
+- New plushies:
+  - Snow fox
+
 ## Version 1.6.0
 - Add wandering plushie trader spawn egg 
 - Add the following animal plushies: raccoon, lemur, and panda

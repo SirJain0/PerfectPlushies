@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-02T14:40:13.4006435	Item Models: perfectplushies
+// 1.20.1	2023-10-13T19:28:03.9381341	Item Models: perfectplushies
 693693b2c54c42d4548eb314c5b02073a1ef50e3 assets/perfectplushies/models/item/bear_plushie.json
 57d71dd9b3836536a19bb7d0a2973db730fc6f1e assets/perfectplushies/models/item/capybara_plushie.json
 390b7656f1409cab89e538abc31fb436d01a1bf3 assets/perfectplushies/models/item/cat_plushie.json
@@ -26,6 +26,7 @@ a79ca6080fccf20a4be4c4056b400676f03a37a1 assets/perfectplushies/models/item/pand
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/sirjain_plushie.json
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/sirjain_plushie_rare.json
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/sizableshrimp_plushie.json
+f2179d535dc47aa7368bfdcdb6622d7335f3553e assets/perfectplushies/models/item/snow_fox_plushie.json
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/tslat_plushie.json
 a93fe5330e09058edb45b851f4f5a5831dedb869 assets/perfectplushies/models/item/turtle_plushie.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/perfectplushies/models/item/wandering_plushie_trader_spawn_egg.json
