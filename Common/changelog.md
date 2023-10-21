@@ -2,6 +2,7 @@
 - New plushies:
   - Snow fox
   - Goose
+- Rename fox plushie to red fox plushie
 
 ## Version 1.6.0
 - Add wandering plushie trader spawn egg 

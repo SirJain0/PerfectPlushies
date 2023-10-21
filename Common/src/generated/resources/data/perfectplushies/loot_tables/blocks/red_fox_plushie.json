@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "perfectplushies:fox_plushie"
+          "name": "perfectplushies:red_fox_plushie"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "perfectplushies:blocks/fox_plushie"
+  "random_sequence": "perfectplushies:blocks/red_fox_plushie"
 }

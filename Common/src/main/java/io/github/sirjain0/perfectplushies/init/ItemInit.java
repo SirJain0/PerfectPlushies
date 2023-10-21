@@ -22,7 +22,7 @@ public class ItemInit {
 
     public static final RegistrationProvider<CreativeModeTab> CREATIVE_MODE_TABS = RegistrationProvider.get(Registries.CREATIVE_MODE_TAB, Constants.MODID);
     public static final RegistryObject<CreativeModeTab> PERFECT_PLUSHIES_TAB = CREATIVE_MODE_TABS.register("perfectplushies", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
-            .icon(() -> new ItemStack(BlockInit.FOX_PLUSHIE.get()))
+            .icon(() -> new ItemStack(BlockInit.RED_FOX_PLUSHIE.get()))
             .displayItems(
                     (itemDisplayParameters, output) -> {
                         BlockInit.plushieBlocks.forEach((registryObject) -> output.accept(new ItemStack(registryObject.get())));

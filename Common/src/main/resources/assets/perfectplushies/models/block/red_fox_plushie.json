@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "perfectplushies:block/fox_plushie",
-		"particle": "perfectplushies:block/fox_plushie"
+		"2": "perfectplushies:block/red_fox_plushie",
+		"particle": "perfectplushies:block/red_fox_plushie"
 	},
 	"elements": [
 		{

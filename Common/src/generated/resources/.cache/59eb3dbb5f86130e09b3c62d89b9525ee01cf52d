@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-20T17:47:10.7722651	Loot Tables
+// 1.20.1	2023-10-21T17:22:58.2851902	Loot Tables
 ffbeb5a2cd3891aab26eaf13f9c308c1e34ac3e9 data/perfectplushies/loot_tables/blocks/bear_plushie.json
 a3a1e869645030831a3fa55cd497af08ca7c6972 data/perfectplushies/loot_tables/blocks/capybara_plushie.json
 5ffda2b7c1085f110d342cf45f8e0545e1354fc4 data/perfectplushies/loot_tables/blocks/cat_plushie.json
@@ -7,7 +7,6 @@ fe6c8056c2c7667b205f68c4af0363e27689f5ca data/perfectplushies/loot_tables/blocks
 29bbd9bba0a1ae396d3985063d291da62758833f data/perfectplushies/loot_tables/blocks/dog_plushie.json
 508fceb57981b9f66af35cb29d94f6630789caba data/perfectplushies/loot_tables/blocks/dolphin_plushie.json
 6a17525ce89963001476738c1365c104e951b79c data/perfectplushies/loot_tables/blocks/elephant_plushie.json
-438757f4e01dbc073dab88c86134b359e330b115 data/perfectplushies/loot_tables/blocks/fox_plushie.json
 35806a4a19aa4fbbb4128a39bd0bf8447783bdaf data/perfectplushies/loot_tables/blocks/frog_plushie.json
 55d34a50547e13c1bb1cd96fb6b2975425ddcf5a data/perfectplushies/loot_tables/blocks/gamerpotion_plushie.json
 11c4dddce8ef7912f3c02668322a8518ce000647 data/perfectplushies/loot_tables/blocks/gamerpotion_plushie_rare.json
@@ -21,6 +20,7 @@ d1d499db00751ee11f990d0ed0d0d07085d2e0a0 data/perfectplushies/loot_tables/blocks
 beb848db71fc418cbd10ccecd683ab4b191336d1 data/perfectplushies/loot_tables/blocks/panda_plushie.json
 496320554a3c31d63eca210dea9f21a6c85dfd19 data/perfectplushies/loot_tables/blocks/rabbit_plushie.json
 cd08b6c6a4d093a7db96b3257b4a9299c1279de9 data/perfectplushies/loot_tables/blocks/raccoon_plushie.json
+7d52b66d1c53ca457faccb92d962f24f9691d301 data/perfectplushies/loot_tables/blocks/red_fox_plushie.json
 d5148820dac2a3cd0d06f556fddb91cb57d18b5e data/perfectplushies/loot_tables/blocks/red_ruffed_lemur.json
 032ac52d31793c4fd90df2d98d11dd370b319860 data/perfectplushies/loot_tables/blocks/rocris_plushie.json
 f4035d9ea63994b1e81ab36fff7508548264f310 data/perfectplushies/loot_tables/blocks/silk_plushie.json
