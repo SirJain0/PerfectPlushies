@@ -2,6 +2,8 @@
 - New plushies:
   - Snow fox
   - Goose
+  - Red panda
+  - Seal
 - Rename fox plushie to red fox plushie
 
 ## Version 1.6.0

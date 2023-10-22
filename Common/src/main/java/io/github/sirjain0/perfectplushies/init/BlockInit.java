@@ -42,7 +42,8 @@ public class BlockInit {
     public static final RegistryObject<Block> RED_FOX_PLUSHIE = registerCommonBasicPlushie("red_fox_plushie");
     public static final RegistryObject<Block> SNOW_FOX_PLUSHIE = registerCommonBasicPlushie("snow_fox_plushie");
     public static final RegistryObject<Block> RACCOON_PLUSHIE = registerCommonBasicPlushie("raccoon_plushie");
-    public static final RegistryObject<Block> RED_RUFFED_LEMUR = registerCommonBasicPlushie("red_ruffed_lemur");
+    public static final RegistryObject<Block> RED_PANDA_PLUSHIE = registerCommonBasicPlushie("red_panda_plushie");
+    public static final RegistryObject<Block> RED_RUFFED_LEMUR_PLUSHIE = registerCommonBasicPlushie("red_ruffed_lemur_plushie");
     public static final RegistryObject<Block> CAPYBARA_PLUSHIE = registerCommonBasicPlushie("capybara_plushie");
     public static final RegistryObject<Block> DOG_PLUSHIE = registerCommonBasicPlushie("dog_plushie");
     public static final RegistryObject<Block> CAT_PLUSHIE = registerCommonBasicPlushie("cat_plushie");
@@ -58,6 +59,7 @@ public class BlockInit {
     public static final RegistryObject<Block> LION_CUB_PLUSHIE = registerCommonBasicPlushie("lion_cub_plushie");
     public static final RegistryObject<Block> ELEPHANT_PLUSHIE = registerCommonBasicPlushie("elephant_plushie");
     public static final RegistryObject<Block> MONKEY_PLUSHIE = registerCommonBasicPlushie("monkey_plushie");
+    public static final RegistryObject<Block> SEAL_PLUSHIE = registerCommonBasicPlushie("seal_plushie");
 
     public static RegistryObject<Block> registerCommonPlayerPlushie(String name) {
         return registerPlayerPlushie(name, Rarity.COMMON);

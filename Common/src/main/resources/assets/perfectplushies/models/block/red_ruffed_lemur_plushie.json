@@ -3,8 +3,8 @@
 	"render_type": "cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "perfectplushies:block/red_ruffed_lemur",
-		"particle": "perfectplushies:block/red_ruffed_lemur"
+		"0": "perfectplushies:block/red_ruffed_lemur_plushie",
+		"particle": "perfectplushies:block/red_ruffed_lemur_plushie"
 	},
 	"elements": [
 		{

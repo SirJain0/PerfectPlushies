@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "perfectplushies:red_ruffed_lemur"
+          "name": "perfectplushies:red_ruffed_lemur_plushie"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "perfectplushies:blocks/red_ruffed_lemur"
+  "random_sequence": "perfectplushies:blocks/red_ruffed_lemur_plushie"
 }
