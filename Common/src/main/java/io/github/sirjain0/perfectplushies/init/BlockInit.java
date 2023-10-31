@@ -36,6 +36,7 @@ public class BlockInit {
     public static final RegistryObject<Block> GAMERPOTION_PLUSHIE = registerCommonPlayerPlushie("gamerpotion_plushie");
     public static final RegistryObject<Block> JOOSH_PLUSHIE = registerCommonPlayerPlushie("joosh_plushie");
     public static final RegistryObject<Block> ROCRIS_PLUSHIE = registerCommonPlayerPlushie("rocris_plushie");
+    public static final RegistryObject<Block> GEODE_PLUSHIE = registerCommonPlayerPlushie("geode_plushie");
     public static final RegistryObject<Block> GAMERPOTION_PLUSHIE_RARE = registerRarePlayerPlushie("gamerpotion_plushie_rare");
     public static final RegistryObject<Block> SIRJAIN_PLUSHIE_RARE = registerRarePlayerPlushie("sirjain_plushie_rare");
     public static List<RegistryObject<Block>> plushieBlocks = new ArrayList<>();

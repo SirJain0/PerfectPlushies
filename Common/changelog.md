@@ -1,5 +1,7 @@
 ## Version 1.8.0
 - Rephrased "Early Supporter" tooltip to "Community Pillar" 
+- New plushies:
+  - New player plushie
 
 ## Version 1.7.0
 - New plushies:
