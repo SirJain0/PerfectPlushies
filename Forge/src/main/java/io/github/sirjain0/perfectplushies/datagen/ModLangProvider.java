@@ -20,6 +20,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ModLangProvider extends LanguageProvider {
+    protected static final String COMMUNITY_PILLAR_STR = "Community Pillar";
+
     protected static final Map<String, String> REPLACE_LIST = ImmutableMap.of(
             "tnt", "TNT",
             "sus", "",
@@ -40,6 +42,7 @@ public class ModLangProvider extends LanguageProvider {
         ItemInit.ITEMS.getEntries().forEach(this::itemLang);
         EntityInit.ENTITIES.getEntries().forEach(this::entityLang);
         BlockInit.BLOCKS.getEntries().forEach(this::blockLang);
+
         add("itemGroup.perfectplushies.tab", "Perfect Plushies");
         add("tooltip.perfectplushies.advanced", "Hold %s for more information");
         add("tooltip.perfectplushies.shift", "SHIFT");
@@ -53,8 +56,10 @@ public class ModLangProvider extends LanguageProvider {
         add("plushie.description.daniel_plushie", "Developer of Spray Madness");
         add("plushie.description.sirjain_plushie", "Co-Developer of Perfect Plushies\nCo-Developer of Herespawn\nDeveloper of Throwable Fluids");
         add("plushie.description.sirjain_plushie_rare", "Co-Developer of Perfect Plushies\nCo-Developer of Herespawn\nDeveloper of Throwable Fluids");
-        add("plushie.description.rocris_plushie", "Early Supporter");
         add("plushie.description.joosh_plushie", "Lead Artist of Bonsai Studios");
+
+        add("plushie.description.rocris_plushie", COMMUNITY_PILLAR_STR);
+        add("plushie.description.geode_plushie", COMMUNITY_PILLAR_STR);
     }
 
     protected void itemLang(RegistryObject<Item> entry) {

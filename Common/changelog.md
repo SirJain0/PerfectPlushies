@@ -1,3 +1,6 @@
+## Version 1.8.0
+- Rephrased "Early Supporter" tooltip to "Community Pillar" 
+
 ## Version 1.7.0
 - New plushies:
   - Snow fox
