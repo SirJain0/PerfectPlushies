@@ -2,6 +2,7 @@
 - Rephrased "Early Supporter" tooltip to "Community Pillar" 
 - New plushies:
   - New player plushie
+  - Duck
 
 ## Version 1.7.0
 - New plushies:
