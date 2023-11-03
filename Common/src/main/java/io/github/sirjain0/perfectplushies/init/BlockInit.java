@@ -3,6 +3,7 @@ package io.github.sirjain0.perfectplushies.init;
 import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.block.PlayerPlushieBlock;
 import io.github.sirjain0.perfectplushies.block.PlushieBlock;
+import io.github.sirjain0.perfectplushies.block.RubberDuckPlushieBlock;
 import io.github.sirjain0.perfectplushies.block.entity.PlayerPlushieBlockEntity;
 import io.github.sirjain0.perfectplushies.item.PlayerPlushieBlockItem;
 import io.github.sirjain0.perfectplushies.registration.RegistrationProvider;
@@ -25,7 +26,9 @@ public class BlockInit {
     public static List<RegistryObject<Block>> playerBlocksCommon = new ArrayList<>();
     public static List<RegistryObject<Block>> playerBlocksRare = new ArrayList<>();
     public static List<RegistryObject<Block>> playerBlocksEpic = new ArrayList<>();
+    public static List<RegistryObject<Block>> plushieBlocks = new ArrayList<>();
 
+    // == PLAYER PLUSHIES ==
     public static final RegistryObject<Block> NYF_PLUSHIE = registerCommonPlayerPlushie("nyf_plushie");
     public static final RegistryObject<Block> SIRJAIN_PLUSHIE = registerCommonPlayerPlushie("sirjain_plushie");
     public static final RegistryObject<Block> SIZABLESHRIMP_PLUSHIE = registerCommonPlayerPlushie("sizableshrimp_plushie");
@@ -39,7 +42,8 @@ public class BlockInit {
     public static final RegistryObject<Block> GEODE_PLUSHIE = registerCommonPlayerPlushie("geode_plushie");
     public static final RegistryObject<Block> GAMERPOTION_PLUSHIE_RARE = registerRarePlayerPlushie("gamerpotion_plushie_rare");
     public static final RegistryObject<Block> SIRJAIN_PLUSHIE_RARE = registerRarePlayerPlushie("sirjain_plushie_rare");
-    public static List<RegistryObject<Block>> plushieBlocks = new ArrayList<>();
+
+    // == ANIMAL PLUSHIES ==
     public static final RegistryObject<Block> RED_FOX_PLUSHIE = registerCommonBasicPlushie("red_fox_plushie");
     public static final RegistryObject<Block> SNOW_FOX_PLUSHIE = registerCommonBasicPlushie("snow_fox_plushie");
     public static final RegistryObject<Block> RACCOON_PLUSHIE = registerCommonBasicPlushie("raccoon_plushie");
@@ -53,7 +57,7 @@ public class BlockInit {
     public static final RegistryObject<Block> FROG_PLUSHIE = registerCommonBasicPlushie("frog_plushie");
     public static final RegistryObject<Block> GOOSE_PLUSHIE = registerCommonBasicPlushie("goose_plushie");
     public static final RegistryObject<Block> DUCK_PLUSHIE = registerCommonBasicPlushie("duck_plushie");
-    public static final RegistryObject<Block> RUBBER_DUCK_PLUSHIE = registerCommonBasicPlushie("rubber_duck_plushie");
+    public static final RegistryObject<Block> RUBBER_DUCK_PLUSHIE = registerRubberDuckPlushie();
     public static final RegistryObject<Block> HIPPO_PLUSHIE = registerCommonBasicPlushie("hippo_plushie");
     public static final RegistryObject<Block> TURTLE_PLUSHIE = registerCommonBasicPlushie("turtle_plushie");
     public static final RegistryObject<Block> DEER_PLUSHIE = registerCommonBasicPlushie("deer_plushie");
@@ -108,11 +112,18 @@ public class BlockInit {
         RegistryObject<Block> block = BLOCKS.register(name, PlushieBlock::new);
         ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(rarity)));
         plushieBlocks.add(block);
+
+        return block;
+    }
+
+    public static RegistryObject<Block> registerRubberDuckPlushie() {
+        RegistryObject<Block> block = BLOCKS.register("rubber_duck_plushie", RubberDuckPlushieBlock::new);
+        ItemInit.ITEMS.register("rubber_duck_plushie", () -> new BlockItem(block.get(), new Item.Properties().rarity(Rarity.COMMON)));
+        plushieBlocks.add(block);
+
         return block;
     }
 
     public static void loadClass() {
     }
-
-
 }
