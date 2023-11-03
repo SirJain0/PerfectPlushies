@@ -1,8 +1,10 @@
 ## Version 1.8.0
 - Rephrased "Early Supporter" tooltip to "Community Pillar" 
+- Retextured, resized, and optimized goose plushie
 - New plushies:
   - New player plushie
   - Duck
+  - Rubber duck
 
 ## Version 1.7.0
 - New plushies:
