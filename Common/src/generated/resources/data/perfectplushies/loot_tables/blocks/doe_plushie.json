@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "perfectplushies:deer_plushie"
+          "name": "perfectplushies:doe_plushie"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "perfectplushies:blocks/deer_plushie"
+  "random_sequence": "perfectplushies:blocks/doe_plushie"
 }

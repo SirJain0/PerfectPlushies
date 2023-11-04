@@ -1,10 +1,12 @@
 ## Version 1.8.0
 - Rephrased "Early Supporter" tooltip to "Community Pillar" 
 - Retextured, resized, and optimized goose plushie
-- New plushies:
-  - New player plushie
+- Renamed old deer plushie to "Doe Plushie"
+- New player plushie
+- New animal plushies:
   - Duck
   - Rubber duck
+  - Reindeer
 
 ## Version 1.7.0
 - New plushies:
