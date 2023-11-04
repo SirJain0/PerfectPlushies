@@ -7,6 +7,7 @@
   - Duck
   - Rubber duck
   - Reindeer
+  - Mouse
 
 ## Version 1.7.0
 - New plushies:
