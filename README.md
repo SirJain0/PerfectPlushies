@@ -1,6 +1,6 @@
 # Perfect Plushies
 
-![Perfect Plushies (1)](https://github.com/SirJain0/PerfectPlushies/assets/94301223/655f07fe-325d-4eb3-85d0-6498be81ce13)
+![pp-gallery](https://github.com/SirJain0/PerfectPlushies/assets/94301223/26a38d69-6b4c-4aeb-9b9a-33e29f15cbfe)
 
 ## General Info
 
