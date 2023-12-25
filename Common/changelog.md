@@ -1,3 +1,6 @@
+## Version 1.9.0
+- Make all plushies wearable on the head
+
 ## Version 1.8.0
 - Rephrased "Early Supporter" tooltip to "Community Pillar" 
 - Retextured, resized, and optimized goose plushie

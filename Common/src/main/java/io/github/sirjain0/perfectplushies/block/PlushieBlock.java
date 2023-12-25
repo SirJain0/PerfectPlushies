@@ -7,7 +7,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -22,7 +24,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class PlushieBlock extends HorizontalDirectionalBlock {
+public class PlushieBlock extends HorizontalDirectionalBlock implements Equipable {
     private static final VoxelShape OUTLINE_SHAPE = Block.box(3, 0, 3, 13, 10, 13);
 
     // Constructor with pre-defined block settings
@@ -78,5 +80,10 @@ public class PlushieBlock extends HorizontalDirectionalBlock {
 
     public String getMessage() {
         return "Hehe!";
+    }
+
+    @Override
+    public EquipmentSlot getEquipmentSlot() {
+        return EquipmentSlot.HEAD;
     }
 }
