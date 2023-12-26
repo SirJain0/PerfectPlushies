@@ -19,4 +19,9 @@ public class PlayerPlushieBlock extends PlushieBlock implements EntityBlock {
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new PlayerPlushieBlockEntity(blockPos, blockState);
     }
+
+    @Override
+    public String getMessageSender() {
+        return "Player Plushie";
+    }
 }
