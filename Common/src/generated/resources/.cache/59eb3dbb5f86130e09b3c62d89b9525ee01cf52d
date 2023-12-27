@@ -1,4 +1,4 @@
-// 1.20.1	2023-11-04T10:13:34.5680829	Loot Tables
+// 1.20.1	2023-12-26T19:22:01.773972	Loot Tables
 ffbeb5a2cd3891aab26eaf13f9c308c1e34ac3e9 data/perfectplushies/loot_tables/blocks/bear_plushie.json
 a3a1e869645030831a3fa55cd497af08ca7c6972 data/perfectplushies/loot_tables/blocks/capybara_plushie.json
 5ffda2b7c1085f110d342cf45f8e0545e1354fc4 data/perfectplushies/loot_tables/blocks/cat_plushie.json
@@ -14,6 +14,7 @@ edc44d2135a9e4b06a3b0ba6f2746292d9ad1b7e data/perfectplushies/loot_tables/blocks
 c896cb08a7c89aa64e64cb56caf0e5598b5113b4 data/perfectplushies/loot_tables/blocks/geode_plushie.json
 f70f7c0d64473e541cac1a3e0f9438f82bef7f72 data/perfectplushies/loot_tables/blocks/goose_plushie.json
 eddc07df737e8965dc9af46ad0c0f29b11beca83 data/perfectplushies/loot_tables/blocks/hippo_plushie.json
+d127d4fd49cfb6f5674821a5b9b60ef7073dd1f9 data/perfectplushies/loot_tables/blocks/hummingbird_plushie.json
 ac69925551768b382ddf73e621850865a3b5d685 data/perfectplushies/loot_tables/blocks/joosh_plushie.json
 57b54a31d426792f3c1a7de69db8acb4814f2f28 data/perfectplushies/loot_tables/blocks/june_plushie.json
 8c05b48bb75248cb99f1cc7913e3c5545321ef99 data/perfectplushies/loot_tables/blocks/lion_cub_plushie.json
@@ -27,6 +28,7 @@ cd08b6c6a4d093a7db96b3257b4a9299c1279de9 data/perfectplushies/loot_tables/blocks
 046ef20b95a9a667a21baa2dcab851909b939374 data/perfectplushies/loot_tables/blocks/red_panda_plushie.json
 b8ebb539693e3c55a62eb742ff50a8677ae2dda6 data/perfectplushies/loot_tables/blocks/red_ruffed_lemur_plushie.json
 554735fdd9d48742f0332f910722bb4ab35d3787 data/perfectplushies/loot_tables/blocks/reindeer_plushie.json
+850cc724af9a94f41da2590de805230e08d0ca6d data/perfectplushies/loot_tables/blocks/robin_plushie.json
 032ac52d31793c4fd90df2d98d11dd370b319860 data/perfectplushies/loot_tables/blocks/rocris_plushie.json
 c15333d3bf0df039dab9e2445d65fb559e45c61f data/perfectplushies/loot_tables/blocks/rubber_duck_plushie.json
 6eea8f6d7b16f3d38f11aaea52a5555eea92e78a data/perfectplushies/loot_tables/blocks/seal_plushie.json

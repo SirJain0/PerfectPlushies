@@ -2,10 +2,9 @@
 - Made all plushies wearable on the head
 - New plushies:
   - Robin
-  - Otter
+  - Hummingbird
 - Made player plushies send a message under the name of "Player Plushie" instead of plushie
 - Made dropped duck plushie item smaller
-
 
 ## Version 1.8.0
 - Rephrased "Early Supporter" tooltip to "Community Pillar" 
