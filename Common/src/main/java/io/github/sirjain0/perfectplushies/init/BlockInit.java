@@ -4,7 +4,9 @@ import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.block.PlayerPlushieBlock;
 import io.github.sirjain0.perfectplushies.block.PlushieBlock;
 import io.github.sirjain0.perfectplushies.block.RubberDuckPlushieBlock;
+import io.github.sirjain0.perfectplushies.block.TestPlushieBlock;
 import io.github.sirjain0.perfectplushies.block.entity.PlayerPlushieBlockEntity;
+import io.github.sirjain0.perfectplushies.block.entity.TestPlushieBlockEntity;
 import io.github.sirjain0.perfectplushies.item.PlayerPlushieBlockItem;
 import io.github.sirjain0.perfectplushies.registration.RegistrationProvider;
 import io.github.sirjain0.perfectplushies.registration.RegistryObject;
@@ -57,7 +59,7 @@ public class BlockInit {
     public static final RegistryObject<Block> FROG_PLUSHIE = registerCommonBasicPlushie("frog_plushie");
     public static final RegistryObject<Block> GOOSE_PLUSHIE = registerCommonBasicPlushie("goose_plushie");
     public static final RegistryObject<Block> DUCK_PLUSHIE = registerCommonBasicPlushie("duck_plushie");
-    public static final RegistryObject<Block> RUBBER_DUCK_PLUSHIE = registerRubberDuckPlushie();
+    public static final RegistryObject<Block> RUBBER_DUCK_PLUSHIE = registerCustomPlushie("rubber_duck_plushie", RubberDuckPlushieBlock::new);
     public static final RegistryObject<Block> ROBIN_PLUSHIE = registerCommonBasicPlushie("robin_plushie");
     public static final RegistryObject<Block> HUMMINGBIRD_PLUSHIE = registerCommonBasicPlushie("hummingbird_plushie");
     public static final RegistryObject<Block> HIPPO_PLUSHIE = registerCommonBasicPlushie("hippo_plushie");
@@ -71,10 +73,14 @@ public class BlockInit {
     public static final RegistryObject<Block> ELEPHANT_PLUSHIE = registerCommonBasicPlushie("elephant_plushie");
     public static final RegistryObject<Block> MONKEY_PLUSHIE = registerCommonBasicPlushie("monkey_plushie");
     public static final RegistryObject<Block> SEAL_PLUSHIE = registerCommonBasicPlushie("seal_plushie");
+    public static final RegistryObject<Block> DUMBO_BLOB_PLUSHIE = registerCustomPlushie("dumbo_blob_plushie", TestPlushieBlock::new);
 
     public static RegistryObject<Block> registerCommonPlayerPlushie(String name) {
         return registerPlayerPlushie(name, Rarity.COMMON);
-    }    public static final RegistryObject<BlockEntityType<PlayerPlushieBlockEntity>> PLAYER_PLUSHIE_BLOCK_ENTITY = BLOCK_ENTITIES.register("player_plushie_block_entity", () -> BlockEntityType.Builder.of(PlayerPlushieBlockEntity::new, playerBlocks.stream().map(Supplier::get).toArray(Block[]::new)).build(null));
+    }
+
+    public static final RegistryObject<BlockEntityType<PlayerPlushieBlockEntity>> PLAYER_PLUSHIE_BLOCK_ENTITY = BLOCK_ENTITIES.register("player_plushie_block_entity", () -> BlockEntityType.Builder.of(PlayerPlushieBlockEntity::new, playerBlocks.stream().map(Supplier::get).toArray(Block[]::new)).build(null));
+    public static final RegistryObject<BlockEntityType<TestPlushieBlockEntity>> TEST_PLUSHIE_BLOCK_ENTITY = BLOCK_ENTITIES.register("dumbo_blob_plushie", () -> BlockEntityType.Builder.of(TestPlushieBlockEntity::new, DUMBO_BLOB_PLUSHIE.get()).build(null));
 
     public static RegistryObject<Block> registerRarePlayerPlushie(String name) {
         return registerPlayerPlushie(name, Rarity.RARE);
@@ -120,9 +126,9 @@ public class BlockInit {
         return block;
     }
 
-    public static RegistryObject<Block> registerRubberDuckPlushie() {
-        RegistryObject<Block> block = BLOCKS.register("rubber_duck_plushie", RubberDuckPlushieBlock::new);
-        ItemInit.ITEMS.register("rubber_duck_plushie", () -> new BlockItem(block.get(), new Item.Properties().rarity(Rarity.COMMON)));
+    public static RegistryObject<Block> registerCustomPlushie(String name, Supplier<? extends Block> customPlushieBlock) {
+        RegistryObject<Block> block = BLOCKS.register(name, customPlushieBlock);
+        ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().rarity(Rarity.COMMON)));
         plushieBlocks.add(block);
 
         return block;

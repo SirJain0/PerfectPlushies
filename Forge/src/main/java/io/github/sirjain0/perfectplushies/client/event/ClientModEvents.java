@@ -1,6 +1,7 @@
 package io.github.sirjain0.perfectplushies.client.event;
 
 import io.github.sirjain0.perfectplushies.client.renderer.PlushieRenderer;
+import io.github.sirjain0.perfectplushies.client.renderer.TestPlushieRenderer;
 import io.github.sirjain0.perfectplushies.client.renderer.WanderingPlushieTraderRenderer;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
 import io.github.sirjain0.perfectplushies.init.EntityInit;
@@ -16,5 +17,6 @@ public class ClientModEvents {
     public static void onRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(BlockInit.PLAYER_PLUSHIE_BLOCK_ENTITY.get(), (context) -> new PlushieRenderer());
         event.registerEntityRenderer(EntityInit.WANDERING_PLUSHIH_TRADER.get(), WanderingPlushieTraderRenderer::new);
+        event.registerBlockEntityRenderer(BlockInit.TEST_PLUSHIE_BLOCK_ENTITY.get(), (context) -> new TestPlushieRenderer());
     }
 }
