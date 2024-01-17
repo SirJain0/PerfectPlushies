@@ -58,6 +58,7 @@ public class BlockInit {
     public static final RegistryObject<Block> RABBIT_PLUSHIE = registerCommonBasicPlushie("rabbit_plushie");
     public static final RegistryObject<Block> FROG_PLUSHIE = registerCommonBasicPlushie("frog_plushie");
     public static final RegistryObject<Block> GOOSE_PLUSHIE = registerCommonBasicPlushie("goose_plushie");
+    public static final RegistryObject<Block> FLAMINGO_PLUSHIE = registerCommonBasicPlushie("flamingo_plushie");
     public static final RegistryObject<Block> DUCK_PLUSHIE = registerCommonBasicPlushie("duck_plushie");
     public static final RegistryObject<Block> RUBBER_DUCK_PLUSHIE = registerCustomPlushie("rubber_duck_plushie", RubberDuckPlushieBlock::new);
     public static final RegistryObject<Block> ROBIN_PLUSHIE = registerCommonBasicPlushie("robin_plushie");
