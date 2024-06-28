@@ -58,7 +58,7 @@ public class ModLangProvider extends LanguageProvider {
         add("plushie.description.sirjain_plushie_rare", "Co-Developer of Perfect Plushies\nCo-Developer of Herespawn\nDeveloper of Throwable Fluids");
         add("plushie.description.joosh_plushie", "Lead Artist of Bonsai Studios");
 
-        add("plushie.description.rocris_plushie", COMMUNITY_PILLAR_STR);
+        add("plushie.description.rocris_plushie", COMMUNITY_PILLAR_STR+"\nDeveloper of Blaster Movement");
         add("plushie.description.geode_plushie", COMMUNITY_PILLAR_STR);
     }
 
