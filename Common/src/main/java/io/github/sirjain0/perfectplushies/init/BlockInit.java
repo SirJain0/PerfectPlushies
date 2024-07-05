@@ -76,7 +76,7 @@ public class BlockInit <T extends Block>  {
     public static final RegistryObject<Block> ELEPHANT_PLUSHIE = registerCommonBasicPlushie("elephant_plushie");
     public static final RegistryObject<Block> MONKEY_PLUSHIE = registerCommonBasicPlushie("monkey_plushie");
     public static final RegistryObject<Block> SEAL_PLUSHIE = registerCommonBasicPlushie("seal_plushie");
-    public static final RegistryObject<Block> DUMBO_BLOB_PLUSHIE = registerCustomItemPlushie("dumbo_blob_plushie", DumboBlobPlushieBlock::new, block -> ()->new ColoredPlushieBlockItem(block.get(), Rarity.EPIC));
+    public static final RegistryObject<Block> DUMBO_BLOB_PLUSHIE = registerCustomItemPlushie("dumbo_blob_plushie", DumboBlobPlushieBlock::new, block -> ()->new ColoredPlushieBlockItem(block.get(), Rarity.RARE));
 
     public static RegistryObject<Block> registerCommonPlayerPlushie(String name) {
         return registerPlayerPlushie(name, Rarity.COMMON);

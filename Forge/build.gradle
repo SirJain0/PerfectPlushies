@@ -82,7 +82,7 @@ dependencies {
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.20.1:${geckolib_version}")
     implementation(jarJar(fg.deobf("com.nyfaria.perfectplushieapi:perfectplushieapi-forge-1.20.1:${plushie_api_version}"))){
-        jarJar.ranged(it, "[0.0.1,0.1.0)")
+        jarJar.ranged(it, "[${plushie_api_version},)")
     }
 }
 
@@ -142,6 +142,7 @@ publishing {
         }
     }
 }
+reg.configureJarTask(tasks.jarJar)
 publishMods {
     file = jar.archiveFile
     changelog = project(":Common").file("changelog.md").text

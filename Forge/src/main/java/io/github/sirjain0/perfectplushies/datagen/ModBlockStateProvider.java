@@ -28,6 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         BlockInit.playerBlocks.stream()
                 .map(Supplier::get)
                 .forEach(this::generatePlayerPlushieBlockState);
+        generatePlayerPlushieBlockState(BlockInit.DUMBO_BLOB_PLUSHIE.get());
     }
 
     protected void simpleCubeBottomTopBlockState(Block block) {

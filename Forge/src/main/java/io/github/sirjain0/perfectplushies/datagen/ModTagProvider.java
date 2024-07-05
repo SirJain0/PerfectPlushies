@@ -44,7 +44,7 @@ public class ModTagProvider {
             populateTag(PlushieTags.EPIC_TREASURE_PLUSHIES_ITEMS,
                     BlockInit.playerBlocksEpic.toArray(new RegistryObject[0])
             );
-            populateTag(PlushieTags.EPIC_VILLAGE_PLUSHIES_ITEMS, BlockInit.DUMBO_BLOB_PLUSHIE::get);
+            populateTag(PlushieTags.RARE_VILLAGE_PLUSHIES_ITEMS, BlockInit.DUMBO_BLOB_PLUSHIE::get);
 
         }
 

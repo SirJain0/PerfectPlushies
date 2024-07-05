@@ -27,6 +27,7 @@ public class ItemInit {
                     (itemDisplayParameters, output) -> {
                         BlockInit.plushieBlocks.forEach((registryObject) -> output.accept(new ItemStack(registryObject.get())));
                         BlockInit.playerBlocks.forEach((registryObject) -> output.accept(new ItemStack(registryObject.get())));
+                        output.accept(BlockInit.DUMBO_BLOB_PLUSHIE.get());
                         output.accept(WANDERING_TRADER_SPAWN_EGG.get());
                     }).title(Component.translatable("itemGroup.perfectplushies.tab"))
             .build());
