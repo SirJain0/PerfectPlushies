@@ -1,5 +1,5 @@
 ## Version 1.10.0
-- New mythical Blob plushie
+- New mythical Dumbo Blob plushie
 
 ## Version 1.9.0
 - Made all plushies wearable on the head
