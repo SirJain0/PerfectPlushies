@@ -1,5 +1,6 @@
 package io.github.sirjain0.perfectplushies.datagen;
 
+import com.nyfaria.perfectplushieapi.init.PlushieTags;
 import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
 import io.github.sirjain0.perfectplushies.init.TagInit;
@@ -31,24 +32,20 @@ public class ModTagProvider {
 
         @Override
         protected void addTags(HolderLookup.Provider pProvider) {
-            populateTag(TagInit.VILLAGE_PLUSHIES_ITEMS,
+            populateTag(PlushieTags.VILLAGE_PLUSHIES_ITEMS,
                     BlockInit.plushieBlocks.toArray(new RegistryObject[0])
             );
-            populateTag(TagInit.TREASURE_PLUSHIES_ITEMS,
+            populateTag(PlushieTags.TREASURE_PLUSHIES_ITEMS,
                     BlockInit.playerBlocksCommon.toArray(new RegistryObject[0])
             );
-            populateTag(TagInit.RARE_TREASURE_PLUSHIES_ITEMS,
+            populateTag(PlushieTags.RARE_TREASURE_PLUSHIES_ITEMS,
                     BlockInit.playerBlocksRare.toArray(new RegistryObject[0])
             );
-            populateTag(TagInit.EPIC_TREASURE_PLUSHIES_ITEMS,
+            populateTag(PlushieTags.EPIC_TREASURE_PLUSHIES_ITEMS,
                     BlockInit.playerBlocksEpic.toArray(new RegistryObject[0])
             );
+            populateTag(PlushieTags.EPIC_VILLAGE_PLUSHIES_ITEMS, BlockInit.DUMBO_BLOB_PLUSHIE::get);
 
-            tag(ItemTags.WOOL).addTags(
-                    TagInit.VILLAGE_PLUSHIES_ITEMS,
-                    TagInit.TREASURE_PLUSHIES_ITEMS,
-                    TagInit.RARE_TREASURE_PLUSHIES_ITEMS
-            );
         }
 
         public void populateTag(TagKey<Item> tag, Supplier<ItemLike>... items) {
@@ -66,14 +63,11 @@ public class ModTagProvider {
 
         @Override
         protected void addTags(HolderLookup.Provider pProvider) {
-            populateTag(TagInit.VILLAGE_PLUSHIES_BLOCKS,
+            populateTag(PlushieTags.VILLAGE_PLUSHIES_BLOCKS,
                     BlockInit.plushieBlocks.toArray(new RegistryObject[0])
             );
-            populateTag(TagInit.TREASURE_PLUSHIES_BLOCKS, BlockInit.playerBlocks.toArray(new RegistryObject[0]));
-            tag(BlockTags.WOOL).addTags(
-                    TagInit.VILLAGE_PLUSHIES_BLOCKS,
-                    TagInit.TREASURE_PLUSHIES_BLOCKS
-            );
+            populateTag(PlushieTags.TREASURE_PLUSHIES_BLOCKS, BlockInit.playerBlocks.toArray(new RegistryObject[0]));
+
         }
 
         public <T extends Block> void populateTag(TagKey<Block> tag, Supplier<?>... items) {

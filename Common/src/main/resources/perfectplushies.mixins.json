@@ -9,7 +9,6 @@
     "ServerLevelMixin"
   ],
   "client": [
-    "PlayerPlushieBlockItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

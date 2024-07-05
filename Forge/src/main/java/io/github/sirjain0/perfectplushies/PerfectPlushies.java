@@ -26,7 +26,6 @@ public class PerfectPlushies {
     public PerfectPlushies() {
         Constants.LOG.info("Hello Forge world!");
         CommonClass.init();
-        LootModifierInit.LOOT_MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CommonConfig.CONFIG_SPEC);
 
     }

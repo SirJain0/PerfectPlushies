@@ -16,7 +16,7 @@ minecraft {
     if (project.hasProperty('forge_ats_enabled') && project.findProperty('forge_ats_enabled').toBoolean()) {
         // This location is hardcoded in Forge and can not be changed.
         // https://github.com/MinecraftForge/MinecraftForge/blob/be1698bb1554f9c8fa2f58e32b9ab70bc4385e60/fmlloader/src/main/java/net/minecraftforge/fml/loading/moddiscovery/ModFile.java#L123
-        accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+        accessTransformer = project(":Common").file('src/main/resources/META-INF/accesstransformer.cfg')
         project.logger.debug('Forge Access Transformers are enabled for this project.')
     }
 
@@ -81,6 +81,9 @@ dependencies {
     compileOnly project(":Common")
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.20.1:${geckolib_version}")
+    implementation(jarJar(fg.deobf("com.nyfaria.perfectplushieapi:perfectplushieapi-forge-1.20.1:${plushie_api_version}"))){
+        jarJar.ranged(it, "[0.0.1,0.1.0)")
+    }
 }
 
 tasks.withType(JavaCompile) {

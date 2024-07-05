@@ -12,7 +12,6 @@ public class PerfectPlushies implements ModInitializer {
     @Override
     public void onInitialize() {
         CommonClass.init();
-        PlushiesLootTableModifier.modifyLootTables();
         ForgeConfigRegistry.INSTANCE.register(Constants.MODID, ModConfig.Type.COMMON, CommonConfig.CONFIG_SPEC);
         EntityInit.attributeSuppliers.forEach(
                 p -> FabricDefaultAttributeRegistry.register(p.entityTypeSupplier().get(), p.factory().get().build())

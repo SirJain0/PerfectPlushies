@@ -1,13 +1,14 @@
 plugins {
     id 'java'
-    id 'org.spongepowered.gradle.vanilla' version '0.2.1-SNAPSHOT'
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
     id 'maven-publish'
 }
 
 archivesBaseName = "${mod_id}-common-${minecraft_version}"
 
 minecraft {
-    version(minecraft_version)
+    mappings channel: mappings_channel, version: mappings_version
     runs {
         if (project.hasProperty('common_runs_enabled') ? project.findProperty('common_runs_enabled').toBoolean() : true) {
 
@@ -20,15 +21,17 @@ minecraft {
         }
     }
     if (project.hasProperty('common_aws_enabled') && project.findProperty('common_aws_enabled').toBoolean()) {
-        accessWideners(project(":Common").file("src/main/resources/perfectplushies.accesswidener"))
+        accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     }
 }
 
 dependencies {
+    minecraft "net.minecraft:joined:${minecraft_version}"
     compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     compileOnly "software.bernie.geckolib:geckolib-forge-1.20.1:${geckolib_version}"
     implementation "fuzs.forgeconfigapiport:forgeconfigapiport-common:${project.forge_config_api_port_version}"
+    compileOnly "com.nyfaria.perfectplushieapi:perfectplushieapi-common-1.20.1:${plushie_api_version}"
 }
 sourceSets.main.resources.srcDir './src/generated/resources'
 processResources {

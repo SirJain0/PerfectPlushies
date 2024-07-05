@@ -1,6 +1,7 @@
 plugins {
     id 'com.matyrobbrt.mc.registrationutils' version "$regutils_version"
     // The plugin is located at the Gradle plugin portal
+    id 'dev._100media.gradleutils' version '1.+'
 }
 registrationUtils {
     group 'io.github.sirjain0.perfectplushies.registration'
@@ -45,9 +46,7 @@ subprojects {
     }
 
     repositories {
-
         mavenCentral()
-
         maven {
             name = 'Sponge / Mixin'
             url = 'https://repo.spongepowered.org/repository/maven-public/'
@@ -61,6 +60,7 @@ subprojects {
             name = "Fuzs Mod Resources"
             url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
         }
+        maven hundredMedia.get100MediaPublicMaven()
     }
 
     tasks.withType(JavaCompile).configureEach {

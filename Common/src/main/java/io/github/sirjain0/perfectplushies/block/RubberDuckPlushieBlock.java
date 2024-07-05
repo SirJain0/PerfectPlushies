@@ -1,5 +1,6 @@
 package io.github.sirjain0.perfectplushies.block;
 
+import com.nyfaria.perfectplushieapi.block.PlushieBlock;
 import net.minecraft.ChatFormatting;
 
 public class RubberDuckPlushieBlock extends PlushieBlock {
