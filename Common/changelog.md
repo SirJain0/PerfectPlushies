@@ -1,5 +1,5 @@
 ## Version 1.10.0
-- New mythical Dumbo Blob plushie
+- New mythical Dumbo Blob plushie with a special animation
 - Adjusted rarity of plushies
 
 ## Version 1.9.0
