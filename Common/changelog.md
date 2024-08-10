@@ -1,3 +1,13 @@
+## Version 1.11.0
+- Added three new plushies
+  - Quokka
+  - Hedgehog
+  - Aye-Aye
+- Remodeled two plushies
+  - Hippo
+  - Rabbit
+- Updated promotional material (new icon, banner, and gallery)
+
 ## Version 1.10.0
 - New mythical Dumbo Blob plushie with a special animation
 - Adjusted rarity of plushies
