@@ -1,4 +1,5 @@
-// 1.20.1	2024-07-04T18:52:36.8455002	Item Models: perfectplushies
+// 1.20.1	2024-08-10T10:33:43.6949539	Item Models: perfectplushies
+1f968a9d760519c596998566cca24dd9af96b215 assets/perfectplushies/models/item/aye_aye_plushie.json
 693693b2c54c42d4548eb314c5b02073a1ef50e3 assets/perfectplushies/models/item/bear_plushie.json
 57d71dd9b3836536a19bb7d0a2973db730fc6f1e assets/perfectplushies/models/item/capybara_plushie.json
 390b7656f1409cab89e538abc31fb436d01a1bf3 assets/perfectplushies/models/item/cat_plushie.json
@@ -13,6 +14,7 @@ e51d02a025dea223310f5dd901c62ed1fba36912 assets/perfectplushies/models/item/frog
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/gamerpotion_plushie_rare.json
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/geode_plushie.json
 6f7bcbb2e9ed7e1faf73a5526134bbb9504dd75a assets/perfectplushies/models/item/goose_plushie.json
+5cabc45079b877dd3209e27bfe2e8c5c79da1009 assets/perfectplushies/models/item/hedgehog_plushie.json
 45036ccf1c7ad1e43c7a2f84a6b5f850af5cdcc7 assets/perfectplushies/models/item/hippo_plushie.json
 9d7cdf62c65087adb0e03ca1c5430f43601c9af8 assets/perfectplushies/models/item/hummingbird_plushie.json
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/joosh_plushie.json
@@ -22,6 +24,7 @@ e51d02a025dea223310f5dd901c62ed1fba36912 assets/perfectplushies/models/item/frog
 93f67d345ee9087fa4ae798f95858b5b1320760b assets/perfectplushies/models/item/mouse_plushie.json
 9c00669cd7e27b9825fab8fcf18d4ef2df7bed4d assets/perfectplushies/models/item/nyf_plushie.json
 a79ca6080fccf20a4be4c4056b400676f03a37a1 assets/perfectplushies/models/item/panda_plushie.json
+6723e278fb22047d91e7cada4faecf59f1c4faf9 assets/perfectplushies/models/item/quokka_plushie.json
 47400898ee5271d98ab78b071e6ce0d97599cfc7 assets/perfectplushies/models/item/rabbit_plushie.json
 3bc73e117981a6515835a1092612061b564e98a8 assets/perfectplushies/models/item/raccoon_plushie.json
 fc46fd7ad15728e15f26628a392b42c56ffeab87 assets/perfectplushies/models/item/red_fox_plushie.json

@@ -1,5 +1,5 @@
-// 1.20.1	2024-07-04T18:54:50.8642803	Tags for minecraft:item mod id perfectplushies
-22aa3de912dfb6ba98470c1c89436be6ef8470d6 data/perfectplushieapi/tags/items/epic_village_plushies.json
+// 1.20.1	2024-08-10T10:33:43.6919278	Tags for minecraft:item mod id perfectplushies
 8f9eeda59e841d3a242407c81f1547ff413ef247 data/perfectplushieapi/tags/items/rare_treasure_plushies.json
+22aa3de912dfb6ba98470c1c89436be6ef8470d6 data/perfectplushieapi/tags/items/rare_village_plushies.json
 4bec6df4c6f446aa6a53294ad9690a4f5cba3ac1 data/perfectplushieapi/tags/items/treasure_plushies.json
-6f9f3398f1397db526c28bc2ba638c6e3772a508 data/perfectplushieapi/tags/items/village_plushies.json
+9998a9957f871179727084a01c58b8fc82ffbd7f data/perfectplushieapi/tags/items/village_plushies.json

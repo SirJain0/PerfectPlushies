@@ -1,4 +1,5 @@
-// 1.20.1	2024-07-04T18:52:36.8455002	Loot Tables
+// 1.20.1	2024-08-10T10:33:43.6969543	Loot Tables
+cb6ebf563b25e300c7e7e95b91fffdae2f412061 data/perfectplushies/loot_tables/blocks/aye_aye_plushie.json
 ffbeb5a2cd3891aab26eaf13f9c308c1e34ac3e9 data/perfectplushies/loot_tables/blocks/bear_plushie.json
 a3a1e869645030831a3fa55cd497af08ca7c6972 data/perfectplushies/loot_tables/blocks/capybara_plushie.json
 5ffda2b7c1085f110d342cf45f8e0545e1354fc4 data/perfectplushies/loot_tables/blocks/cat_plushie.json
@@ -14,6 +15,7 @@ a97216212d42db9f65a36fb2c40fa83435f8a578 data/perfectplushies/loot_tables/blocks
 11c4dddce8ef7912f3c02668322a8518ce000647 data/perfectplushies/loot_tables/blocks/gamerpotion_plushie_rare.json
 c896cb08a7c89aa64e64cb56caf0e5598b5113b4 data/perfectplushies/loot_tables/blocks/geode_plushie.json
 f70f7c0d64473e541cac1a3e0f9438f82bef7f72 data/perfectplushies/loot_tables/blocks/goose_plushie.json
+bdc6a27f85cf53afcd60179c79cc973c8f6a9fc1 data/perfectplushies/loot_tables/blocks/hedgehog_plushie.json
 eddc07df737e8965dc9af46ad0c0f29b11beca83 data/perfectplushies/loot_tables/blocks/hippo_plushie.json
 d127d4fd49cfb6f5674821a5b9b60ef7073dd1f9 data/perfectplushies/loot_tables/blocks/hummingbird_plushie.json
 ac69925551768b382ddf73e621850865a3b5d685 data/perfectplushies/loot_tables/blocks/joosh_plushie.json
@@ -23,6 +25,7 @@ ac69925551768b382ddf73e621850865a3b5d685 data/perfectplushies/loot_tables/blocks
 6da3ae5440824ef6dbfa878b64e04cfa16fd172b data/perfectplushies/loot_tables/blocks/mouse_plushie.json
 d1d499db00751ee11f990d0ed0d0d07085d2e0a0 data/perfectplushies/loot_tables/blocks/nyf_plushie.json
 beb848db71fc418cbd10ccecd683ab4b191336d1 data/perfectplushies/loot_tables/blocks/panda_plushie.json
+00334e50231cfa7edc22e4207f137dc85ca4c781 data/perfectplushies/loot_tables/blocks/quokka_plushie.json
 496320554a3c31d63eca210dea9f21a6c85dfd19 data/perfectplushies/loot_tables/blocks/rabbit_plushie.json
 cd08b6c6a4d093a7db96b3257b4a9299c1279de9 data/perfectplushies/loot_tables/blocks/raccoon_plushie.json
 7d52b66d1c53ca457faccb92d962f24f9691d301 data/perfectplushies/loot_tables/blocks/red_fox_plushie.json
