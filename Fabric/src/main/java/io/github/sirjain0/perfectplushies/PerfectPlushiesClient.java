@@ -20,6 +20,7 @@ public class PerfectPlushiesClient implements ClientModInitializer {
     public void onInitializeClient() {
         registerCutout(BlockInit.FROG_PLUSHIE);
         registerCutout(BlockInit.GOOSE_PLUSHIE);
+        registerCutout(BlockInit.HEDGEHOG_PLUSHIE);
 
         BlockEntityRenderers.register(BlockInit.PLAYER_PLUSHIE_BLOCK_ENTITY.get(), (context) -> new PlushieRenderer());
         BlockEntityRenderers.register(BlockInit.PP_COLOR_BLOCK_ENTITY.get(), (context) -> new ColoredPlushieRenderer(new ResourceLocation(Constants.MODID,"dumbo_blob_plushie")));
