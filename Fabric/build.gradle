@@ -125,6 +125,9 @@ publishMods {
             accessToken = modrinth_token
             projectId = modrinth_project_id
             minecraftVersions.add(minecraft_version)
+            requires {
+                slug = "geckolib"
+            }
         }
     }
 

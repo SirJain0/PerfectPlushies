@@ -12,7 +12,7 @@ archivesBaseName = "${mod_id}-forge-${minecraft_version}"
 
 minecraft {
     mappings channel: mappings_channel, version: mappings_version
-
+    jarJar.enable()
     if (project.hasProperty('forge_ats_enabled') && project.findProperty('forge_ats_enabled').toBoolean()) {
         // This location is hardcoded in Forge and can not be changed.
         // https://github.com/MinecraftForge/MinecraftForge/blob/be1698bb1554f9c8fa2f58e32b9ab70bc4385e60/fmlloader/src/main/java/net/minecraftforge/fml/loading/moddiscovery/ModFile.java#L123
@@ -123,7 +123,19 @@ processResources {
         }
     }
 }
-
+reobf {
+    jarJar {}
+}
+afterEvaluate {
+    reobfJar {
+        enabled = false
+    }
+    jar.finalizedBy reobfJar
+    tasks.jarJar.finalizedBy reobfJarJar
+}
+tasks.jarJar {
+    archiveClassifier = ''
+}
 
 jar.finalizedBy('reobfJar')
 
@@ -144,7 +156,7 @@ publishing {
 }
 reg.configureJarTask(tasks.jarJar)
 publishMods {
-    file = jar.archiveFile
+    file = tasks.jarJar.archiveFile
     changelog = project(":Common").file("changelog.md").text
     type = STABLE
     modLoaders.add("forge")
@@ -165,6 +177,9 @@ publishMods {
             accessToken = modrinth_token
             projectId = modrinth_project_id
             minecraftVersions.add(minecraft_version)
+            requires {
+                slug = "geckolib"
+            }
         }
     }
 

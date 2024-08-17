@@ -1,3 +1,6 @@
+## Version 1.11.1
+- Fixed Forge JarInJar
+
 ## Version 1.11.0
 - Added three new plushies
   - Quokka
@@ -7,6 +10,9 @@
   - Hippo
   - Rabbit
 - Updated promotional material (new icon, banner, and gallery)
+
+## Version 1.10.1
+- Fixed Forge JarInJar
 
 ## Version 1.10.0
 - New mythical Dumbo Blob plushie with a special animation
