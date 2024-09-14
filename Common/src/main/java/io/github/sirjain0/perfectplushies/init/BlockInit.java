@@ -58,7 +58,7 @@ public class BlockInit <T extends Block>  {
     public static final RegistryObject<Block> DOG_PLUSHIE = registerCommonBasicPlushie("dog_plushie");
     public static final RegistryObject<Block> CAT_PLUSHIE = registerCommonBasicPlushie("cat_plushie");
     public static final RegistryObject<Block> DOLPHIN_PLUSHIE = registerCommonBasicPlushie("dolphin_plushie");
-    public static final RegistryObject<Block> RABBIT_PLUSHIE = registerCommonBasicPlushie("rabbit_plushie");
+    public static final RegistryObject<Block> BROWN_RABBIT_PLUSHIE = registerCommonBasicPlushie("brown_rabbit_plushie");
     public static final RegistryObject<Block> FROG_PLUSHIE = registerCommonBasicPlushie("frog_plushie");
     public static final RegistryObject<Block> GOOSE_PLUSHIE = registerCommonBasicPlushie("goose_plushie");
     public static final RegistryObject<Block> DUCK_PLUSHIE = registerCommonBasicPlushie("duck_plushie");

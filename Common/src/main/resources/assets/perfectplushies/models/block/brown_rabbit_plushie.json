@@ -3,8 +3,8 @@
 	"render_type": "cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "perfectplushies:block/rabbit_plushie",
-		"particle": "perfectplushies:block/rabbit_plushie"
+		"2": "perfectplushies:block/brown_rabbit_plushie",
+		"particle": "perfectplushies:block/brown_rabbit_plushie"
 	},
 	"elements": [
 		{

@@ -1,3 +1,6 @@
+## Version 1.12.0
+- Rename Rabbit plushie to Brown Rabbit plushie
+
 ## Version 1.11.1
 - Fixed Forge JarInJar
 
