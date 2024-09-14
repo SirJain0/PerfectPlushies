@@ -3,7 +3,8 @@
 	"render_type": "cutout",
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "block/koala_plushie"
+		"2": "perfectplushies:block/koala_plushie",
+		"particle": "perfectplushies:block/koala_plushie"
 	},
 	"elements": [
 		{

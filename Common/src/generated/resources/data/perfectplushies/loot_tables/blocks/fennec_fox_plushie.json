@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "perfectplushies:rabbit_plushie"
+          "name": "perfectplushies:fennec_fox_plushie"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "perfectplushies:blocks/rabbit_plushie"
+  "random_sequence": "perfectplushies:blocks/fennec_fox_plushie"
 }
