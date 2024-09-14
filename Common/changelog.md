@@ -1,5 +1,9 @@
 ## Version 1.12.0
 - Rename Rabbit plushie to Brown Rabbit plushie
+- New plushies:
+  - White rabbit
+  - Koala
+  - Fennec fox
 
 ## Version 1.11.1
 - Fixed Forge JarInJar
