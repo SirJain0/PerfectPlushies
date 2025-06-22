@@ -1,10 +1,6 @@
 package io.github.sirjain0.perfectplushies.platform.services;
 
-import io.github.sirjain0.perfectplushies.registration.RegistryObject;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.item.SpawnEggItem;
 import software.bernie.geckolib.animatable.GeoItem;
 
 import java.util.function.Consumer;
@@ -48,5 +44,4 @@ public interface IPlatformHelper<T extends Mob> {
 
     Supplier<Object> getRenderProvider(GeoItem item);
 
-    SpawnEggItem createSpawnEggItem(RegistryObject<EntityType<T>> entityTypeRegistryObject, int primaryColor, int secondaryColor);
 }

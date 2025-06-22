@@ -1,5 +1,6 @@
 package io.github.sirjain0.perfectplushies.datagen;
 
+import com.nyfaria.perfectplushieapi.api.PlushieStore;
 import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.minecraft.data.PackOutput;
@@ -21,11 +22,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        models().getBuilder("")
+                .texture("", "")
+                .renderType("cutout");
 
-        BlockInit.plushieBlocks.stream()
+        PlushieStore.plushieBlocks.stream()
                 .map(Supplier::get)
+                .filter(p-> p != BlockInit.DUMBO_BLOB_PLUSHIE.get())
                 .forEach(this::generatePlushieBlockState);
-        BlockInit.playerBlocks.stream()
+        PlushieStore.playerBlocks.stream()
                 .map(Supplier::get)
                 .forEach(this::generatePlayerPlushieBlockState);
         generatePlayerPlushieBlockState(BlockInit.DUMBO_BLOB_PLUSHIE.get());
@@ -42,7 +47,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void generatePlayerPlushieBlockState(Block block) {
         ResourceLocation textRL = modLoc("block/" + getName(block));
-        BlockModelBuilder builder = models().getBuilder(getName(block)).texture("particle", textRL);
+        BlockModelBuilder builder = models().getBuilder(getName(block)).texture("particle", textRL)
+                .renderType("cutout");
         getVariantBuilder(block).partialState().setModels(new ConfiguredModel(builder));
     }
 

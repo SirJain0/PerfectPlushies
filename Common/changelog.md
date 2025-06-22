@@ -1,3 +1,15 @@
+## Versions 1.13.3
+- Fixed an issue where fabric would not load on server.
+
+## Version 1.13.2 
+- internal api update.
+
+## Version 1.13.1
+- Fixed Player Plushie Rendering.
+
+## Version 1.13.0
+- Added Config Options to Fabric for Chest Loot Drops.
+
 ## Version 1.12.0
 - Rename Rabbit plushie to Brown Rabbit plushie
 - New plushies:

@@ -1,8 +1,8 @@
 package io.github.sirjain0.perfectplushies.datagen;
 
+import com.nyfaria.perfectplushieapi.api.PlushieStore;
 import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
-import io.github.sirjain0.perfectplushies.init.ItemInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -29,13 +29,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         //         .map(Supplier::get)
         //         .forEach(this::simpleGeneratedModel);
 
-        BlockInit.plushieBlocks.stream()
+        PlushieStore.plushieBlocks.stream()
                 .map(Supplier::get)
+                .filter(block -> block != BlockInit.DUMBO_BLOB_PLUSHIE.get())
                 .forEach(this::simpleBlockItemModel);
-        BlockInit.playerBlocks.stream()
+        PlushieStore.playerBlocks.stream()
                 .map(Supplier::get)
                 .forEach(this::playerPlushieItemModel);
-        spawnEgg(ItemInit.WANDERING_TRADER_SPAWN_EGG.get());
     }
 
     protected ItemModelBuilder simpleBlockItemModel(Block block) {

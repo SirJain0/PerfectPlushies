@@ -20,7 +20,9 @@ dependencies {
     modImplementation "software.bernie.geckolib:geckolib-fabric-1.20.1:${geckolib_version}"
     modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${project.forge_config_api_port_version}"
     include "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${project.forge_config_api_port_version}"
-    modImplementation include("com.nyfaria.perfectplushieapi:perfectplushieapi-fabric-1.20.1:${plushie_api_version}")
+    modImplementation include("com.nyfaria.perfectplushieapi:perfectplushieapi-fabric-1.20.1:${plushie_api_version}"){
+        transitive = false
+    }
 }
 
 loom {
@@ -104,31 +106,32 @@ publishing {
     }
 }
 publishMods {
-    file = remapJar.archiveFile
-    changelog = project(":Common").file("changelog.md").text
-    type = STABLE
-    modLoaders.add("fabric")
-    displayName = "${mod_name} ${project.property('version')} [Fabric]"
-    dryRun = dry_run.toBoolean()
-    if (curseforge_publishing_enabled.toBoolean()) {
-        curseforge {
-            projectId = curseforge_project_id
-            accessToken = curseforge_token
-            minecraftVersions.add(minecraft_version)
-            requires {
-                slug = "geckolib"
+    if(publish_fabric.asBoolean()) {
+        file = remapJar.archiveFile
+        changelog = project(":Common").file("changelog.md").text
+        type = STABLE
+        modLoaders.add("fabric")
+        displayName = "${mod_name} ${project.property('version')} [Fabric]"
+        dryRun = dry_run.toBoolean()
+        if (curseforge_publishing_enabled.toBoolean()) {
+            curseforge {
+                projectId = curseforge_project_id
+                accessToken = curseforge_token
+                minecraftVersions.add(minecraft_version)
+                requires {
+                    slug = "geckolib"
+                }
+            }
+        }
+        if (modrinth_publishing_enabled.toBoolean()) {
+            modrinth {
+                accessToken = modrinth_token
+                projectId = modrinth_project_id
+                minecraftVersions.add(minecraft_version)
+                requires {
+                    slug = "geckolib"
+                }
             }
         }
     }
-    if (modrinth_publishing_enabled.toBoolean()) {
-        modrinth {
-            accessToken = modrinth_token
-            projectId = modrinth_project_id
-            minecraftVersions.add(minecraft_version)
-            requires {
-                slug = "geckolib"
-            }
-        }
-    }
-
 }

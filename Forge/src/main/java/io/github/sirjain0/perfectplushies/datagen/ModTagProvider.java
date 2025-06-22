@@ -1,16 +1,14 @@
 package io.github.sirjain0.perfectplushies.datagen;
 
+import com.nyfaria.perfectplushieapi.api.PlushieStore;
 import com.nyfaria.perfectplushieapi.init.PlushieTags;
+import com.nyfaria.perfectplushieapi.registration.RegistryObject;
 import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
-import io.github.sirjain0.perfectplushies.init.TagInit;
-import io.github.sirjain0.perfectplushies.registration.RegistryObject;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
@@ -33,16 +31,16 @@ public class ModTagProvider {
         @Override
         protected void addTags(HolderLookup.Provider pProvider) {
             populateTag(PlushieTags.VILLAGE_PLUSHIES_ITEMS,
-                    BlockInit.plushieBlocks.toArray(new RegistryObject[0])
+                    PlushieStore.plushieBlocks.toArray(new RegistryObject[0])
             );
             populateTag(PlushieTags.TREASURE_PLUSHIES_ITEMS,
-                    BlockInit.playerBlocksCommon.toArray(new RegistryObject[0])
+                    PlushieStore.playerBlocksCommon.toArray(new RegistryObject[0])
             );
             populateTag(PlushieTags.RARE_TREASURE_PLUSHIES_ITEMS,
-                    BlockInit.playerBlocksRare.toArray(new RegistryObject[0])
+                    PlushieStore.playerBlocksRare.toArray(new RegistryObject[0])
             );
             populateTag(PlushieTags.EPIC_TREASURE_PLUSHIES_ITEMS,
-                    BlockInit.playerBlocksEpic.toArray(new RegistryObject[0])
+                    PlushieStore.playerBlocksEpic.toArray(new RegistryObject[0])
             );
             populateTag(PlushieTags.RARE_VILLAGE_PLUSHIES_ITEMS, BlockInit.DUMBO_BLOB_PLUSHIE::get);
 
@@ -64,9 +62,11 @@ public class ModTagProvider {
         @Override
         protected void addTags(HolderLookup.Provider pProvider) {
             populateTag(PlushieTags.VILLAGE_PLUSHIES_BLOCKS,
-                    BlockInit.plushieBlocks.toArray(new RegistryObject[0])
+                    PlushieStore.plushieBlocks.toArray(new RegistryObject[0])
             );
-            populateTag(PlushieTags.TREASURE_PLUSHIES_BLOCKS, BlockInit.playerBlocks.toArray(new RegistryObject[0]));
+            populateTag(PlushieTags.TREASURE_PLUSHIES_BLOCKS, PlushieStore.playerBlocks.toArray(new RegistryObject[0]));
+
+            populateTag(PlushieTags.ACTIVE_PLAYER_PLUSHIES, PlushieStore.playerBlocks.toArray(new RegistryObject[0]));
 
         }
 

@@ -156,31 +156,32 @@ publishing {
 }
 reg.configureJarTask(tasks.jarJar)
 publishMods {
-    file = tasks.jarJar.archiveFile
-    changelog = project(":Common").file("changelog.md").text
-    type = STABLE
-    modLoaders.add("forge")
-    displayName = "${mod_name} ${project.property('version')} [Forge]"
-    dryRun = dry_run.toBoolean()
-    if (curseforge_publishing_enabled.toBoolean()) {
-        curseforge {
-            projectId = curseforge_project_id
-            accessToken = curseforge_token
-            minecraftVersions.add(minecraft_version)
-            requires {
-                slug = "geckolib"
+    if(publish_forge) {
+        file = tasks.jarJar.archiveFile
+        changelog = project(":Common").file("changelog.md").text
+        type = STABLE
+        modLoaders.add("forge")
+        displayName = "${mod_name} ${project.property('version')} [Forge]"
+        dryRun = dry_run.toBoolean()
+        if (curseforge_publishing_enabled.toBoolean()) {
+            curseforge {
+                projectId = curseforge_project_id
+                accessToken = curseforge_token
+                minecraftVersions.add(minecraft_version)
+                requires {
+                    slug = "geckolib"
+                }
+            }
+        }
+        if (modrinth_publishing_enabled.toBoolean()) {
+            modrinth {
+                accessToken = modrinth_token
+                projectId = modrinth_project_id
+                minecraftVersions.add(minecraft_version)
+                requires {
+                    slug = "geckolib"
+                }
             }
         }
     }
-    if (modrinth_publishing_enabled.toBoolean()) {
-        modrinth {
-            accessToken = modrinth_token
-            projectId = modrinth_project_id
-            minecraftVersions.add(minecraft_version)
-            requires {
-                slug = "geckolib"
-            }
-        }
-    }
-
 }

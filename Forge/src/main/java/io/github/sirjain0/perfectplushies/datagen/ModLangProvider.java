@@ -1,11 +1,11 @@
 package io.github.sirjain0.perfectplushies.datagen;
 
 import com.google.common.collect.ImmutableMap;
+import com.nyfaria.perfectplushieapi.registration.RegistryObject;
 import io.github.sirjain0.perfectplushies.Constants;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
 import io.github.sirjain0.perfectplushies.init.EntityInit;
 import io.github.sirjain0.perfectplushies.init.ItemInit;
-import io.github.sirjain0.perfectplushies.registration.RegistryObject;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
@@ -44,7 +44,6 @@ public class ModLangProvider extends LanguageProvider {
         BlockInit.BLOCKS.getEntries().forEach(this::blockLang);
 
         add("itemGroup.perfectplushies.tab", "Perfect Plushies");
-        add("tooltip.perfectplushies.advanced", "Hold %s for more information");
         add("tooltip.perfectplushies.shift", "SHIFT");
         add("plushie.description.tslat_plushie", "Developer of Advent of Ascension\nDeveloper of SmartBrainLib\nMaintainer of Geckolib");
         add("plushie.description.nyf_plushie", "Co-Developer of Perfect Plushies\nDeveloper of Many Mods that Start with \"Nyf's\"");
