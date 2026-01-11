@@ -1,5 +1,6 @@
 plugins {
-    id 'fabric-loom' version '1.0-SNAPSHOT'
+    id 'multiloader-loader'
+    id 'fabric-loom'
     id 'maven-publish'
     id 'idea'
     id "me.modmuss50.mod-publish-plugin" version "0.3.3"
@@ -20,7 +21,7 @@ dependencies {
     modImplementation "software.bernie.geckolib:geckolib-fabric-1.20.1:${geckolib_version}"
     modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${project.forge_config_api_port_version}"
     include "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${project.forge_config_api_port_version}"
-    modImplementation include("com.nyfaria.perfectplushieapi:perfectplushieapi-fabric-1.20.1:${plushie_api_version}"){
+    modImplementation include("com.nyfaria.perfectplushieapi:perfectplushieapi-Fabric-1.20.1:${plushie_api_version}"){
         transitive = false
     }
 }
@@ -51,12 +52,12 @@ def replaceProperties =
         [
                 mod_id                     : mod_id,
                 mod_name                   : mod_name,
-                mod_version                : version,
-                mod_authors                : mod_author,
+                version                : version,
+                mod_author                : mod_author,
                 mod_description            : mod_description,
                 minecraft_version_range    : minecraft_version_range,
                 forge_version_range        : forge_version_range,
-                loader_version_range       : loader_version_range,
+                forge_loader_version_range       : forge_loader_version_range,
                 fabric_loader_version_range: fabric_loader_version_range,
                 minecraft_version          : minecraft_version,
                 geckolib_version_range     : geckolib_version
@@ -95,7 +96,9 @@ publishing {
             groupId project.group
             artifactId project.archivesBaseName
             version project.version
-            from components.java
+            afterEvaluate {
+                artifact tasks.named("remapJar")
+            }
         }
     }
 

@@ -1,12 +1,12 @@
 # The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
 modLoader="javafml" #mandatory
-loaderVersion="${loader_version_range}"
+loaderVersion="${forge_loader_version_range}"
 license="All rights reserved"
 [[mods]]
 modId="${mod_id}"
-version="${mod_version}"
+version="${version}"
 displayName="${mod_name}"
-authors="${mod_authors}"
+authors="${mod_author}"
 description='''${mod_description}'''
 [[dependencies.${mod_id}]]
 modId="forge"

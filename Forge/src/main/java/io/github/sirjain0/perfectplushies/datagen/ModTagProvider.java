@@ -15,8 +15,8 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 

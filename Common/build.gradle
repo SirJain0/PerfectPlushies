@@ -1,62 +1,45 @@
 plugins {
-    id 'java'
-    id 'net.minecraftforge.gradle' version '5.1.+'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'multiloader-common'
+    id 'net.neoforged.moddev.legacyforge'
     id 'maven-publish'
+    id 'dev._100media.gradleutils' version '1.+'
 }
 
-archivesBaseName = "${mod_id}-common-${minecraft_version}"
 
-minecraft {
-    mappings channel: mappings_channel, version: mappings_version
-    runs {
-        if (project.hasProperty('common_runs_enabled') ? project.findProperty('common_runs_enabled').toBoolean() : true) {
+legacyForge {
+    mcpVersion = minecraft_version
 
-            server(project.hasProperty('common_server_run_name') ? project.findProperty('common_server_run_name') : 'vanilla_server') {
-                workingDirectory(this.file("run"))
-            }
-            client(project.hasProperty('common_client_run_name') ? project.findProperty('common_client_run_name') : 'vanilla_client') {
-                workingDirectory(this.file("run"))
-            }
-        }
-    }
     if (project.hasProperty('common_aws_enabled') && project.findProperty('common_aws_enabled').toBoolean()) {
-        accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+        accessTransformers = [file('src/main/resources/META-INF/accesstransformer.cfg')]
+    }
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
     }
 }
 
 dependencies {
-    minecraft "net.minecraft:joined:${minecraft_version}"
     compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    compileOnly group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    compileOnly("io.github.llamalad7:mixinextras-forge:0.5.2")
+    annotationProcessor("io.github.llamalad7:mixinextras-forge:0.5.2")
     compileOnly "software.bernie.geckolib:geckolib-forge-1.20.1:${geckolib_version}"
     implementation "fuzs.forgeconfigapiport:forgeconfigapiport-common:${project.forge_config_api_port_version}"
-    compileOnly "com.nyfaria.perfectplushieapi:perfectplushieapi-common-1.20.1:${plushie_api_version}"
+    compileOnly "com.nyfaria.perfectplushieapi:perfectplushieapi-Common-1.20.1:${plushie_api_version}"
 }
-sourceSets.main.resources.srcDir './src/generated/resources'
-processResources {
-
-    def buildProps = project.properties.clone()
-
-    filesMatching(['pack.mcmeta']) {
-
-        expand buildProps
+configurations {
+    commonJava {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+    commonResources {
+        canBeResolved = false
+        canBeConsumed = true
     }
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId project.group
-            artifactId project.archivesBaseName
-            version project.version
-            from components.java
-        }
-    }
-
-    repositories {
-        maven {
-            url "file://" + System.getenv("local_maven")
-        }
-    }
+artifacts {
+    commonJava sourceSets.main.java.sourceDirectories.singleFile
+    commonResources sourceSets.main.resources.sourceDirectories.singleFile
 }
+
