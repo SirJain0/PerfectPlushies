@@ -65,7 +65,7 @@ jar {
     ])
 }
 
-reg.configureJarTask(tasks.jar)
+//reg.configureJarTask(tasks.jar)
 publishMods {
     if(publish_forge) {
         file = tasks.jar.archiveFile
