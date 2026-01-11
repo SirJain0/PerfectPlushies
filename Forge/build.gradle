@@ -1,5 +1,6 @@
 plugins {
     id 'maven-publish'
+    id 'com.matyrobbrt.mc.registrationutils'
     id 'multiloader-loader'
     id 'net.neoforged.moddev.legacyforge'
     id "me.modmuss50.mod-publish-plugin" version "0.3.3"
@@ -53,7 +54,7 @@ dependencies {
     compileOnly project(":Common")
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
     modImplementation "software.bernie.geckolib:geckolib-forge-1.20.1:${geckolib_version}"
-    compileOnly("com.nyfaria.perfectplushieapi:perfectplushieapi-Common-1.20.1:${plushie_api_version}")
+//    compileOnly("com.nyfaria.perfectplushieapi:perfectplushieapi-Common-1.20.1:${plushie_api_version}")
     jarJar(modImplementation("com.nyfaria.perfectplushieapi:perfectplushieapi-Forge-1.20.1:${plushie_api_version}"))
 }
 
