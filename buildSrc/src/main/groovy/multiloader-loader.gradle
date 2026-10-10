@@ -1,7 +1,6 @@
 plugins {
     id 'multiloader-common'
 }
-
 configurations {
     commonJava{
         canBeResolved = true
@@ -12,13 +11,13 @@ configurations {
 }
 
 dependencies {
-    compileOnly(project(':Common')) {
+    compileOnly(project(':common')) {
         capabilities {
             requireCapability "$group:$mod_id"
         }
     }
-    commonJava project(path: ':Common', configuration: 'commonJava')
-    commonResources project(path: ':Common', configuration: 'commonResources')
+    commonJava project(path: ':common', configuration: 'commonJava')
+    commonResources project(path: ':common', configuration: 'commonResources')
 }
 
 tasks.named('compileJava', JavaCompile) {
@@ -36,9 +35,14 @@ tasks.named('javadoc', Javadoc).configure {
     source(configurations.commonJava)
 }
 
-tasks.named('sourcesJar', Jar) {
+tasks.named("sourcesJar", Jar) {
     dependsOn(configurations.commonJava)
     from(configurations.commonJava)
     dependsOn(configurations.commonResources)
     from(configurations.commonResources)
+}
+
+sourceSets.main.resources {
+    srcDir project(":common").file('src/generated/resources').getAbsolutePath()
+    exclude '.cache'
 }

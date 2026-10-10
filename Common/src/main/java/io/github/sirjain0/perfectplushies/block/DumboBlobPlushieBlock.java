@@ -1,7 +1,7 @@
-package io.github.sirjain0.perfectplushies.block;
+package io.github.sirjain0.perfectplushies.perfectplushies.block;
 
 import com.nyfaria.perfectplushieapi.block.RandomDualColoredPlushieBlock;
-import io.github.sirjain0.perfectplushies.block.entity.PPDualColorBlockEntity;
+import io.github.sirjain0.perfectplushies.perfectplushies.block.entity.PPDualColorBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

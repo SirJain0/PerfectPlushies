@@ -1,6 +1,6 @@
-package io.github.sirjain0.perfectplushies.mixin;
+package io.github.sirjain0.perfectplushies.perfectplushies.mixin;
 
-import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,0 +1,74 @@
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(java_version)
+}
+
+def legacy = nyfs.versions.era.get() == "legacy"
+def neoforgeParts = legacy ? [] : nyfs.versions.neoforgeVersion.get().tokenize('.')
+def neoforgeMajor = (neoforgeParts.isEmpty() ? '' : neoforgeParts[0].replaceAll(/\D/, '') ?: '0').toInteger()
+def neoforgeMinor = (neoforgeParts.size() < 2 ? '' : neoforgeParts[1].replaceAll(/\D/, '') ?: '0').toInteger()
+def splitDataRuns = neoforgeMajor > 21 || (neoforgeMajor == 21 && neoforgeMinor >= 4)
+def accessTransformer = project(":common").file('src/main/resources/META-INF/accesstransformer.cfg')
+def dataArguments = ['--mod', project.mod_id, '--all', '--output', rootProject.project(":common").file('src/generated/resources/').getAbsolutePath(), '--existing', rootProject.project(":common").file('src/main/resources/').getAbsolutePath()]
+
+if (legacy) {
+    legacyForge {
+        version = nyfs.versions.minecraft.get() + "-" + nyfs.versions.forgeVersion.get()
+        if (accessTransformer.exists()) {
+            accessTransformers = [accessTransformer]
+        }
+        parchment {
+            minecraftVersion = nyfs.versions.parchmentMinecraft.get()
+            mappingsVersion = nyfs.versions.parchmentVersion.get()
+        }
+        mods {
+            "${mod_id}" {
+                sourceSet sourceSets.main
+                sourceSet project(":neoforge").sourceSets.main
+            }
+        }
+        runs {
+            data {
+                data()
+                programArguments.addAll dataArguments
+            }
+        }
+    }
+} else {
+    neoForge {
+        version = nyfs.versions.neoforgeVersion.get()
+        if (accessTransformer.exists()) {
+            accessTransformers = [accessTransformer]
+        }
+        mods {
+            "${mod_id}" {
+                sourceSet sourceSets.main
+                sourceSet project(":neoforge").sourceSets.main
+            }
+        }
+        runs {
+            if (splitDataRuns) {
+                clientData {
+                    clientData()
+                    programArguments.addAll dataArguments
+                }
+                serverData {
+                    serverData()
+                    programArguments.addAll dataArguments
+                }
+            } else {
+                data {
+                    data()
+                    programArguments.addAll dataArguments
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compileOnly(project(":neoforge")) {
+        capabilities {
+            requireCapability "$group:$mod_id"
+        }
+    }
+}

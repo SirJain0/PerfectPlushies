@@ -1,4 +1,4 @@
-package io.github.sirjain0.perfectplushies;
+package io.github.sirjain0.perfectplushies.perfectplushies;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

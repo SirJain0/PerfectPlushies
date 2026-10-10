@@ -1,9 +1,6 @@
-package io.github.sirjain0.perfectplushies;
+package io.github.sirjain0.perfectplushies.perfectplushies;
 
-import io.github.sirjain0.perfectplushies.init.BlockInit;
-import io.github.sirjain0.perfectplushies.init.EntityInit;
-import io.github.sirjain0.perfectplushies.init.ItemInit;
-import io.github.sirjain0.perfectplushies.init.TagInit;
+import io.github.sirjain0.perfectplushies.perfectplushies.init.*;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide

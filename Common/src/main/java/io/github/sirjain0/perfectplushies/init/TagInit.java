@@ -1,4 +1,4 @@
-package io.github.sirjain0.perfectplushies.init;
+package io.github.sirjain0.perfectplushies.perfectplushies.init;
 
 public class TagInit {
 

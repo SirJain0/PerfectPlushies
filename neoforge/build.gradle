@@ -1,0 +1,22 @@
+plugins {
+    id 'multiloader-loader'
+    alias(nyfs.plugins.mdg.loader)
+    alias(nyfs.plugins.regutils.loader)
+    id 'multiloader-moddev'
+    id("com.nyfaria.moddingtools.dependencies")
+    id("com.nyfaria.moddingtools.publishing")
+}
+
+legacyForge {
+    runs {
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+    }
+}
+
+dependencies {
+    modDeps.requiredMod(nyfs.geckolib.forge, "geckolib", null)
+    jarJar(modImplementation("com.nyfaria.perfectplushieapi:perfectplushieapi-Forge-1.20.1:${plushie_api_version}"))
+}

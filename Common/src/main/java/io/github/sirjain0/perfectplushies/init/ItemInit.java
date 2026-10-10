@@ -1,10 +1,10 @@
-package io.github.sirjain0.perfectplushies.init;
+package io.github.sirjain0.perfectplushies.perfectplushies.init;
 
 import com.nyfaria.perfectplushieapi.api.PlushieStore;
 import com.nyfaria.perfectplushieapi.init.PlushieItemInit;
 import com.nyfaria.perfectplushieapi.registration.RegistrationProvider;
 import com.nyfaria.perfectplushieapi.registration.RegistryObject;
-import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

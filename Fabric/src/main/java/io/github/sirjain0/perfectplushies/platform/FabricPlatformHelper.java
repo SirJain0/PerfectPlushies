@@ -1,6 +1,6 @@
-package io.github.sirjain0.perfectplushies.platform;
+package io.github.sirjain0.perfectplushies.perfectplushies.platform;
 
-import io.github.sirjain0.perfectplushies.platform.services.IPlatformHelper;
+import io.github.sirjain0.perfectplushies.perfectplushies.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.entity.Mob;
 import software.bernie.geckolib.animatable.GeoItem;

@@ -1,4 +1,4 @@
-package io.github.sirjain0.perfectplushies.platform.services;
+package io.github.sirjain0.perfectplushies.perfectplushies.platform.services;
 
 import net.minecraft.world.entity.Mob;
 import software.bernie.geckolib.animatable.GeoItem;

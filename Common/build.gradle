@@ -1,45 +1,15 @@
 plugins {
     id 'multiloader-common'
-    id 'net.neoforged.moddev.legacyforge'
-    id 'maven-publish'
-    id 'dev._100media.gradleutils' version '1.+'
-}
-
-
-legacyForge {
-    mcpVersion = minecraft_version
-
-    if (project.hasProperty('common_aws_enabled') && project.findProperty('common_aws_enabled').toBoolean()) {
-        accessTransformers = [file('src/main/resources/META-INF/accesstransformer.cfg')]
-    }
-    parchment {
-        minecraftVersion = parchment_minecraft
-        mappingsVersion = parchment_version
-    }
+    alias(nyfs.plugins.mdg.loader)
+    alias(nyfs.plugins.regutils.loader)
+    id 'multiloader-vanilla'
 }
 
 dependencies {
-    compileOnly group:'org.spongepowered', name:'mixin', version:'0.8.5'
+    compileOnly(nyfs.bundles.mixin.common.get())
+    annotationProcessor nyfs.mixin.extras.common.get()
     compileOnly group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    compileOnly("io.github.llamalad7:mixinextras-forge:0.5.2")
-    annotationProcessor("io.github.llamalad7:mixinextras-forge:0.5.2")
-    compileOnly "software.bernie.geckolib:geckolib-forge-1.20.1:${geckolib_version}"
-    implementation "fuzs.forgeconfigapiport:forgeconfigapiport-common:${project.forge_config_api_port_version}"
+    compileOnly nyfs.geckolib.forge.get()
+    implementation nyfs.config.api.common.get()
     compileOnly "com.nyfaria.perfectplushieapi:perfectplushieapi-Common-1.20.1:${plushie_api_version}"
 }
-configurations {
-    commonJava {
-        canBeResolved = false
-        canBeConsumed = true
-    }
-    commonResources {
-        canBeResolved = false
-        canBeConsumed = true
-    }
-}
-
-artifacts {
-    commonJava sourceSets.main.java.sourceDirectories.singleFile
-    commonResources sourceSets.main.resources.sourceDirectories.singleFile
-}
-

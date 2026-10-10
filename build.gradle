@@ -1,14 +1,23 @@
 plugins {
-    id 'com.matyrobbrt.mc.registrationutils' version "$regutils_version"
-    id 'fabric-loom' version '1.9-SNAPSHOT' apply(false)
-    id 'net.neoforged.moddev.legacyforge' version '2.0.77' apply(false)
-    id 'dev._100media.gradleutils' version '1.+'
+    id "org.jetbrains.gradle.plugin.idea-ext" version "1.1.7"
+    alias(nyfs.plugins.loom) apply false
+    alias(nyfs.plugins.mdg) apply false
+    alias(nyfs.plugins.regutils)
 }
+
+def legacy = nyfs.versions.era.get() == "legacy"
+
 registrationUtils {
-    group 'io.github.sirjain0.perfectplushies.registration'
+    group "io.github.sirjain0.${mod_id}.registration"
     projects {
-        Fabric { type 'fabric' } // The fabric project
-        Forge { type 'forge' } // The forge project
-        Common { type 'common' } // The common project
+        fabric {
+            type 'fabric'
+        }
+        neoforge {
+            type legacy ? 'forge' : 'neoforge'
+        }
+        common {
+            type 'common'
+        }
     }
 }

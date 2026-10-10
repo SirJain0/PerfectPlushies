@@ -1,13 +1,13 @@
-package io.github.sirjain0.perfectplushies.init;
+package io.github.sirjain0.perfectplushies.perfectplushies.init;
 
 import com.nyfaria.perfectplushieapi.init.PlushieBlockInit;
 import com.nyfaria.perfectplushieapi.item.ColoredPlushieBlockItem;
 import com.nyfaria.perfectplushieapi.registration.RegistrationProvider;
 import com.nyfaria.perfectplushieapi.registration.RegistryObject;
-import io.github.sirjain0.perfectplushies.Constants;
-import io.github.sirjain0.perfectplushies.block.DumboBlobPlushieBlock;
-import io.github.sirjain0.perfectplushies.block.RubberDuckPlushieBlock;
-import io.github.sirjain0.perfectplushies.block.entity.PPDualColorBlockEntity;
+import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.perfectplushies.block.DumboBlobPlushieBlock;
+import io.github.sirjain0.perfectplushies.perfectplushies.block.RubberDuckPlushieBlock;
+import io.github.sirjain0.perfectplushies.perfectplushies.block.entity.PPDualColorBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
