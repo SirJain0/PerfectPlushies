@@ -1,6 +1,6 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.datagen;
+package io.github.sirjain0.perfectplushies.datagen;
 
-import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.Constants;
 import net.minecraft.data.PackOutput;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.common.data.ExistingFileHelper;

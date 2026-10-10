@@ -1,8 +1,8 @@
-package io.github.sirjain0.perfectplushies.perfectplushies;
+package io.github.sirjain0.perfectplushies;
 
 import com.nyfaria.perfectplushieapi.client.renderer.ColoredPlushieRenderer;
 import com.nyfaria.perfectplushieapi.registration.RegistryObject;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.BlockInit;
+import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.renderer.RenderType;

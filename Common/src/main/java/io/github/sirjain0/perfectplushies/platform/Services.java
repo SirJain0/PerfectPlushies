@@ -1,7 +1,7 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.platform;
+package io.github.sirjain0.perfectplushies.platform;
 
-import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
-import io.github.sirjain0.perfectplushies.perfectplushies.platform.services.IPlatformHelper;
+import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

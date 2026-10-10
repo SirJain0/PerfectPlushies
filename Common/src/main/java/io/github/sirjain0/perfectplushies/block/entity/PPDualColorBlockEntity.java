@@ -1,7 +1,7 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.block.entity;
+package io.github.sirjain0.perfectplushies.block.entity;
 
 import com.nyfaria.perfectplushieapi.block.entity.ColoredPlushieBlockEntity;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.BlockInit;
+import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 import software.bernie.geckolib.core.animation.AnimatableManager;

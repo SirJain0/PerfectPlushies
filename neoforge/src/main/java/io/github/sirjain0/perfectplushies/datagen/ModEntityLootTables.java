@@ -1,4 +1,4 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.datagen;
+package io.github.sirjain0.perfectplushies.datagen;
 
 import net.minecraft.data.loot.EntityLootSubProvider;
 import net.minecraft.world.entity.EntityType;

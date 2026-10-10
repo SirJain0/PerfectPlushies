@@ -1,8 +1,8 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.datagen;
+package io.github.sirjain0.perfectplushies.datagen;
 
 import com.nyfaria.perfectplushieapi.api.PlushieStore;
-import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.BlockInit;
+import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;

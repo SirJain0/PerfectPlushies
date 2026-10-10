@@ -1,8 +1,8 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.client.event;
+package io.github.sirjain0.perfectplushies.client.event;
 
 import com.nyfaria.perfectplushieapi.client.renderer.ColoredPlushieRenderer;
-import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.BlockInit;
+import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;

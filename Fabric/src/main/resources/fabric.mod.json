@@ -18,10 +18,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-            "io.github.sirjain0.perfectplushies.perfectplushies.PerfectPlushies"
+            "io.github.sirjain0.perfectplushies.PerfectPlushies"
         ],
     "client": [
-            "io.github.sirjain0.perfectplushies.perfectplushies.PerfectPlushiesClient"
+            "io.github.sirjain0.perfectplushies.PerfectPlushiesClient"
         ]
   },
   "mixins": [

@@ -1,4 +1,4 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.block;
+package io.github.sirjain0.perfectplushies.block;
 
 import com.nyfaria.perfectplushieapi.block.PlushieBlock;
 import net.minecraft.ChatFormatting;

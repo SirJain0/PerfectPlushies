@@ -1,6 +1,6 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.platform;
+package io.github.sirjain0.perfectplushies.platform;
 
-import io.github.sirjain0.perfectplushies.perfectplushies.platform.services.IPlatformHelper;
+import io.github.sirjain0.perfectplushies.platform.services.IPlatformHelper;
 import net.minecraft.world.entity.Mob;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;

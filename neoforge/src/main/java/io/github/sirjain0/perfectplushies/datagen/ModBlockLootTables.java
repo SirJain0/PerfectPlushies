@@ -1,7 +1,7 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.datagen;
+package io.github.sirjain0.perfectplushies.datagen;
 
 import com.nyfaria.perfectplushieapi.registration.RegistryObject;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.BlockInit;
+import io.github.sirjain0.perfectplushies.init.BlockInit;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;

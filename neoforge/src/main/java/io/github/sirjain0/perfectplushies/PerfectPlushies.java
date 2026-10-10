@@ -1,12 +1,12 @@
-package io.github.sirjain0.perfectplushies.perfectplushies;
+package io.github.sirjain0.perfectplushies;
 
-import io.github.sirjain0.perfectplushies.perfectplushies.datagen.ModBlockStateProvider;
-import io.github.sirjain0.perfectplushies.perfectplushies.datagen.ModItemModelProvider;
-import io.github.sirjain0.perfectplushies.perfectplushies.datagen.ModLangProvider;
-import io.github.sirjain0.perfectplushies.perfectplushies.datagen.ModLootTableProvider;
-import io.github.sirjain0.perfectplushies.perfectplushies.datagen.ModRecipeProvider;
-import io.github.sirjain0.perfectplushies.perfectplushies.datagen.ModSoundProvider;
-import io.github.sirjain0.perfectplushies.perfectplushies.datagen.ModTagProvider;
+import io.github.sirjain0.perfectplushies.datagen.ModBlockStateProvider;
+import io.github.sirjain0.perfectplushies.datagen.ModItemModelProvider;
+import io.github.sirjain0.perfectplushies.datagen.ModLangProvider;
+import io.github.sirjain0.perfectplushies.datagen.ModLootTableProvider;
+import io.github.sirjain0.perfectplushies.datagen.ModRecipeProvider;
+import io.github.sirjain0.perfectplushies.datagen.ModSoundProvider;
+import io.github.sirjain0.perfectplushies.datagen.ModTagProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;

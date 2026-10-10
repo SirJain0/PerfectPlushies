@@ -1,4 +1,4 @@
-package io.github.sirjain0.perfectplushies.perfectplushies;
+package io.github.sirjain0.perfectplushies;
 
 import fuzs.forgeconfigapiport.impl.util.*;
 import net.fabricmc.api.ModInitializer;

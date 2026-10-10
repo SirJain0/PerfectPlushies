@@ -1,11 +1,11 @@
-package io.github.sirjain0.perfectplushies.perfectplushies.datagen;
+package io.github.sirjain0.perfectplushies.datagen;
 
 import com.google.common.collect.ImmutableMap;
 import com.nyfaria.perfectplushieapi.registration.RegistryObject;
-import io.github.sirjain0.perfectplushies.perfectplushies.Constants;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.BlockInit;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.EntityInit;
-import io.github.sirjain0.perfectplushies.perfectplushies.init.ItemInit;
+import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.init.BlockInit;
+import io.github.sirjain0.perfectplushies.init.EntityInit;
+import io.github.sirjain0.perfectplushies.init.ItemInit;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
