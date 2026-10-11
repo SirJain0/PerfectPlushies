@@ -105,8 +105,11 @@ publishing {
         }
     }
     repositories {
-        maven {
-            url System.getenv("local_maven_url")
+        def localMaven = System.getenv("local_maven_url")
+        if (localMaven) {
+            maven {
+                url localMaven
+            }
         }
     }
 }
