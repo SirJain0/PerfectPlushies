@@ -7,11 +7,11 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.function.Supplier;
 
@@ -22,10 +22,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        models().getBuilder("")
-                .texture("", "")
-                .renderType("cutout");
-
         PlushieStore.plushieBlocks.stream()
                 .map(Supplier::get)
                 .filter(p-> p != BlockInit.DUMBO_BLOB_PLUSHIE.get())
@@ -62,6 +58,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     protected String getName(Block item) {
-        return ForgeRegistries.BLOCKS.getKey(item).getPath();
+        return BuiltInRegistries.BLOCK.getKey(item).getPath();
     }
 }

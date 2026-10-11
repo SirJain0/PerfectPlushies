@@ -9,13 +9,14 @@ import io.github.sirjain0.perfectplushies.datagen.ModSoundProvider;
 import io.github.sirjain0.perfectplushies.datagen.ModTagProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 @Mod(Constants.MODID)
-@Mod.EventBusSubscriber(modid = Constants.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Constants.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class PerfectPlushies {
 
     public PerfectPlushies() {
@@ -30,8 +31,8 @@ public class PerfectPlushies {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         boolean includeServer = event.includeServer();
         boolean includeClient = event.includeClient();
-        generator.addProvider(includeServer, new ModRecipeProvider(packOutput));
-        generator.addProvider(includeServer, new ModLootTableProvider(packOutput));
+        generator.addProvider(includeServer, new ModRecipeProvider(packOutput, event.getLookupProvider()));
+        generator.addProvider(includeServer, new ModLootTableProvider(packOutput, event.getLookupProvider()));
         generator.addProvider(includeServer, new ModSoundProvider(packOutput, existingFileHelper));
         generator.addProvider(includeServer, new ModTagProvider.Blocks(packOutput, event.getLookupProvider(), existingFileHelper));
         generator.addProvider(includeServer, new ModTagProvider.Items(packOutput, event.getLookupProvider(), existingFileHelper));

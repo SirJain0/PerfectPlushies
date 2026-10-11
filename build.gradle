@@ -2,22 +2,8 @@ plugins {
     id "org.jetbrains.gradle.plugin.idea-ext" version "1.1.7"
     alias(nyfs.plugins.loom) apply false
     alias(nyfs.plugins.mdg) apply false
-    alias(nyfs.plugins.regutils)
 }
 
 def legacy = nyfs.versions.era.get() == "legacy"
 
-registrationUtils {
-    group "io.github.sirjain0.${mod_id}.registration"
-    projects {
-        fabric {
-            type 'fabric'
-        }
-        neoforge {
-            type legacy ? 'forge' : 'neoforge'
-        }
-        common {
-            type 'common'
-        }
-    }
-}
+

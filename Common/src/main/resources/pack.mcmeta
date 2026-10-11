@@ -1,6 +1,7 @@
 {
     "pack": {
         "description": "${mod_name}",
-        "pack_format": 8
+        "pack_format": 34,
+        "supported_formats": [34, 48]
     }
 }

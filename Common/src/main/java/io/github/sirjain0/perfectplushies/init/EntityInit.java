@@ -3,6 +3,7 @@ package io.github.sirjain0.perfectplushies.init;
 import com.nyfaria.perfectplushieapi.registration.RegistrationProvider;
 import com.nyfaria.perfectplushieapi.registration.RegistryObject;
 import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.registration.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -13,22 +14,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
+@Init
 public class EntityInit {
     public static final RegistrationProvider<EntityType<?>> ENTITIES = RegistrationProvider.get(Registries.ENTITY_TYPE, Constants.MODID);
     public static final List<AttributesRegister<?>> attributeSuppliers = new ArrayList<>();
 
-    private static <T extends Entity> RegistryObject<EntityType<T>> registerEntity(String name, Supplier<EntityType.Builder<T>> supplier) {
+    private static <T extends Entity> RegistryObject<EntityType<?>, EntityType<T>> registerEntity(String name, Supplier<EntityType.Builder<T>> supplier) {
         return ENTITIES.register(name, () -> supplier.get().build(Constants.MODID + ":" + name));
     }
 
-    private static <T extends LivingEntity> RegistryObject<EntityType<T>> registerEntity(String name, Supplier<EntityType.Builder<T>> supplier,
+    private static <T extends LivingEntity> RegistryObject<EntityType<?>, EntityType<T>> registerEntity(String name, Supplier<EntityType.Builder<T>> supplier,
                                                                                          Supplier<AttributeSupplier.Builder> attributeSupplier) {
-        RegistryObject<EntityType<T>> entityTypeSupplier = registerEntity(name, supplier);
+        RegistryObject<EntityType<?>, EntityType<T>> entityTypeSupplier = registerEntity(name, supplier);
         attributeSuppliers.add(new AttributesRegister<>(entityTypeSupplier, attributeSupplier));
         return entityTypeSupplier;
-    }
-
-    public static void loadClass() {
     }
 
 

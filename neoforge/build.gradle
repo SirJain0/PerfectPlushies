@@ -1,22 +1,29 @@
 plugins {
     id 'multiloader-loader'
     alias(nyfs.plugins.mdg.loader)
-    alias(nyfs.plugins.regutils.loader)
     id 'multiloader-moddev'
     id("com.nyfaria.moddingtools.dependencies")
     id("com.nyfaria.moddingtools.publishing")
 }
 
-legacyForge {
+neoForge {
     runs {
         data {
             data()
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', rootProject.project(':common').file('src/generated/resources/').getAbsolutePath(), '--existing', rootProject.project(':common').file('src/main/resources/').getAbsolutePath()
         }
     }
 }
 
+def plushieApi = "com.nyfaria:perfectplushieapi-neoforge:${plushie_api_version}+${minecraft_version}"
+def plushieApiCapability = "com.nyfaria:perfectplushieapi-neoforge-${minecraft_version}"
+
 dependencies {
-    modDeps.requiredMod(nyfs.geckolib.forge, "geckolib", null)
-    jarJar(modImplementation("com.nyfaria.perfectplushieapi:perfectplushieapi-Forge-1.20.1:${plushie_api_version}"))
+    modDeps.requiredMod(nyfs.geckolib.neoforge, "geckolib", null)
+    implementation(plushieApi) {
+        capabilities { requireCapability(plushieApiCapability) }
+    }
+    jarJar(plushieApi) {
+        capabilities { requireCapability(plushieApiCapability) }
+    }
 }

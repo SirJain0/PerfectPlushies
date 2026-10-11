@@ -18,11 +18,11 @@ public class PerfectPlushiesClient implements ClientModInitializer {
         registerCutout(BlockInit.GOOSE_PLUSHIE);
         registerCutout(BlockInit.HEDGEHOG_PLUSHIE);
 
-        BlockEntityRenderers.register(BlockInit.PP_COLOR_BLOCK_ENTITY.get(), (context) -> new ColoredPlushieRenderer(new ResourceLocation(Constants.MODID,"dumbo_blob_plushie")));
+        BlockEntityRenderers.register(BlockInit.PP_COLOR_BLOCK_ENTITY.get(), (context) -> new ColoredPlushieRenderer(ResourceLocation.fromNamespaceAndPath(Constants.MODID,"dumbo_blob_plushie")));
 
     }
 
-    private static void registerCutout(RegistryObject<Block> block) {
+    private static void registerCutout(RegistryObject<Block, ? extends Block> block) {
         BlockRenderLayerMap.INSTANCE.putBlock(block.get(), RenderType.cutout());
     }
 }

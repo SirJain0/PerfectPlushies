@@ -1,18 +1,24 @@
 plugins {
     id 'multiloader-loader'
     alias(nyfs.plugins.loom.loader)
-    alias(nyfs.plugins.regutils.loader)
     id("com.nyfaria.moddingtools.dependencies")
     id("com.nyfaria.moddingtools.publishing")
     id 'multiloader-fabric'
 }
+
+def plushieApi = "com.nyfaria:perfectplushieapi-fabric:${plushie_api_version}+${minecraft_version}"
+def plushieApiCapability = "com.nyfaria:perfectplushieapi-fabric-${minecraft_version}"
 
 dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     modDeps.requiredMod(nyfs.geckolib.fabric, "geckolib", null)
     modApi nyfs.config.api.fabric.get()
     include nyfs.config.api.fabric.get()
-    modImplementation include("com.nyfaria.perfectplushieapi:perfectplushieapi-Fabric-1.20.1:${plushie_api_version}") {
+    modImplementation(plushieApi) {
         transitive = false
+        capabilities { requireCapability(plushieApiCapability) }
+    }
+    include(plushieApi) {
+        capabilities { requireCapability(plushieApiCapability) }
     }
 }

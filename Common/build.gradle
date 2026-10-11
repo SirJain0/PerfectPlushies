@@ -1,7 +1,6 @@
 plugins {
     id 'multiloader-common'
     alias(nyfs.plugins.mdg.loader)
-    alias(nyfs.plugins.regutils.loader)
     id 'multiloader-vanilla'
 }
 
@@ -9,7 +8,9 @@ dependencies {
     compileOnly(nyfs.bundles.mixin.common.get())
     annotationProcessor nyfs.mixin.extras.common.get()
     compileOnly group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    compileOnly nyfs.geckolib.forge.get()
+    compileOnly nyfs.geckolib.common.get()
     implementation nyfs.config.api.common.get()
-    compileOnly "com.nyfaria.perfectplushieapi:perfectplushieapi-Common-1.20.1:${plushie_api_version}"
+    compileOnly("com.nyfaria:perfectplushieapi-common:${plushie_api_version}+${minecraft_version}") {
+        capabilities { requireCapability("com.nyfaria:perfectplushieapi-common-${minecraft_version}") }
+    }
 }

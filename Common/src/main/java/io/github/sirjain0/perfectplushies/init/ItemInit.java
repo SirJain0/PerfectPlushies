@@ -5,17 +5,19 @@ import com.nyfaria.perfectplushieapi.init.PlushieItemInit;
 import com.nyfaria.perfectplushieapi.registration.RegistrationProvider;
 import com.nyfaria.perfectplushieapi.registration.RegistryObject;
 import io.github.sirjain0.perfectplushies.Constants;
+import io.github.sirjain0.perfectplushies.registration.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
+@Init
 public class ItemInit {
     public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registries.ITEM, Constants.MODID);
 
     public static final RegistrationProvider<CreativeModeTab> CREATIVE_MODE_TABS = RegistrationProvider.get(Registries.CREATIVE_MODE_TAB, Constants.MODID);
-    public static final RegistryObject<CreativeModeTab> PERFECT_PLUSHIES_TAB = CREATIVE_MODE_TABS.register("perfectplushies", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
+    public static final RegistryObject<CreativeModeTab, CreativeModeTab> PERFECT_PLUSHIES_TAB = CREATIVE_MODE_TABS.register("perfectplushies", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
             .icon(() -> new ItemStack(BlockInit.RED_FOX_PLUSHIE.get()))
             .displayItems(
                     (itemDisplayParameters, output) -> {
@@ -30,6 +32,4 @@ public class ItemInit {
     }
 
 
-    public static void loadClass() {
-    }
 }

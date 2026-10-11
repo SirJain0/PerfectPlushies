@@ -12,7 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.data.LanguageProvider;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
@@ -61,21 +61,21 @@ public class ModLangProvider extends LanguageProvider {
         add("plushie.description.geode_plushie", COMMUNITY_PILLAR_STR);
     }
 
-    protected void itemLang(RegistryObject<Item> entry) {
+    protected void itemLang(RegistryObject<Item, ? extends Item> entry) {
         if (!(entry.get() instanceof BlockItem) || entry.get() instanceof ItemNameBlockItem) {
             addItem(entry, checkReplace(entry));
         }
     }
 
-    protected void blockLang(RegistryObject<Block> entry) {
+    protected void blockLang(RegistryObject<Block, ? extends Block> entry) {
         addBlock(entry, checkReplace(entry));
     }
 
-    protected void entityLang(RegistryObject<EntityType<?>> entry) {
+    protected void entityLang(RegistryObject<EntityType<?>, ? extends EntityType<?>> entry) {
         addEntityType(entry, checkReplace(entry));
     }
 
-    protected String checkReplace(RegistryObject<?> registryObject) {
+    protected String checkReplace(RegistryObject<?, ?> registryObject) {
         return Arrays.stream(registryObject.getId().getPath().split("_"))
                 .map(this::checkReplace)
                 .filter(s -> !s.isBlank())

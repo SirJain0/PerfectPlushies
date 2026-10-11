@@ -1,7 +1,7 @@
 package io.github.sirjain0.perfectplushies.datagen;
 
-import com.nyfaria.perfectplushieapi.registration.RegistryObject;
 import io.github.sirjain0.perfectplushies.init.BlockInit;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.CopyCustomDataFunction;
 import net.minecraft.world.level.storage.loot.functions.CopyNameFunction;
-import net.minecraft.world.level.storage.loot.functions.CopyNbtFunction;
 import net.minecraft.world.level.storage.loot.providers.nbt.ContextNbtProvider;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
@@ -19,8 +19,8 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
-    protected ModBlockLootTables() {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+    protected ModBlockLootTables(HolderLookup.Provider registries) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     }
 
     protected Stream<Block> getBlockStream() {
-        return BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get);
+        return BlockInit.BLOCKS.getEntries().stream().map(entry -> (Block) entry.get());
     }
 
     protected boolean shouldDropSelf(Block block) {
@@ -50,7 +50,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         return LootTable.lootTable().withPool(
                 this.applyExplosionCondition(pBlock, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
                         .add(LootItem.lootTableItem(pBlock).apply(CopyNameFunction.copyName(CopyNameFunction.NameSource.BLOCK_ENTITY))
-                                .apply(CopyNbtFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
+                                .apply(CopyCustomDataFunction.copyData(ContextNbtProvider.BLOCK_ENTITY)
                                         .copy("colors", "colors")))));
     }
 }
